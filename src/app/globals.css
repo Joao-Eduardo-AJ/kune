@@ -5,3 +5,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button.waves::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, rgba(20, 234, 138, .24), rgba(160, 255, 87, .24));
+}

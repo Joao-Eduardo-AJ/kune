@@ -24,6 +24,19 @@ export default {
       fontFamily: {
         inter: ['var(--font-inter)'],
         rethink: ['var(--rethink-sans)']
+      },
+      animation: {
+        waves: 'waves 2s linear infinite'
+      },
+      keyframes: {
+        waves: {
+          '100%': {
+            width: 'calc(100% + 32px)',
+            height: 'calc(100% + 32px)',
+            opacity: '0',
+            'border-radius': '24px'
+          }
+        }
       }
     }
   },
