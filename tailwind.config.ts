@@ -22,8 +22,7 @@ export default {
         'grayscale-900': '#161D19'
       },
       fontFamily: {
-        inter: ['var(--font-inter)'],
-        rethink: ['var(--rethink-sans)']
+        outfit: ['var(--font-outfit)']
       },
       animation: {
         waves: 'waves 2s linear infinite'
