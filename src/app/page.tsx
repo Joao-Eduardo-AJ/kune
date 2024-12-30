@@ -1,3 +1,4 @@
+'use client'
 import { ButtonWave, Logo } from './_components'
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
       <nav></nav>
       <main>
         <section className="flex h-dvh w-dvw flex-col items-center justify-center gap-8">
-          <ButtonWave />
+          <ButtonWave onClick={() => window.alert('aaa')} />
           <Logo />
         </section>
       </main>

@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+button.waves::before {
+  transition: all 1s;
+  right: -50%;
+  top: -150%;
+  background-color: rgb(160, 255, 87);
+  width: 250;
+  height: 250;
+  border-radius: 100%;
+  filter: blur(65);
 }
 
-button.waves::after {
-  content: '';
-  z-index: -1;
-  position: absolute;
+button.waves:hover::before {
+  top: 0%;
+  right: 50%;
+}
+
+div.waves::before {
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   border-radius: 12px;

@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable} bg-grayscale-100 font-outfit antialiased`}
-      >
+      <body className={`${outfit.variable} font-outfit antialiased`}>
         {children}
       </body>
     </html>
