@@ -6,11 +6,20 @@ button.waves::before {
   transition: all 1s;
   right: -50%;
   top: -150%;
-  background-color: rgb(160, 255, 87);
   width: 250;
   height: 250;
   border-radius: 100%;
   filter: blur(65);
+}
+
+button.contained::before {
+  transition: all 2s;
+  left: -10%;
+  top: -90%;
+  width: 75;
+  height: 75;
+  border-radius: 100%;
+  filter: blur(40);
 }
 
 button.waves:hover::before {
@@ -24,6 +33,19 @@ div.waves::before {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 12;
   background-image: linear-gradient(to right, rgba(20, 234, 138, .24), rgba(160, 255, 87, .24));
+}
+
+button.text::after {
+  width: 0;
+  transition: 500ms;
+  left: 14;
+  top: 80%;
+  transform: translate(0, -50%);
+}
+
+button.text:hover::after {
+  height: 2;
+  width: calc(100% - 28px);
 }
