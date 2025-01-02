@@ -10,7 +10,11 @@ export default {
     extend: {
       colors: {
         accent: '#14EA8A',
+        'accent-shadow': '#14EA8A3D',
+
         'accent-aux': '#A0FF57',
+        'accent-aux-shadow': '#A0FF573D',
+
         'grayscale-100': '#F5F8F5',
         'grayscale-200': '#E0E7E2',
         'grayscale-300': '#C6C9C7',
@@ -25,7 +29,8 @@ export default {
         outfit: ['var(--font-outfit)']
       },
       animation: {
-        waves: 'waves 2s linear infinite'
+        waves: 'waves 2s linear infinite',
+        status: 'status 2s linear infinite'
       },
       keyframes: {
         waves: {
@@ -34,6 +39,13 @@ export default {
             height: 'calc(100% + 32px)',
             opacity: '0',
             'border-radius': '24px'
+          }
+        },
+        status: {
+          '100%': {
+            width: 'calc(100% + 16px)',
+            height: 'calc(100% + 16px)',
+            opacity: '0'
           }
         }
       }
