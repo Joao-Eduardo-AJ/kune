@@ -2,12 +2,12 @@ import { ButtonHTMLAttributes } from 'react'
 import { tv } from 'tailwind-variants'
 
 const badge = tv({
-  base: 'rounded-full px-[14] py-[5] text-xl font-semibold transition-all duration-300',
+  base: 'rounded-full px-[14px] py-[5px] text-xl font-semibold transition-all duration-300 overflow-hidden',
   variants: {
     type: {
       contained: 'bg-grayscale-900 text-white',
       outlined:
-        'border border-gray-300 text-grayscale-700 hover:bg-grayscale-100 hover:scale-105'
+        'badge relative border border-gray-300 text-grayscale-700 before:absolute before:bg-white hover:bg-grayscale-100 hover:text-grayscale-900'
     },
     size: {
       sm: 'text-sm',

@@ -2,12 +2,12 @@ import { ButtonHTMLAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
-  base: 'relative rounded-lg font-semibold',
+  base: 'relative rounded-lg font-semibold overflow-hidden',
   variants: {
     type: {
       contained:
-        'contained overflow-hidden bg-grayscale-900 px-6 py-4 text-white transition-shadow duration-[2s] before:absolute hover:shadow-2xl hover:before:bg-grayscale-100',
-      text: 'text px-4 py-[10px] text-grayscale-700 after:absolute after:bg-grayscale-700'
+        'contained bg-grayscale-900 px-6 py-4 text-white transition-shadow duration-[2s] before:absolute hover:shadow-2xl before:bg-grayscale-300',
+      text: 'text px-4 py-[10px] text-grayscale-700 before:absolute before:bg-grayscale-700'
     },
     size: {
       sm: 'text-sm',

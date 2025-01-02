@@ -1,4 +1,3 @@
-'use client'
 import {
   Badge,
   Button,
@@ -27,11 +26,9 @@ export default function Home() {
             <Badge>Mobile App</Badge>
             <Badge>Web App</Badge>
           </div>
-          <ButtonWave onClick={() => window.alert('aaa')} />
-          <div className="flex gap-6">
-            <ScrollIndicator />
-            <Logo />
-          </div>
+          <ButtonWave />
+          <Logo />
+          <ScrollIndicator />
         </section>
       </main>
     </>

@@ -2,25 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-button.contained::before, button.waves::before {
+button.badge::before, button.contained::before, button.waves::before {
   border-radius: 100%;
 }
+
+button.badge::before, button.contained::before {
+  width: 75px;
+  height: 75px;
+  filter: blur(40px);
+  top: -100%;
+}
+
+button.badge::before {
+  transition: all 1s;
+  left: 150%;
+}
+
 button.contained::before {
-  transition: all 2s;
-  left: -10%;
-  top: -90%;
-  width: 75;
-  height: 75;
-  filter: blur(40);
+  transition: all 1s;
+  left: 100%;
+}
+
+button.badge:hover::before {
+  left: -25%;
+  top: 0%;
+}
+
+button.contained:hover::before {
+  left: -60%;
+  top: 0%;
 }
 
 button.waves::before {
   transition: all 1s;
   right: -50%;
   top: -150%;
-  width: 250;
-  height: 250;
-  filter: blur(65);
+  width: 250px;
+  height: 250px;
+  filter: blur(65px);
 }
 
 button.waves:hover::before {
@@ -37,23 +56,22 @@ div.waves::before, span.status::before {
 }
 
 div.waves::before {
-  border-radius: 12;
-  background-image: linear-gradient(to right, rgba(20, 234, 138, .24), rgba(160, 255, 87, .24));
+  border-radius: 12px;
 }
 
 span.status::before {
   border-radius: 100%;
 }
 
-button.text::after {
+button.text::before {
+  height: 1px;
   width: 0;
   transition: 500ms;
-  left: 14;
+  right: 14px;
   top: 80%;
   transform: translate(0, -50%);
 }
 
-button.text:hover::after {
-  height: 2;
+button.text:hover::before {
   width: calc(100% - 28px);
 }

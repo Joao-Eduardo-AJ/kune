@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes } from 'react'
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {}
 
 export const ButtonWave = ({ ...props }: ButtonProps) => (
-  <div className="waves relative before:absolute before:animate-waves">
+  <div className="waves relative from-accent-shadow to-accent-aux-shadow before:absolute before:animate-waves before:bg-gradient-to-r">
     <button
       {...props}
       className="waves relative flex w-[232px] items-center justify-between overflow-hidden rounded-xl bg-accent p-2 pl-6 text-xl font-semibold before:absolute before:bg-accent-aux"
