@@ -1,5 +1,12 @@
 'use client'
-import { Badge, Button, ButtonWave, Logo, Status } from './_components'
+import {
+  Badge,
+  Button,
+  ButtonWave,
+  Logo,
+  ScrollIndicator,
+  Status
+} from './_components'
 
 export default function Home() {
   return (
@@ -21,7 +28,10 @@ export default function Home() {
             <Badge>Web App</Badge>
           </div>
           <ButtonWave onClick={() => window.alert('aaa')} />
-          <Logo />
+          <div className="flex gap-6">
+            <ScrollIndicator />
+            <Logo />
+          </div>
         </section>
       </main>
     </>

@@ -28,7 +28,7 @@ button.waves:hover::before {
   right: 50%;
 }
 
-div.waves::before, div.status::before {
+div.waves::before, span.status::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -41,7 +41,7 @@ div.waves::before {
   background-image: linear-gradient(to right, rgba(20, 234, 138, .24), rgba(160, 255, 87, .24));
 }
 
-div.status::before {
+span.status::before {
   border-radius: 100%;
 }
 
