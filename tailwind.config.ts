@@ -36,7 +36,7 @@ export default {
       animation: {
         waves: 'waves 2s linear infinite',
         status: 'status 2s linear infinite',
-        'project-card': 'project-card 2s ease-in-out forwards'
+        'project-card': 'project-card 1.5s ease-in-out forwards'
       },
       keyframes: {
         waves: {

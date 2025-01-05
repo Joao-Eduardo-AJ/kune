@@ -4,10 +4,10 @@ import {
   Button,
   ButtonWave,
   Logo,
+  ProjectGroup,
   ScrollIndicator,
   Status
 } from './_components'
-import { ProjectGroup } from './_components/project-group'
 
 export default function Home() {
   return (

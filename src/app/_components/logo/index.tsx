@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import k from '@public/k.svg'
+import logo from '@public/logo.svg'
 import { HtmlHTMLAttributes } from 'react'
 
 const Span = ({ ...props }: HtmlHTMLAttributes<HTMLParagraphElement>) => (
@@ -10,7 +10,7 @@ const Span = ({ ...props }: HtmlHTMLAttributes<HTMLParagraphElement>) => (
 )
 export const Logo = () => (
   <div className="group relative flex items-center">
-    <Image src={k} width={40} height={40} alt="logo" />
+    <Image src={logo} width={40} height={40} alt="logo" />
     <Span className="-top-[2px]">Kune</Span>
     <Span className="-bottom-[2px] delay-100">Studio</Span>
   </div>

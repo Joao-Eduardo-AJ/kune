@@ -4,14 +4,14 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import project from '@public/project.svg'
 import { ProjectType } from '@/atom'
 
-export type Author = {
+export type Member = {
   avatarSrc: StaticImport
   linkedinUrl: string
   name: string
 }
 
 export type Project = {
-  authors: Author[]
+  team: Member[]
   description: string
   externalUrl: string
   figureAlt: string
@@ -21,43 +21,43 @@ export type Project = {
   year: string
 }
 
-const arnon: Author = {
+const arnon: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/arnon-cornette/',
   name: 'Arnon Cornette'
 }
 
-const daniel: Author = {
+const daniel: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/danieldecastroliveira/',
   name: 'Daniel Oliveira'
 }
 
-const guylherme: Author = {
+const guylherme: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/guysarmento/',
   name: 'Guylherme Sarmento'
 }
 
-const joao: Author = {
+const joao: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/joaoeduardoaj/',
   name: 'Eduardo Amorim'
 }
 
-const lucas: Author = {
+const lucas: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/lucasjfvieira/',
   name: 'Lucas Vieira'
 }
 
-const miguel: Author = {
+const miguel: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/miguel-elibio-717526212/',
   name: 'Miguel Elbio'
 }
 
-const spica: Author = {
+const spica: Member = {
   avatarSrc: avatar,
   linkedinUrl: 'https://www.linkedin.com/in/guilhermespica/',
   name: 'Guilheme Spica'
@@ -65,7 +65,7 @@ const spica: Author = {
 
 export const projects: Project[] = [
   {
-    authors: [arnon, daniel, guylherme],
+    team: [arnon, daniel, guylherme],
     description:
       ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
     externalUrl: 'a',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     year: '2024'
   },
   {
-    authors: [arnon, daniel, guylherme],
+    team: [arnon, daniel, guylherme],
     description:
       ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
     externalUrl: 'b',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     year: '2024'
   },
   {
-    authors: [arnon, daniel, guylherme],
+    team: [arnon, daniel, guylherme],
     description:
       ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
     externalUrl: 'c',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     year: '2024'
   },
   {
-    authors: [arnon, daniel, guylherme],
+    team: [arnon, daniel, guylherme],
     description:
       ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
     externalUrl: 'd',

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HTMLAttributes, useCallback, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Author } from '../../mock'
+import { Member } from '@src/app/mock'
 
 type ChildrenProp = {
   children: React.ReactNode
@@ -27,7 +27,7 @@ type HeaderProps = {
 
 type InfoProps = {
   title: string
-  authors: Author[]
+  team: Member[]
 }
 
 export function Wrapper({ children, spacedTop }: WrapperProps) {
@@ -95,19 +95,19 @@ export function Caption({ children }: ChildrenProp) {
   )
 }
 
-export function Info({ authors, title }: InfoProps) {
+export function Info({ team, title }: InfoProps) {
   return (
     <div className="flex items-center justify-between">
       <h3 className="font-semibold">{title}</h3>
       <div className="flex">
-        {authors.map((item, index) => (
+        {team.map((item, index) => (
           <Image
             key={index}
             src={item.avatarSrc}
             width={64}
             height={64}
             alt={item.name}
-            className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-300 hover:scale-105 -z-[${index - authors.length}] ${index + 1 === authors.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
+            className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-300 hover:scale-105 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
           />
         ))}
       </div>
