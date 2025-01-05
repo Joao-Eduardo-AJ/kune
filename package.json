@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.1.0",
     "jotai": "^2.11.0",
     "lenis": "^1.1.18",
     "next": "15.1.3",
