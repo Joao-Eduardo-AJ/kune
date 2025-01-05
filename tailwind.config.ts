@@ -28,9 +28,15 @@ export default {
       fontFamily: {
         outfit: ['var(--font-outfit)']
       },
+      fontSize: {
+        h1: '56px',
+        h2: '48px',
+        h3: '40px'
+      },
       animation: {
         waves: 'waves 2s linear infinite',
-        status: 'status 2s linear infinite'
+        status: 'status 2s linear infinite',
+        'project-card': 'project-card 2s ease-in-out forwards'
       },
       keyframes: {
         waves: {
@@ -46,6 +52,21 @@ export default {
             width: 'calc(100% + 16px)',
             height: 'calc(100% + 16px)',
             opacity: '0'
+          }
+        },
+        'project-card': {
+          '50%': {
+            'max-width': '560px',
+            padding: '20px',
+            bottom: '180px',
+            left: '16px'
+          },
+          '100%': {
+            'max-width': '592px',
+            padding: '0px',
+            bottom: '0px',
+            left: '0px',
+            'z-index': '2'
           }
         }
       }

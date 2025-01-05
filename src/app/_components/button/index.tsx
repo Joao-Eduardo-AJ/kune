@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
-  base: 'relative rounded-lg font-semibold overflow-hidden',
+  base: 'relative rounded-lg',
   variants: {
     type: {
       contained:
