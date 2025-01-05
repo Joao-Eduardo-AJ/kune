@@ -23,6 +23,20 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6C9C7;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+}
+
 button.badge::before, button.contained::before, button.waves::before {
   border-radius: 100%;
 }

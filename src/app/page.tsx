@@ -1,3 +1,4 @@
+import ReactLenis from 'lenis/react'
 import {
   Badge,
   Button,
@@ -10,7 +11,7 @@ import { ProjectGroup } from './_components/project-group'
 
 export default function Home() {
   return (
-    <>
+    <ReactLenis root>
       <nav></nav>
       <main>
         <section className="flex flex-col items-center justify-center gap-20 py-96">
@@ -33,6 +34,6 @@ export default function Home() {
           <ScrollIndicator />
         </section>
       </main>
-    </>
+    </ReactLenis>
   )
 }
