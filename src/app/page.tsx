@@ -8,13 +8,16 @@ import {
   ScrollIndicator,
   Status
 } from './_components'
+import { TeamGroup } from './_components/team-group'
 
 export default function Home() {
   return (
     <ReactLenis root>
       <nav></nav>
       <main>
+        <div className="bg-member-card h-96 w-96"></div>
         <section className="flex flex-col items-center justify-center gap-20 py-96">
+          <TeamGroup />
           <ProjectGroup />
           <Status />
           <div className="flex gap-6">

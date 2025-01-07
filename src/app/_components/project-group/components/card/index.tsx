@@ -30,32 +30,26 @@ type InfoProps = {
   team: Member[]
 }
 
-export function Wrapper({ children, spacedTop }: WrapperProps) {
-  return (
-    <article
-      className={`relative h-[870px] max-w-[592px] ${spacedTop ? 'mt-[120px]' : 'mb-[120px]'}`}
-    >
-      {children}
-    </article>
-  )
-}
+export const Wrapper = ({ children, spacedTop }: WrapperProps) => (
+  <article
+    className={`relative h-[870px] max-w-[592px] ${spacedTop ? 'mt-[120px]' : 'mb-[120px]'}`}
+  >
+    {children}
+  </article>
+)
 
-export function Figure({ alt, src }: FigureProps) {
-  return (
-    <figure className="">
-      <Image width={592} height={695} src={src} alt={alt} />
-    </figure>
-  )
-}
+export const Figure = ({ alt, src }: FigureProps) => (
+  <figure className="">
+    <Image width={592} height={695} src={src} alt={alt} />
+  </figure>
+)
 
-export function Header({ url, year }: HeaderProps) {
-  return (
-    <div className="absolute left-10 top-10 flex items-center justify-between text-[22px] text-gray-100">
-      <span>{year}</span>
-      <span>{url}</span>
-    </div>
-  )
-}
+export const Header = ({ url, year }: HeaderProps) => (
+  <div className="absolute left-10 top-10 flex items-center justify-between text-[22px] text-gray-100">
+    <span>{year}</span>
+    <span>{url}</span>
+  </div>
+)
 
 export function Caption({ children }: ChildrenProp) {
   const ref = useRef<HTMLElement>(null)
@@ -95,28 +89,24 @@ export function Caption({ children }: ChildrenProp) {
   )
 }
 
-export function Info({ team, title }: InfoProps) {
-  return (
-    <div className="flex items-center justify-between">
-      <h3 className="font-semibold">{title}</h3>
-      <div className="flex">
-        {team.map((item, index) => (
-          <Image
-            key={index}
-            src={item.avatarSrc}
-            width={64}
-            height={64}
-            alt={item.name}
-            className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-300 hover:scale-105 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
-          />
-        ))}
-      </div>
+export const Info = ({ team, title }: InfoProps) => (
+  <div className="flex items-center justify-between">
+    <h3 className="font-semibold">{title}</h3>
+    <div className="flex">
+      {team.map((item, index) => (
+        <Image
+          key={index}
+          src={item.avatarSrc}
+          width={64}
+          height={64}
+          alt={item.name}
+          className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-300 hover:scale-105 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
+        />
+      ))}
     </div>
-  )
-}
+  </div>
+)
 
-export function Description({
+export const Description = ({
   ...props
-}: HTMLAttributes<HTMLParagraphElement>) {
-  return <p {...props} />
-}
+}: HTMLAttributes<HTMLParagraphElement>) => <p {...props} />
