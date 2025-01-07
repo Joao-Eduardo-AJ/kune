@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import { HTMLAttributes, useCallback, useRef } from 'react'
-import { useInView } from 'react-intersection-observer'
 import { Member } from '@src/app/mock'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { HTMLAttributes } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 type ChildrenProp = {
   children: React.ReactNode
@@ -39,8 +39,14 @@ export const Wrapper = ({ children, spacedTop }: WrapperProps) => (
 )
 
 export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="">
-    <Image width={592} height={695} src={src} alt={alt} />
+  <figure className="group cursor-pointer overflow-hidden rounded-xl transition-all duration-500 ease-in-out hover:shadow-xl">
+    <Image
+      width={592}
+      height={695}
+      src={src}
+      alt={alt}
+      className="transition-all duration-500 ease-in-out group-hover:scale-110"
+    />
   </figure>
 )
 
@@ -51,62 +57,51 @@ export const Header = ({ url, year }: HeaderProps) => (
   </div>
 )
 
-export function Caption({ children }: ChildrenProp) {
-  const ref = useRef<HTMLElement>(null)
-  const { ref: inViewRef } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-    onChange(inView) {
-      handleEntry(inView)
-    }
+export const Caption = ({ children }: ChildrenProp) => (
+  <figcaption className="grid gap-5 rounded-xl bg-white">{children}</figcaption>
+)
+
+export const Info = ({ team, title }: InfoProps) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true
   })
 
-  const setRefs = useCallback(
-    (node: HTMLElement) => {
-      ref.current = node
-      inViewRef(node)
-    },
-    [inViewRef]
-  )
-
-  function handleEntry(inView: boolean) {
-    if (!ref.current) return
-    const { classList } = ref.current
-    if (classList.contains('animate-project-card') || !inView) return
-    classList.add('animate-project-card')
-  }
-
   return (
-    <>
-      <span className="absolute bottom-0 z-[1] h-[175px] w-full bg-white" />
-      <figcaption
-        ref={setRefs}
-        className="absolute bottom-0 left-4 grid max-w-[560px] gap-5 rounded-xl bg-white p-5 transition-all duration-300"
-      >
-        {children}
-      </figcaption>
-    </>
+    <div
+      ref={ref}
+      className={`absolute flex w-full items-center justify-between transition-all duration-500 ease-out ${inView ? 'bottom-[71px] opacity-100' : '-bottom-20 opacity-0'}`}
+    >
+      <h3 className="font-semibold">{title}</h3>
+      <div className="flex">
+        {team.map((item, index) => (
+          <Image
+            key={index}
+            src={item.avatarSrc}
+            width={64}
+            height={64}
+            alt={item.name}
+            className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-500 ease-out hover:-translate-y-1 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
 
-export const Info = ({ team, title }: InfoProps) => (
-  <div className="flex items-center justify-between">
-    <h3 className="font-semibold">{title}</h3>
-    <div className="flex">
-      {team.map((item, index) => (
-        <Image
-          key={index}
-          src={item.avatarSrc}
-          width={64}
-          height={64}
-          alt={item.name}
-          className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-300 hover:scale-105 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
-        />
-      ))}
-    </div>
-  </div>
-)
-
-export const Description = ({
+export function Description({
   ...props
-}: HTMLAttributes<HTMLParagraphElement>) => <p {...props} />
+}: HTMLAttributes<HTMLParagraphElement>) {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true
+  })
+
+  return (
+    <p
+      {...props}
+      ref={ref}
+      className={`absolute transition-all delay-200 duration-500 ease-out ${inView ? 'bottom-0 opacity-100' : '-bottom-20 opacity-0'}`}
+    />
+  )
+}
