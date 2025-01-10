@@ -10,10 +10,10 @@ export default {
     extend: {
       colors: {
         accent: '#14EA8A',
-        'accent-shadow': '#14EA8A3D',
+        'accent-shadow': 'rgba(20, 234, 138, 0.4)',
 
         'accent-aux': '#A0FF57',
-        'accent-aux-shadow': '#A0FF573D',
+        'accent-aux-shadow': 'rgba(160, 255, 87, 0.4)',
 
         'grayscale-100': '#F5F8F5',
         'grayscale-200': '#E0E7E2',
@@ -29,30 +29,40 @@ export default {
         outfit: ['var(--font-outfit)']
       },
       fontSize: {
-        h1: '56px',
-        h2: '48px',
-        h3: '40px'
+        'h1-xs': '40px',
+        'h1-md': '48px',
+        'h1-xl': '56px',
+
+        'h2-xs': '32px',
+        'h2-md': '40px',
+        'h2-xl': '48px',
+
+        'h3-xs': '28px',
+        'h3-md': '34px',
+        'h3-xl': '40px'
+      },
+      lineHeight: {
+        'h1-xs': '50px',
+        'h1-md': '58px',
+        'h1-xl': '66px',
+
+        'h2-xs': '42px',
+        'h2-md': '50px',
+        'h2-xl': '58px',
+
+        'h3-xs': '38px',
+        'h3-md': '44px',
+        'h3-xl': '50px'
       },
       animation: {
-        waves: 'waves 2s linear infinite',
+        'customers-fade': 'customers-fade 20s linear infinite',
+        'project-card': 'project-card 1.5s ease-in-out forwards',
         status: 'status 2s linear infinite',
-        'project-card': 'project-card 1.5s ease-in-out forwards'
+        waves: 'waves 2s linear infinite'
       },
       keyframes: {
-        waves: {
-          '100%': {
-            width: 'calc(100% + 32px)',
-            height: 'calc(100% + 32px)',
-            opacity: '0',
-            'border-radius': '24px'
-          }
-        },
-        status: {
-          '100%': {
-            width: 'calc(100% + 16px)',
-            height: 'calc(100% + 16px)',
-            opacity: '0'
-          }
+        'customers-fade': {
+          '100%': { transform: 'translateX(-100%)' }
         },
         'project-card': {
           '50%': {
@@ -67,6 +77,21 @@ export default {
             bottom: '0px',
             left: '0px',
             'z-index': '2'
+          }
+        },
+        status: {
+          '100%': {
+            width: 'calc(100% + 16px)',
+            height: 'calc(100% + 16px)',
+            opacity: '0'
+          }
+        },
+        waves: {
+          '100%': {
+            width: 'calc(100% + 32px)',
+            height: 'calc(100% + 32px)',
+            opacity: '0',
+            'border-radius': '24px'
           }
         }
       }

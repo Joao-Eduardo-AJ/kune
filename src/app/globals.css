@@ -6,23 +6,23 @@
   h1, h2, h3, h4, h5, h6, p, span, strong {
     @apply cursor-default
   }
-  h1, h2, h3 {
-    @apply text-grayscale-900
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-grayscale-900 font-semibold
   }
   h1 {
-    @apply text-h1
+    @apply text-h1-xs md:text-h1-md xl:text-h1-xl leading-h1-xs md:leading-h1-md xl:leading-h1-xl
   }
   h2 {
-    @apply text-h2
+    @apply text-h2-xs md:text-h2-md xl:text-h2-xl leading-h2-xs md:leading-h2-md xl:leading-h2-xl
   }
-  h3 {
-    @apply text-h3
+  h2 {
+    @apply text-h2-xs md:text-h2-md xl:text-h2-xl leading-h2-xs md:leading-h2-md xl:leading-h2-xl
   }
   p {
-    @apply text-grayscale-700 leading-[26px]
+    @apply text-grayscale-700
   }
   button {
-    @apply font-semibold overflow-hidden
+    @apply font-semibold overflow-hidden leading-[26px]
   }
 }
 
@@ -112,4 +112,8 @@ button.text::before {
 
 button.text:hover::before {
   width: calc(100% - 28px);
+}
+
+span.customers-fade {
+  background-image: linear-gradient(to left, #F5F8F5, #ffffff00, #F5F8F5);
 }
