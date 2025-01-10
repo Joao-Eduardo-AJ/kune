@@ -7,7 +7,7 @@ const badge = tv({
     type: {
       contained: 'bg-grayscale-900 text-white',
       outlined:
-        'badge relative border border-gray-300 text-grayscale-700 before:absolute before:bg-white hover:bg-grayscale-100 hover:text-grayscale-900'
+        'relative border border-gray-300 text-grayscale-700 before:bg-white hover:bg-grayscale-100 hover:text-grayscale-900'
     },
     size: {
       sm: 'text-sm',

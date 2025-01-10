@@ -6,8 +6,8 @@ const button = tv({
   variants: {
     type: {
       contained:
-        'contained bg-grayscale-900 xl:px-6 py-2 xl:py-[15px] text-white transition-shadow duration-[2s] before:absolute hover:shadow-2xl before:bg-grayscale-300 leading-[26px]',
-      text: 'text py-[10px] text-grayscale-700 before:absolute before:bg-grayscale-700'
+        'contained bg-grayscale-900 py-[7px] leading-[26px] text-white transition-shadow duration-[2s] hover:shadow-2xl xl:px-6 xl:py-[15px] before:bg-grayscale-300',
+      text: ''
     }
   },
   defaultVariants: {

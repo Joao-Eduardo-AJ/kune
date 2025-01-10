@@ -25,7 +25,7 @@ export default function Home() {
               Building <br className="sm:hidden" /> human-centered systems
               <br className="hidden md:block" /> that create real impact
             </Typography>
-            <Typography variant="p1" className="pb-4">
+            <Typography variant="p1" className="md:pb-4">
               Take the first step to turn your idea into reality. Chat with us
               for 10 minutes and explore simple, impactful solutions made for
               you.

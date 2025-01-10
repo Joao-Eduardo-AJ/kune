@@ -6,9 +6,9 @@ export function CustomerCarousel() {
   return (
     <div className="grid gap-2 xl:gap-5">
       <Typography variant="p2">Trusted by</Typography>
-      <div className="relative max-w-[912px] overflow-hidden">
+      <div className="customers relative max-w-[912px] overflow-hidden">
         <span className="customers-fade absolute left-0 z-10 h-12 w-full" />
-        <div className="flex animate-customers-fade gap-6">
+        <div className="flex animate-customers gap-6">
           {[...customersLogos, ...customersLogos].map(
             ({ alt, src, width }, index) => (
               <Image
