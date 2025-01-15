@@ -1,6 +1,8 @@
-import { HtmlHTMLAttributes } from 'react'
+import { HtmlHTMLAttributes, RefAttributes } from 'react'
 
-interface ITypography extends HtmlHTMLAttributes<HTMLParagraphElement> {
+interface ITypography
+  extends HtmlHTMLAttributes<HTMLParagraphElement>,
+    RefAttributes<HTMLParagraphElement> {
   variant:
     | 'h1'
     | 'h2'
@@ -27,10 +29,12 @@ export function Typography({ variant, ...props }: ITypography) {
 
   const Component = isP1 || isP2 ? 'p' : variant
 
+  const { className } = props
+
   return (
     <Component
       {...props}
-      className={`${isP1 ? p1Classes : ''} ${isP2 ? p2Classes : ''} ${props.className}`}
+      className={`${isP1 ? p1Classes : ''} ${isP2 ? p2Classes : ''} ${className ? className : ''}`}
     />
   )
 }

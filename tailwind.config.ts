@@ -54,6 +54,9 @@ export default {
         'h3-md': '42px',
         'h3-xl': '50px'
       },
+      screens: {
+        xs: '360px'
+      },
       animation: {
         customers: 'customers linear infinite',
         project: 'project 1.5s ease-in-out forwards',

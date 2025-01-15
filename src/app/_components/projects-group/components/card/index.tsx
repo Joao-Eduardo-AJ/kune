@@ -6,6 +6,7 @@ import { Member } from '@src/app/mock'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { Typography } from '@/app/_components/typography'
 
 type ChildrenProp = {
   children: React.ReactNode
@@ -32,20 +33,20 @@ type InfoProps = {
 
 export const Wrapper = ({ children, spacedTop }: WrapperProps) => (
   <article
-    className={`relative h-[870px] max-w-[592px] ${spacedTop ? 'mt-[120px]' : 'mb-[120px]'}`}
+    className={`relative max-w-[384px] xl:max-w-none ${spacedTop ? 'sm:mt-10 md:mt-20 xl:mt-[120px]' : 'justify-self-end sm:mb-10 md:mb-20 xl:mb-[120px]'}`}
   >
     {children}
   </article>
 )
 
 export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="group cursor-pointer overflow-hidden rounded-xl transition-all duration-500 ease-in-out hover:shadow-xl">
+  <figure className="transition-500 group cursor-pointer overflow-hidden rounded-xl">
     <Image
-      width={592}
-      height={695}
+      width={624}
+      height={732}
       src={src}
       alt={alt}
-      className="transition-all duration-500 ease-in-out group-hover:scale-110"
+      className="transition-500 group-hover:scale-105"
     />
   </figure>
 )
@@ -58,7 +59,9 @@ export const Header = ({ url, year }: HeaderProps) => (
 )
 
 export const Caption = ({ children }: ChildrenProp) => (
-  <figcaption className="grid gap-5 rounded-xl bg-white">{children}</figcaption>
+  <figcaption className="relative grid h-[180px] gap-5 rounded-xl xs:h-[156px] xl:h-[176px]">
+    {children}
+  </figcaption>
 )
 
 export const Info = ({ team, title }: InfoProps) => {
@@ -70,9 +73,9 @@ export const Info = ({ team, title }: InfoProps) => {
   return (
     <div
       ref={ref}
-      className={`absolute flex w-full items-center justify-between transition-all duration-500 ease-out ${inView ? 'bottom-[71px] opacity-100' : '-bottom-20 opacity-0'}`}
+      className={`transition-500 absolute flex w-full items-center justify-between ${inView ? 'top-6 opacity-100 xl:top-10' : 'top-[74px] opacity-0 xl:top-[90px]'}`}
     >
-      <h3 className="font-semibold">{title}</h3>
+      <Typography variant="h3">{title}</Typography>
       <div className="flex">
         {team.map((item, index) => (
           <Image
@@ -81,7 +84,7 @@ export const Info = ({ team, title }: InfoProps) => {
             width={64}
             height={64}
             alt={item.name}
-            className={`cursor-pointer rounded-full bg-grayscale-100 transition-all duration-500 ease-out hover:-translate-y-1 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-3 hover:-ml-2' : '-mx-3 hover:-mx-2'}`}
+            className={`transition-500 h-auto w-12 cursor-pointer rounded-full bg-grayscale-100 hover:-translate-y-1 xl:w-16 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-2 hover:-ml-2' : '-mx-2 hover:-mx-2 lg:-mx-3'}`}
           />
         ))}
       </div>
@@ -93,15 +96,16 @@ export function Description({
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
     triggerOnce: true
   })
 
   return (
-    <p
+    <Typography
       {...props}
       ref={ref}
-      className={`absolute transition-all delay-200 duration-500 ease-out ${inView ? 'bottom-0 opacity-100' : '-bottom-20 opacity-0'}`}
+      variant="p2"
+      className={`transition-500 absolute delay-200 ${inView ? 'top-[84px] opacity-100 xl:top-[124px]' : 'top-[134px] opacity-0 xl:top-[174px]'}`}
     />
   )
 }

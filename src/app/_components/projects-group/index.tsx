@@ -15,7 +15,7 @@ export function ProjectGroup() {
   }, [projectType])
 
   return (
-    <div className="grid grid-cols-2 gap-x-8 gap-y-20">
+    <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
       {visibleProjects.map(
         (
           { team, description, externalUrl, figureAlt, figureSrc, name, year },

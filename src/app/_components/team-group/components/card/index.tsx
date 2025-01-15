@@ -41,7 +41,7 @@ export function Caption({ name, role }: CaptionProps) {
   return (
     <figcaption
       ref={ref}
-      className={`absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 transition-all duration-500 ease-out ${inView ? 'bottom-4 opacity-100' : '-bottom-16 opacity-0'} `}
+      className={`transition-500 absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 ${inView ? 'bottom-4 opacity-100' : '-bottom-16 opacity-0'} `}
     >
       <div className="grid">
         <p className="font-semibold text-grayscale-900">{role}</p>
