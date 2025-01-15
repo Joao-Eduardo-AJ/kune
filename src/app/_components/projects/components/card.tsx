@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 
-import { Member } from '@src/app/mock'
+import { Typography } from '@/app/_components/typography'
+import { Member } from '@/mock'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Typography } from '@/app/_components/typography'
 
 type ChildrenProp = {
   children: React.ReactNode

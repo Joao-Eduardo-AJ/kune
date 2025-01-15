@@ -3,14 +3,14 @@ import ReactLenis from 'lenis/react'
 import {
   Button,
   ButtonWave,
-  CustomerCarousel,
+  Customers,
   Logo,
-  ProjectGroup,
-  ProjectHeader,
   ScrollIndicator,
   Status,
   Typography
-} from './_components'
+} from '@/app/_components'
+
+import * as Projects from '@/app/_components/projects'
 
 export default function Home() {
   return (
@@ -37,14 +37,14 @@ export default function Home() {
               </Typography>
               <ButtonWave />
             </div>
-            <CustomerCarousel />
+            <Customers />
             <ScrollIndicator />
           </div>
         </section>
         <section className="xl:px-28 xl:py-[200px]">
           <div className="max-w-[384px] sm:max-w-none">
-            <ProjectHeader />
-            <ProjectGroup />
+            <Projects.Header />
+            <Projects.Group />
           </div>
         </section>
       </main>

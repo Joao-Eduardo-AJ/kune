@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import arrow from '@public/arrow-right.svg'
+import Image from 'next/image'
 import { ButtonHTMLAttributes } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {}
