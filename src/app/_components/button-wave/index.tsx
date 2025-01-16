@@ -10,7 +10,7 @@ export const ButtonWave = ({ ...props }: ButtonProps) => (
       {...props}
       className="waves relative flex w-[232px] items-center justify-between rounded-xl bg-accent p-2 pl-6 text-xl before:bg-accent-aux"
     >
-      <span className="z-10">Book a call</span>
+      <span className="z-10 cursor-pointer">Book a call</span>
       <Image src={arrow} width={40} height={40} alt="" className="z-10" />
     </button>
   </div>

@@ -6,12 +6,17 @@ const button = tv({
   variants: {
     type: {
       contained:
-        'contained bg-grayscale-900 py-[7px] leading-[26px] text-white transition-shadow duration-[2s] hover:shadow-2xl xl:px-6 xl:py-[15px] before:bg-grayscale-300',
+        'contained bg-grayscale-900 leading-[26px] text-white transition-shadow duration-[2s] hover:shadow-2xl xl:px-6 xl:py-[15px] before:bg-grayscale-300',
       text: ''
+    },
+    size: {
+      md: 'py-[7px]',
+      lg: 'py-[15px] before:duration-[2s] xl:before:duration-[1.5s]'
     }
   },
   defaultVariants: {
-    type: 'contained'
+    type: 'contained',
+    size: 'md'
   }
 })
 

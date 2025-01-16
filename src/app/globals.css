@@ -35,7 +35,7 @@
   }
 
   section {
-    @apply w-full px-7 py-10
+    @apply w-full px-7 py-10 xl:px-28 xl:py-20
   }
 
   section div {
@@ -93,6 +93,20 @@
   .transition-500 {
     transition: all 500ms ease-in-out;
   }
+
+  .divider-xs {
+    transition: 1s ease-in-out;
+    width: 375px;
+    height: 400px;
+    filter: blur(100px);
+  }
+
+  .divider-lg {
+    transition: 1.5s ease-in-out;
+    width: 1350px;
+    height: 1350px;
+    filter: blur(300px);
+  }
 }
 
 @screen md {
@@ -128,8 +142,8 @@
 
 button.contained::before {
   width: 75px;
-  height: 75px;
-  filter: blur(40px);
+  height: 150px;
+  filter: blur(80px);
   top: -100%;
   left: 100%;
 }
@@ -147,4 +161,16 @@ button.contained:hover::before,
 button.waves:hover::before {
   top: 0%;
   left: -60%;
+}
+
+section.divider::before {
+  border-radius: 100%;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-delay: .4s;
+}
+
+section.divider:has(button:hover)::before {
+  left: 10%;
 }
