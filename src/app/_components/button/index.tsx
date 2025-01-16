@@ -11,7 +11,7 @@ const button = tv({
     },
     size: {
       md: 'py-[7px]',
-      lg: 'py-[15px] before:duration-[2s] xl:before:duration-[1.5s]'
+      lg: 'py-[15px]'
     }
   },
   defaultVariants: {

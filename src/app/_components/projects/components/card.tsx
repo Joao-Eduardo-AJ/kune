@@ -33,7 +33,7 @@ type InfoProps = {
 
 export const Wrapper = ({ children, spacedTop }: WrapperProps) => (
   <article
-    className={`relative max-w-[384px] xl:max-w-none ${spacedTop ? 'sm:mt-10 md:mt-20 xl:mt-[120px]' : 'justify-self-end sm:mb-10 md:mb-20 xl:mb-[120px]'}`}
+    className={`relative max-w-[384px] lg:max-w-none ${spacedTop ? 'sm:mt-10 md:mt-20 xl:mt-[120px]' : 'justify-self-end sm:mb-10 md:mb-20 xl:mb-[120px]'}`}
   >
     {children}
   </article>
@@ -66,7 +66,7 @@ export const Caption = ({ children }: ChildrenProp) => (
 
 export const Info = ({ team, title }: InfoProps) => {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 1,
     triggerOnce: true
   })
 
@@ -96,7 +96,7 @@ export function Description({
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true
   })
 

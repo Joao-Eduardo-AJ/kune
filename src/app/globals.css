@@ -38,10 +38,6 @@
     @apply w-full px-7 py-10 xl:px-28 xl:py-20
   }
 
-  section div {
-    @apply m-auto xl:max-w-7xl
-  }
-
   h1,
   h2,
   h3,
@@ -90,22 +86,24 @@
 }
 
 @layer utilities {
-  .transition-500 {
-    transition: all 500ms ease-in-out;
+  .container {
+    @apply mx-auto xl:max-w-7xl
   }
 
   .divider-xs {
-    transition: 1s ease-in-out;
     width: 375px;
     height: 400px;
     filter: blur(100px);
   }
 
   .divider-lg {
-    transition: 1.5s ease-in-out;
     width: 1350px;
     height: 1350px;
     filter: blur(300px);
+  }
+
+  .transition-500 {
+    transition: all 500ms ease-in-out;
   }
 }
 
@@ -168,7 +166,7 @@ section.divider::before {
   left: 100%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition-delay: .4s;
+  transition-delay: .3s;
 }
 
 section.divider:has(button:hover)::before {
