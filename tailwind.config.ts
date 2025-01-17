@@ -39,7 +39,11 @@ export default {
 
         'h3-xs': '24px',
         'h3-md': '32px',
-        'h3-xl': '40px'
+        'h3-xl': '40px',
+
+        'h4-xs': '20px',
+        'h4-md': '28px',
+        'h4-xl': '38px'
       },
       lineHeight: {
         'h1-xs': '42px',
@@ -52,7 +56,11 @@ export default {
 
         'h3-xs': '34px',
         'h3-md': '42px',
-        'h3-xl': '50px'
+        'h3-xl': '50px',
+
+        'h4-xs': '30px',
+        'h4-md': '38px',
+        'h4-xl': '48px'
       },
       screens: {
         xs: '360px'

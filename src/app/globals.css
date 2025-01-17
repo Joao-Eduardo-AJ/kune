@@ -59,6 +59,10 @@
     @apply text-h3-xs leading-h3-xs md:text-h3-md md:leading-h3-md xl:text-h3-xl xl:leading-h3-xl;
   }
 
+  h4 {
+    @apply text-h4-xs leading-h4-xs md:text-h4-md md:leading-h4-md xl:text-h4-xl xl:leading-h4-xl;
+  }
+
   p {
     @apply text-grayscale-700;
   }

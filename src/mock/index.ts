@@ -12,6 +12,17 @@ import atom from '@public/atom.svg'
 import syonet from '@public/syonet.svg'
 import docdoor from '@public/docdoor.svg'
 
+type Customers = {
+  alt: string
+  src: StaticImport
+  width: number
+}
+
+type Expersise = {
+  title: string
+  content: string
+}
+
 export type Member = {
   avatarSrc: StaticImport
   cardImageSrc: StaticImport
@@ -30,6 +41,72 @@ export type Project = {
   type: ProjectType
   year: string
 }
+
+export const customers: Customers[] = [
+  {
+    src: verdecampo,
+    alt: 'verde campo',
+    width: 80
+  },
+  {
+    src: evo,
+    alt: 'evo',
+    width: 70
+  },
+  {
+    src: mapletv,
+    alt: 'maple tv',
+    width: 129
+  },
+  {
+    src: voltbras,
+    alt: 'voltbras',
+    width: 97
+  },
+  {
+    src: hulala,
+    alt: 'hulala',
+    width: 90
+  },
+  {
+    src: atom,
+    alt: 'atom',
+    width: 48
+  },
+  {
+    src: syonet,
+    alt: 'syonet',
+    width: 104
+  },
+  {
+    src: docdoor,
+    alt: 'docdoor',
+    width: 98
+  }
+]
+
+export const expertises: Expersise[] = [
+  {
+    title: 'UX Design & Strategy',
+    content:
+      'We design user-focused experiences and strategies that drive growth, boost engagement, and deliver results.'
+  },
+  {
+    title: 'UI Design & auditing',
+    content:
+      'We create intuitive interfaces and audit designs to improve usability, performance, and visual impact.'
+  },
+  {
+    title: 'Development & Technology',
+    content:
+      'We build scalable, custom digital solutions using smart technology to ensure performance, reliability, and growth.'
+  },
+  {
+    title: 'Branding & Positioning',
+    content:
+      'We craft authentic brand identities and strategies that inspire, connect with audiences, and stand out.'
+  }
+]
 
 const arnon: Member = {
   avatarSrc: avatar,
@@ -142,53 +219,4 @@ export const team: Member[] = [
   lucas,
   miguel,
   spica
-]
-
-type Customers = {
-  alt: string
-  src: StaticImport
-  width: number
-}
-
-export const customers: Customers[] = [
-  {
-    src: verdecampo,
-    alt: 'verde campo',
-    width: 80
-  },
-  {
-    src: evo,
-    alt: 'evo',
-    width: 70
-  },
-  {
-    src: mapletv,
-    alt: 'maple tv',
-    width: 129
-  },
-  {
-    src: voltbras,
-    alt: 'voltbras',
-    width: 97
-  },
-  {
-    src: hulala,
-    alt: 'hulala',
-    width: 90
-  },
-  {
-    src: atom,
-    alt: 'atom',
-    width: 48
-  },
-  {
-    src: syonet,
-    alt: 'syonet',
-    width: 104
-  },
-  {
-    src: docdoor,
-    alt: 'docdoor',
-    width: 98
-  }
 ]
