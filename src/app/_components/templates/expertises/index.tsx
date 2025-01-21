@@ -1,7 +1,10 @@
 import { expertises } from '@/mock'
-import { Typography } from '@/app/_components'
+import { Typography } from '@/app/_shared'
+import { SectionHeader } from '@/app/_components/header'
 
-export const Expertises = () => (
+export const Header = () => <SectionHeader>Our expertise</SectionHeader>
+
+export const List = () => (
   <ul>
     {expertises.map(({ title, content }) => (
       <li

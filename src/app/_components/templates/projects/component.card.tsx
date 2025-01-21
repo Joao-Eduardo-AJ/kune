@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { Typography } from '@/app/_components/typography'
+import { Typography } from '@/app/_shared/typography'
 import { Member } from '@/mock'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HTMLAttributes } from 'react'

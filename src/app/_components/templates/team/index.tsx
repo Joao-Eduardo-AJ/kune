@@ -1,5 +1,5 @@
 import { team } from '@/mock'
-import * as Card from './components/card'
+import * as Card from './component.card'
 
 export function Team() {
   return (

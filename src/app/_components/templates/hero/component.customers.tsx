@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_components'
+import { Typography } from '@/app/_shared'
 import { customers } from '@/mock'
 import Image from 'next/image'
 

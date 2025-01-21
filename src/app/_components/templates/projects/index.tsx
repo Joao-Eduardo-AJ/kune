@@ -5,11 +5,11 @@ import { Project, projects } from '@/mock'
 import { useAtomValue } from 'jotai'
 import { useEffect, useState } from 'react'
 
-import { Typography } from '@/app/_components'
+import { Typography } from '@/app/_shared'
 import { ProjectType } from '@/atom'
 import { useAtom } from 'jotai'
-import { Badge } from './components/badge'
-import * as Card from './components/card'
+import { Badge } from './component.badge'
+import * as Card from './component.card'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
