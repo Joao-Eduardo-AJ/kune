@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import { Typography } from '@/app/_shared/typography'
 import { Member } from '@/mock'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -18,7 +17,7 @@ type WrapperProps = ChildrenProp & {
 
 type FigureProps = {
   alt: string
-  src: StaticImport
+  src: string
 }
 
 type HeaderProps = {

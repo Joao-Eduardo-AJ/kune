@@ -1,16 +1,15 @@
-import avatar from '@public/avatar.svg'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import project from '@public/project.svg'
 import { ProjectType } from '@/atom'
-import memberDaniel from '@public/memberdaniel.svg'
-import verdecampo from '@public/verdecampo.svg'
-import evo from '@public/evo.svg'
-import mapletv from '@public/mapletv.svg'
-import voltbras from '@public/voltbras.svg'
-import hulala from '@public/hulala.svg'
-import atom from '@public/atom.svg'
-import syonet from '@public/syonet.svg'
-import docdoor from '@public/docdoor.svg'
+import atom from '@public/logos/atom.svg'
+import docdoor from '@public/logos/docdoor.svg'
+import evo from '@public/logos/evo.svg'
+import hulala from '@public/logos/hulala.svg'
+import mapletv from '@public/logos/mapletv.svg'
+import syonet from '@public/logos/syonet.svg'
+import verdecampo from '@public/logos/verdecampo.svg'
+import voltbras from '@public/logos/voltbras.svg'
+import avatar from '@public/members/avatar.svg'
+import memberDaniel from '@public/members/memberdaniel.svg'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 type Customers = {
   alt: string
@@ -35,8 +34,6 @@ export type Project = {
   team: Member[]
   description: string
   externalUrl: string
-  figureAlt: string
-  figureSrc: StaticImport
   name: string
   type: ProjectType
   year: string
@@ -164,52 +161,160 @@ const spica: Member = {
   role: 'Software Develop'
 }
 
-export const projects: Project[] = [
-  {
-    team: [arnon, daniel, guylherme],
-    description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-    externalUrl: 'a',
-    figureAlt: '',
-    figureSrc: project,
-    name: 'Project 1',
-    type: 'website',
-    year: '2024'
-  },
-  {
-    team: [arnon, daniel, guylherme],
-    description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-    externalUrl: 'b',
-    figureAlt: '',
-    figureSrc: project,
-    name: 'Project 2',
-    type: 'website',
-    year: '2024'
-  },
-  {
-    team: [arnon, daniel, guylherme],
-    description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-    externalUrl: 'c',
-    figureAlt: '',
-    figureSrc: project,
-    name: 'Project 3',
-    type: 'website',
-    year: '2024'
-  },
-  {
-    team: [arnon, daniel, guylherme],
-    description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-    externalUrl: 'd',
-    figureAlt: '',
-    figureSrc: project,
-    name: 'Project 4',
-    type: 'website',
-    year: '2024'
-  }
-]
+export const projects: Record<ProjectType, Project[]> = {
+  branding: [
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'a',
+      name: 'Project 1',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'b',
+      name: 'Project 2',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'c',
+      name: 'Project 3',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'd',
+      name: 'Project 4',
+      type: 'website',
+      year: '2024'
+    }
+  ],
+  mobileapp: [
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'a',
+      name: 'Project 1',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'b',
+      name: 'Project 2',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'c',
+      name: 'Project 3',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'd',
+      name: 'Project 4',
+      type: 'website',
+      year: '2024'
+    }
+  ],
+  webapp: [
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'a',
+      name: 'Project 1',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'b',
+      name: 'Project 2',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'c',
+      name: 'Project 3',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'd',
+      name: 'Project 4',
+      type: 'website',
+      year: '2024'
+    }
+  ],
+  website: [
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'a',
+      name: 'Project 1',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'b',
+      name: 'Project 2',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'c',
+      name: 'Project 3',
+      type: 'website',
+      year: '2024'
+    },
+    {
+      team: [arnon, daniel, guylherme],
+      description:
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
+      externalUrl: 'd',
+      name: 'Project 4',
+      type: 'website',
+      year: '2024'
+    }
+  ]
+}
 
 export const team: Member[] = [
   arnon,

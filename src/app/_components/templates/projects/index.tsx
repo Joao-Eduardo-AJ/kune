@@ -1,9 +1,8 @@
 'use client'
 
 import { projectTypeAtom } from '@/atom'
-import { Project, projects } from '@/mock'
+import { projects } from '@/mock'
 import { useAtomValue } from 'jotai'
-import { useEffect, useState } from 'react'
 
 import { Typography } from '@/app/_shared'
 import { ProjectType } from '@/atom'
@@ -56,23 +55,18 @@ export function Header() {
 }
 
 export function Group() {
-  const [visibleProjects, setVisibleProjects] = useState<Project[]>([])
   const projectType = useAtomValue(projectTypeAtom)
-
-  useEffect(() => {
-    setVisibleProjects(projects.filter(({ type }) => type === projectType))
-  }, [projectType])
 
   return (
     <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
-      {visibleProjects.map(
-        (
-          { team, description, externalUrl, figureAlt, figureSrc, name, year },
-          index
-        ) => (
+      {projects[projectType].map(
+        ({ team, description, externalUrl, figureAlt, name, year }, index) => (
           <Card.Wrapper key={externalUrl} spacedTop={index % 2 !== 0}>
             <Card.Header url={externalUrl} year={year} />
-            <Card.Figure alt={figureAlt} src={figureSrc} />
+            <Card.Figure
+              alt={figureAlt}
+              src={`projects/${projectType}/${index + 1}/thumb.svg`}
+            />
             <Card.Caption>
               <Card.Info team={team} title={name} />
               <Card.Description>{description}</Card.Description>

@@ -5,7 +5,7 @@ type sectionHeader = {
 }
 
 export const SectionHeader = ({ children }: sectionHeader) => (
-  <div className="">
+  <div>
     <Typography variant="h2">{children}</Typography>
     <span>aaa</span>
   </div>

@@ -1,4 +1,4 @@
-import logo from '@public/logo.svg'
+import logo from '@public/logos/kune.svg'
 import Image from 'next/image'
 import { HtmlHTMLAttributes } from 'react'
 
