@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { Typography } from '@/app/_shared/typography'
+import { Typography } from '@/app/_components/typography'
 import { Member } from '@/mock'
 import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -46,6 +46,8 @@ export const Figure = ({ alt, src }: FigureProps) => (
       src={src}
       alt={alt}
       className="transition-500 group-hover:scale-105"
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,..."
     />
   </figure>
 )

@@ -20,14 +20,14 @@ type CaptionProps = {
 }
 
 export const Wrapper = ({ children }: ChildrenProp) => (
-  <article className="relative h-[547px] w-[384px] overflow-hidden rounded-2xl bg-[url('/public/membercardbg.svg')] bg-cover p-4">
+  <article className="relative h-full min-w-[264px] overflow-hidden rounded-2xl bg-[url(/members/memberbg.svg)] bg-cover p-4 xs:min-w-[301px]">
     <span className="text-gray-100">icon</span>
     {children}
   </article>
 )
 
 export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="absolute bottom-0 left-0">
+  <figure className="absolute bottom-0 left-0 rounded-xl">
     <Image width={384} height={547} src={src} alt={alt} />
   </figure>
 )
@@ -41,7 +41,7 @@ export function Caption({ name, role }: CaptionProps) {
   return (
     <figcaption
       ref={ref}
-      className={`transition-500 absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 ${inView ? 'bottom-4 opacity-100' : '-bottom-16 opacity-0'} `}
+      className={`transition-500 absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 ${inView ? 'bottom-4 opacity-100' : '-bottom-14 opacity-0'} `}
     >
       <div className="grid">
         <p className="font-semibold text-grayscale-900">{role}</p>

@@ -1,1 +1,3 @@
-export * from './templates'
+export * from './button'
+export * from './header'
+export * from './typography'

@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_shared'
+import { Typography } from '@/app/_components'
 
 type StatusProps = {
   unavailable?: boolean

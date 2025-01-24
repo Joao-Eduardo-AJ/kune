@@ -31,11 +31,10 @@ export type Member = {
 }
 
 export type Project = {
+  id: 1 | 2 | 3 | 4
   team: Member[]
   description: string
-  externalUrl: string
   name: string
-  type: ProjectType
   year: string
 }
 
@@ -105,14 +104,6 @@ export const expertises: Expersise[] = [
   }
 ]
 
-const arnon: Member = {
-  avatarSrc: avatar,
-  cardImageSrc: memberDaniel,
-  linkedinUrl: 'https://www.linkedin.com/in/arnon-cornette/',
-  name: 'Arnon Cornette',
-  role: 'UX Designer'
-}
-
 const daniel: Member = {
   avatarSrc: avatar,
   cardImageSrc: memberDaniel,
@@ -164,164 +155,140 @@ const spica: Member = {
 export const projects: Record<ProjectType, Project[]> = {
   branding: [
     {
-      team: [arnon, daniel, guylherme],
+      id: 1,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'a',
       name: 'Project 1',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 2,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'b',
       name: 'Project 2',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 3,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'c',
       name: 'Project 3',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 4,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'd',
       name: 'Project 4',
-      type: 'website',
       year: '2024'
     }
   ],
   mobileapp: [
     {
-      team: [arnon, daniel, guylherme],
+      id: 1,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'a',
       name: 'Project 1',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 2,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'b',
       name: 'Project 2',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 3,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'c',
       name: 'Project 3',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 4,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'd',
       name: 'Project 4',
-      type: 'website',
       year: '2024'
     }
   ],
   webapp: [
     {
-      team: [arnon, daniel, guylherme],
+      id: 1,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'a',
       name: 'Project 1',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 2,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'b',
       name: 'Project 2',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 3,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'c',
       name: 'Project 3',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 4,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'd',
       name: 'Project 4',
-      type: 'website',
       year: '2024'
     }
   ],
   website: [
     {
-      team: [arnon, daniel, guylherme],
+      id: 1,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'a',
       name: 'Project 1',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 2,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'b',
       name: 'Project 2',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 3,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'c',
       name: 'Project 3',
-      type: 'website',
       year: '2024'
     },
     {
-      team: [arnon, daniel, guylherme],
+      id: 4,
+      team: [daniel, guylherme],
       description:
         ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequuntur, voluptatem doloremque, possimus harum velit',
-      externalUrl: 'd',
       name: 'Project 4',
-      type: 'website',
       year: '2024'
     }
   ]
 }
 
-export const team: Member[] = [
-  arnon,
-  daniel,
-  guylherme,
-  joao,
-  lucas,
-  miguel,
-  spica
-]
+export const team: Member[] = [daniel, guylherme, joao, lucas, miguel, spica]

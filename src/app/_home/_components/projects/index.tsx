@@ -4,7 +4,7 @@ import { projectTypeAtom } from '@/atom'
 import { projects } from '@/mock'
 import { useAtomValue } from 'jotai'
 
-import { Typography } from '@/app/_shared'
+import { Typography } from '@/app/_components'
 import { ProjectType } from '@/atom'
 import { useAtom } from 'jotai'
 import { Badge } from './component.badge'
@@ -60,12 +60,12 @@ export function Group() {
   return (
     <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
       {projects[projectType].map(
-        ({ team, description, externalUrl, figureAlt, name, year }, index) => (
-          <Card.Wrapper key={externalUrl} spacedTop={index % 2 !== 0}>
-            <Card.Header url={externalUrl} year={year} />
+        ({ team, description, id, name, year }, index) => (
+          <Card.Wrapper key={index} spacedTop={index % 2 !== 0}>
+            <Card.Header url="teste" year={year} />
             <Card.Figure
-              alt={figureAlt}
-              src={`projects/${projectType}/${index + 1}/thumb.svg`}
+              alt="project"
+              src={`projects/${projectType}/${id}/thumb.svg`}
             />
             <Card.Caption>
               <Card.Info team={team} title={name} />

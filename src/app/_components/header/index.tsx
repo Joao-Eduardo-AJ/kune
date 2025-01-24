@@ -1,12 +1,11 @@
-import { Typography } from '@/app/_shared'
+import { Button } from '@/app/_components'
+import { Logo } from './component.logo'
 
-type sectionHeader = {
-  children: React.ReactNode
-}
-
-export const SectionHeader = ({ children }: sectionHeader) => (
-  <div>
-    <Typography variant="h2">{children}</Typography>
-    <span>aaa</span>
-  </div>
+export const Header = () => (
+  <header className="bg-grayscale-100 px-7 py-3 xl:px-28 xl:py-6">
+    <div className="container flex justify-between">
+      <Logo />
+      <Button>Book a Call</Button>
+    </div>
+  </header>
 )

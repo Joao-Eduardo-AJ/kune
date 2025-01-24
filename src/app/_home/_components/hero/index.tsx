@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_shared'
+import { Typography } from '@/app/_components'
 import { Status } from './component.status'
 import { ButtonWave } from './component.button'
 import { Customers } from './component.customers'
