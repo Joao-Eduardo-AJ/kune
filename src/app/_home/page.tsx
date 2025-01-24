@@ -1,6 +1,6 @@
 import ReactLenis from 'lenis/react'
 
-import { Expertises, Hero, Projects, Team } from './_components'
+import { Expertises, Hero, Projects, Team, Working } from './_components'
 import { Button, Header, Typography } from '@/app/_components'
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
             <Button variant={{ size: 'lg' }}>Schedule a 10-Minute Call</Button>
           </div>
         </section>
-        <section aria-labelledby="our-expertise">
+        <section aria-labelledby="our-expertise" className="bg-grayscale-100">
           <div className="container grid gap-10 lg:gap-20">
             <Expertises.Header />
             <Expertises.List />
@@ -41,7 +41,13 @@ export default function Home() {
             <Team.Content />
           </div>
         </section>
-        <section></section>
+        <section className="bg-grayscale-100">
+          <div className="container grid gap-10 lg:gap-20">
+            <Working.Header />
+            <Working.Info />
+            <Working.Content />
+          </div>
+        </section>
       </main>
     </ReactLenis>
   )
