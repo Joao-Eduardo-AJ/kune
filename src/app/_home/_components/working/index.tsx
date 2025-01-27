@@ -1,4 +1,5 @@
 import { Typography } from '@/app/_components'
+import * as Card from './card.component'
 
 export const Header = () => (
   <div className="my-[19px] flex items-center justify-between border-b border-gray-300 pb-5 lg:my-0">
@@ -21,39 +22,39 @@ export const Info = () => (
 export const Content = () => (
   <div className="hidden-scroll overflow-x-scroll">
     <div className="grid justify-items-center gap-8 md:flex">
-      <article className="flex h-[456px] w-full max-w-[337px] flex-col justify-between rounded-xl bg-white p-8 lg:h-[547px] lg:max-w-none">
-        <div className="h-24 w-24 rounded-2xl bg-grayscale-100" />
-        <div className="grid gap-6">
+      <Card.Wrapper>
+        <Card.Icon />
+        <Card.Text>
           <h5>Collaboration</h5>
           <Typography variant="p2">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
           </Typography>
-        </div>
-      </article>
-      <article className="flex h-[456px] w-full max-w-[337px] flex-col justify-between rounded-xl bg-white p-8 lg:h-[547px] lg:max-w-none">
-        <div className="h-24 w-24 rounded-2xl bg-grayscale-100" />
-        <div className="grid gap-6">
+        </Card.Text>
+      </Card.Wrapper>
+      <Card.Wrapper>
+        <Card.Icon />
+        <Card.Text>
           <h5>Collaboration</h5>
           <Typography variant="p2">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
           </Typography>
-        </div>
-      </article>
-      <article className="flex h-[456px] w-full max-w-[337px] flex-col justify-between rounded-xl bg-white p-8 lg:h-[547px] lg:max-w-none">
-        <div className="h-24 w-24 rounded-2xl bg-grayscale-100" />
-        <div className="grid gap-6">
+        </Card.Text>
+      </Card.Wrapper>
+      <Card.Wrapper>
+        <Card.Icon />
+        <Card.Text>
           <h5>Collaboration</h5>
           <Typography variant="p2">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
           </Typography>
-        </div>
-      </article>
+        </Card.Text>
+      </Card.Wrapper>
     </div>
   </div>
 )
