@@ -34,7 +34,7 @@
     @apply cursor-default;
   }
 
-  section {
+  section, footer {
     @apply w-full px-7 py-10 xl:px-28 xl:py-20
   }
 
@@ -135,7 +135,6 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, var(--color-accent-shadow), var(--color-accent-aux-shadow));
 }
 
 .hidden-scroll::-webkit-scrollbar {
@@ -175,4 +174,27 @@ section.divider::before {
 
 section.divider:has(button:hover)::before {
   left: 10%;
+}
+
+span.plus-button::before,
+span.plus-button::after {
+  height: 18px;
+  width: 2px;
+  background-color: var(--color-grayscale-800);
+  bottom: 50%;
+  left: 50%;
+  transition: all .5s;
+}
+
+span.plus-button::after {
+  transform: translate(-50%, 50%) rotate(90deg);
+}
+
+span.plus-button::before {
+  transform: translate(-50%, 50%);
+}
+
+li:hover>span.plus-button::before,
+li:hover>span.plus-button::after {
+  transform: translate(-50%, 50%) rotate(270deg);
 }

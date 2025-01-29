@@ -68,7 +68,7 @@ export default {
       animation: {
         customers: 'customers linear infinite',
         project: 'project 1.5s ease-in-out forwards',
-        status: 'status 2s linear infinite',
+        topic: 'topic 2s linear infinite',
         waves: 'waves 2s linear infinite'
       },
       keyframes: {
@@ -90,7 +90,7 @@ export default {
             'z-index': '2'
           }
         },
-        status: {
+        topic: {
           '100%': {
             width: 'calc(100% + 16px)',
             height: 'calc(100% + 16px)',

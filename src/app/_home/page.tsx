@@ -1,7 +1,14 @@
 import ReactLenis from 'lenis/react'
 
-import { Expertises, Hero, Projects, Team, Working } from './_components'
-import { Button, Header, Typography } from '@/app/_components'
+import {
+  Expertises,
+  Hero,
+  Numbers,
+  Projects,
+  Team,
+  Working
+} from './_components'
+import { Button, Footer, Header, Typography } from '@/app/_components'
 
 export default function Home() {
   return (
@@ -77,7 +84,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-grayscale-900">
+        <section className="overflow-hidden bg-grayscale-900">
           <div className="container">
             <div className="relative flex flex-col gap-10 bg-no-repeat before:top-1/3 before:hidden before:h-[781px] before:w-[781px] before:bg-[url(/section-bg.svg)] md:flex-row md:justify-between before:lg:block">
               <h2 className="text-white">
@@ -102,7 +109,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section>
+          <div className="container grid gap-10 lg:gap-20">
+            <Numbers.Header />
+            <Numbers.Content />
+          </div>
+        </section>
       </main>
+      <Footer />
     </ReactLenis>
   )
 }

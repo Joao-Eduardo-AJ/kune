@@ -1,11 +1,10 @@
-import { Typography } from '@/app/_components'
-import { Status } from './component.status'
+import { Topic, Typography } from '@/app/_components'
 import { ButtonWave } from './component.button'
 import { Customers } from './component.customers'
 
 export const Content = () => (
   <div className="flex max-w-[912px] flex-col items-center gap-6">
-    <Status />
+    <Topic>Available for new projects</Topic>
     <Typography variant="h1">
       Building <br className="sm:hidden" /> human-centered systems
       <br className="hidden md:block" /> that create real impact
