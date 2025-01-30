@@ -1,6 +1,8 @@
-import { team } from '@/mock'
-import * as Card from './component.card'
 import { Typography } from '@/app/_components'
+
+import * as Card from './component.card'
+
+import { team } from '@/data'
 
 export const Header = () => (
   <div className="my-[19px] flex items-center justify-between border-b border-gray-600 pb-5 lg:my-0">
@@ -32,10 +34,10 @@ export function Content() {
   return (
     <div className="hidden-scroll overflow-x-scroll">
       <div className="flex h-[413px] min-w-min gap-4 lg:grid lg:h-[1134px] lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
-        {team.map(({ linkedinUrl, cardImageSrc, name, role }) => (
-          <Card.Wrapper key={linkedinUrl}>
+        {team.members.map(({ id, name, role }) => (
+          <Card.Wrapper key={id}>
             a
-            <Card.Figure alt="teste" src={cardImageSrc} />
+            <Card.Figure alt="teste" src={`/members/${id}/team-image.svg`} />
             <Card.Caption name={name} role={role} />
           </Card.Wrapper>
         ))}

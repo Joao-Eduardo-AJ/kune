@@ -1,5 +1,5 @@
 import { atom } from 'jotai'
 
-export type ProjectType = 'website' | 'mobileapp' | 'webapp' | 'branding'
+export type ProjectType = 'branding' | 'mobile' | 'web' | 'website'
 
 export const projectTypeAtom = atom<ProjectType>('branding')

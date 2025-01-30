@@ -1,18 +1,13 @@
 'use client'
 
-import Image from 'next/image'
-
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 type ChildrenProp = {
   children: React.ReactNode
 }
 
-type FigureProps = {
-  alt: string
-  src: StaticImport
-}
+type FigureProps = React.ComponentProps<typeof Image>
 
 type CaptionProps = {
   name: string

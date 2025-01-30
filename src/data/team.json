@@ -1,0 +1,298 @@
+{
+  "members": [
+    {
+      "id": "01",
+      "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+      "name": "Daniel Oliveira",
+      "role": "Marketing"
+    },
+    {
+      "id": "02",
+      "linkedinUrl": "https://www.linkedin.com/in/guysarmento/",
+      "name": "Guylherme Sarmento",
+      "role": "Branding"
+    },
+    {
+      "id": "03",
+      "linkedinUrl": "https://www.linkedin.com/in/guilhermespica/",
+      "name": "Guilheme Spica Luiz",
+      "role": "Software Engineer"
+    },
+    {
+      "id": "04",
+      "linkedinUrl": "https://www.linkedin.com/in/joaoeduardoaj/",
+      "name": "João Eduardo Amorim",
+      "role": "Software Engineer"
+    },
+    {
+      "id": "05",
+      "linkedinUrl": "https://www.linkedin.com/in/lucasjfvieira/",
+      "name": "Lucas Vieira",
+      "role": "UI Designer"
+    },
+    {
+      "id": "06",
+      "linkedinUrl": "https://www.linkedin.com/in/miguel-elibio-717526212/",
+      "name": "Miguel Elbio",
+      "role": "Branding"
+    }
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Branding 01",
+      "slug": "project-branding-01",
+      "type": "branding",
+      "year": "2024"
+    },
+    {
+      "id": "02",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Branding 02",
+      "slug": "project-branding-02",
+      "type": "branding",
+      "year": "2024"
+    },
+    {
+      "id": "03",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Branding 03",
+      "slug": "project-branding-03",
+      "type": "branding",
+      "year": "2024"
+    },
+    {
+      "id": "04",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Branding 04",
+      "slug": "project-branding-04",
+      "type": "branding",
+      "year": "2024"
+    },
+    {
+      "id": "05",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Mobile 01",
+      "slug": "project-mobile-01",
+      "type": "mobile",
+      "year": "2024"
+    },
+    {
+      "id": "06",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Mobile 02",
+      "slug": "project-mobile-02",
+      "type": "mobile",
+      "year": "2024"
+    },
+    {
+      "id": "07",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Mobile 03",
+      "slug": "project-mobile-03",
+      "type": "mobile",
+      "year": "2024"
+    },
+    {
+      "id": "08",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Mobile 04",
+      "slug": "project-mobile-04",
+      "type": "mobile",
+      "year": "2024"
+    },
+    {
+      "id": "09",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Web 01",
+      "slug": "project-web-01",
+      "type": "web",
+      "year": "2024"
+    },
+    {
+      "id": "10",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Web 02",
+      "slug": "project-web-02",
+      "type": "web",
+      "year": "2024"
+    },
+    {
+      "id": "11",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Web 03",
+      "slug": "project-web-03",
+      "type": "web",
+      "year": "2024"
+    },
+    {
+      "id": "12",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Web 04",
+      "slug": "project-web-04",
+      "type": "web",
+      "year": "2024"
+    },
+    {
+      "id": "13",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Website 01",
+      "slug": "project-website-01",
+      "type": "website",
+      "year": "2024"
+    },
+    {
+      "id": "14",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Website 02",
+      "slug": "project-website-02",
+      "type": "website",
+      "year": "2024"
+    },
+    {
+      "id": "15",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Website 03",
+      "slug": "project-website-03",
+      "type": "website",
+      "year": "2024"
+    },
+    {
+      "id": "16",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "members": [
+        {
+          "id": "01",
+          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
+          "name": "Daniel Oliveira",
+          "role": "Marketing"
+        }
+      ],
+      "name": "Project Website 04",
+      "slug": "project-website-04",
+      "type": "website",
+      "year": "2024"
+    }
+  ]
+}

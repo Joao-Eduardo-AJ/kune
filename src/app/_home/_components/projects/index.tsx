@@ -1,12 +1,12 @@
 'use client'
 
-import { projectTypeAtom } from '@/atom'
-import { projects } from '@/mock'
-import { useAtomValue } from 'jotai'
+import { useAtom, useAtomValue } from 'jotai'
 
 import { Typography } from '@/app/_components'
-import { ProjectType } from '@/atom'
-import { useAtom } from 'jotai'
+import { projectTypeAtom, ProjectType } from '@/atom'
+
+import { team } from '@/data'
+
 import { Badge } from './component.badge'
 import * as Card from './component.card'
 
@@ -14,7 +14,8 @@ export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
 
   function handleProjectType(newProjectType: ProjectType) {
-    if (projectType === newProjectType) return
+    console.log('test')
+
     setProjectType(newProjectType)
   }
 
@@ -31,14 +32,14 @@ export function Header() {
             Web Sites
           </Badge>
           <Badge
-            selected={projectType === 'mobileapp'}
-            onClick={() => handleProjectType('mobileapp')}
+            selected={projectType === 'mobile'}
+            onClick={() => handleProjectType('mobile')}
           >
             Mobile App
           </Badge>
           <Badge
-            selected={projectType === 'webapp'}
-            onClick={() => handleProjectType('webapp')}
+            selected={projectType === 'web'}
+            onClick={() => handleProjectType('web')}
           >
             Web App
           </Badge>
@@ -57,23 +58,27 @@ export function Header() {
 export function Group() {
   const projectType = useAtomValue(projectTypeAtom)
 
+  const projectsByType = team.projects.filter(project => {
+    return project.type === projectType
+  })
+
   return (
     <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
-      {projects[projectType].map(
-        ({ team, description, id, name, year }, index) => (
-          <Card.Wrapper key={index} spacedTop={index % 2 !== 0}>
-            <Card.Header url="teste" year={year} />
+      {projectsByType.map((project, index) => {
+        return (
+          <Card.Wrapper key={project.id} spacedTop={index % 2 !== 0}>
+            <Card.Header url="teste" year={project.year} />
             <Card.Figure
               alt="project"
-              src={`projects/${projectType}/${id}/thumb.svg`}
+              src={`projects/${project.id}/thumb.svg`}
             />
             <Card.Caption>
-              <Card.Info team={team} title={name} />
-              <Card.Description>{description}</Card.Description>
+              <Card.Info members={project.members} title={project.name} />
+              <Card.Description>{project.description}</Card.Description>
             </Card.Caption>
           </Card.Wrapper>
         )
-      )}
+      })}
     </div>
   )
 }

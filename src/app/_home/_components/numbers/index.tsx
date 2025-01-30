@@ -1,5 +1,5 @@
 import { Typography } from '@/app/_components'
-import { questionsLeft } from '@/mock'
+import { questions } from './questions'
 
 export const Header = () => (
   <div className="my-[19px] flex items-center justify-between border-b border-gray-300 pb-5">
@@ -10,7 +10,7 @@ export const Header = () => (
 
 export const Content = () => (
   <ul>
-    {questionsLeft.map(({ content, title }, index) => (
+    {questions.map(({ content, title }, index) => (
       <li
         key={title}
         className="group flex gap-6 border-b px-4 py-10 last:border-b-0"

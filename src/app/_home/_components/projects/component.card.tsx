@@ -1,71 +1,76 @@
 'use client'
 
+import { HTMLAttributes } from 'react'
+import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 
 import { Typography } from '@/app/_components/typography'
-import { Member } from '@/mock'
-import { HTMLAttributes } from 'react'
-import { useInView } from 'react-intersection-observer'
 
-type ChildrenProp = {
+import type { Member } from '@/data'
+
+type CardWrapperProps = {
   children: React.ReactNode
-}
-
-type WrapperProps = ChildrenProp & {
   spacedTop?: boolean
 }
 
-type FigureProps = {
-  alt: string
-  src: string
+export function Wrapper({ children, spacedTop }: CardWrapperProps) {
+  return (
+    <article
+      className={`relative max-w-[384px] lg:max-w-none ${spacedTop ? 'sm:mt-10 md:mt-20 xl:mt-[120px]' : 'justify-self-end sm:mb-10 md:mb-20 xl:mb-[120px]'}`}
+    >
+      {children}
+    </article>
+  )
 }
 
-type HeaderProps = {
-  year: string
+type CardFigureProps = React.ComponentProps<typeof Image>
+
+export function Figure({ alt, src }: CardFigureProps) {
+  return (
+    <figure className="transition-500 group cursor-pointer overflow-hidden rounded-xl">
+      <Image
+        width={624}
+        height={732}
+        src={src}
+        alt={alt}
+        className="transition-500 group-hover:scale-105"
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,..."
+      />
+    </figure>
+  )
+}
+
+type CardHeaderProps = {
   url: string
+  year: string
 }
 
-type InfoProps = {
-  title: string
-  team: Member[]
-}
-
-export const Wrapper = ({ children, spacedTop }: WrapperProps) => (
-  <article
-    className={`relative max-w-[384px] lg:max-w-none ${spacedTop ? 'sm:mt-10 md:mt-20 xl:mt-[120px]' : 'justify-self-end sm:mb-10 md:mb-20 xl:mb-[120px]'}`}
-  >
-    {children}
-  </article>
-)
-
-export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="transition-500 group cursor-pointer overflow-hidden rounded-xl">
-    <Image
-      width={624}
-      height={732}
-      src={src}
-      alt={alt}
-      className="transition-500 group-hover:scale-105"
-      placeholder="blur"
-      blurDataURL="data:image/jpeg;base64,..."
-    />
-  </figure>
-)
-
-export const Header = ({ url, year }: HeaderProps) => (
+export const Header = ({ url, year }: CardHeaderProps) => (
   <div className="absolute left-10 top-10 flex items-center justify-between text-[22px] text-gray-100">
     <span>{year}</span>
     <span>{url}</span>
   </div>
 )
 
-export const Caption = ({ children }: ChildrenProp) => (
-  <figcaption className="relative grid h-[180px] gap-5 rounded-xl xs:h-[156px] xl:h-[176px]">
-    {children}
-  </figcaption>
-)
+type CardCaptionProps = {
+  children: React.ReactNode
+}
 
-export const Info = ({ team, title }: InfoProps) => {
+export function Caption({ children }: CardCaptionProps) {
+  return (
+    <figcaption className="relative grid h-[180px] gap-5 rounded-xl xs:h-[156px] xl:h-[176px]">
+      {children}
+    </figcaption>
+  )
+}
+
+type CardInfoProps = {
+  members: Member[]
+  title: string
+}
+
+export function Info({ members, title }: CardInfoProps) {
   const { ref, inView } = useInView({
     threshold: 1,
     triggerOnce: true
@@ -78,14 +83,14 @@ export const Info = ({ team, title }: InfoProps) => {
     >
       <Typography variant="h3">{title}</Typography>
       <div className="flex">
-        {team.map((item, index) => (
+        {members.map((member, index) => (
           <Image
-            key={index}
-            src={item.avatarSrc}
+            key={member.id}
+            src={`/members/${member.id}/avatar.svg`}
             width={64}
             height={64}
-            alt={item.name}
-            className={`transition-500 h-auto w-12 cursor-pointer rounded-full bg-grayscale-100 hover:-translate-y-1 xl:w-16 -z-[${index - team.length}] ${index + 1 === team.length ? '-ml-2 hover:-ml-2' : '-mx-2 hover:-mx-2 lg:-mx-3'}`}
+            alt={member.name}
+            className={`transition-500 h-auto w-12 cursor-pointer rounded-full bg-grayscale-100 hover:-translate-y-1 xl:w-16 -z-[${index - members.length}] ${index + 1 === members.length ? '-ml-2 hover:-ml-2' : '-mx-2 hover:-mx-2 lg:-mx-3'}`}
           />
         ))}
       </div>
