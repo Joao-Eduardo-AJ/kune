@@ -9,7 +9,7 @@ import {
   Questions,
   SocialProof,
   WorkWay
-} from './_components'
+} from './components'
 import { Button, Footer, Header } from '@/components'
 
 export default function Home() {
