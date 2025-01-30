@@ -2,12 +2,9 @@ import { Typography } from '@/app/_components'
 
 import { expertises } from './expertises'
 
-export const Header = () => (
-  <div className="my-[19px] flex items-center justify-between border-b border-gray-300 pb-5">
-    <Typography variant="h2">Our expertises</Typography>
-    <span>\/</span>
-  </div>
-)
+import { HeaderSection } from '../shared/HeaderSection'
+
+export const Header = () => <HeaderSection>Our Expertises</HeaderSection>
 
 export const List = () => (
   <ul>

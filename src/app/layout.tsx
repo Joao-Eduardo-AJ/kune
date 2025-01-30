@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
+import 'material-symbols'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
