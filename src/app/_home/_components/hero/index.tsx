@@ -1,6 +1,6 @@
 import { Topic, Typography } from '@/app/_components'
-import { ButtonWave } from './component.button'
-import { Customers } from './component.customers'
+import { ButtonWave } from './Button'
+import { Customers } from './Customers'
 
 export const Content = () => (
   <div className="flex max-w-[912px] flex-col items-center gap-6">

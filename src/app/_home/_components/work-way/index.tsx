@@ -1,12 +1,8 @@
 import { Typography } from '@/app/_components'
-import * as Card from './card.component'
+import * as Card from './Card'
+import { HeaderSection } from '../shared/HeaderSection'
 
-export const Header = () => (
-  <div className="my-[19px] flex items-center justify-between border-b border-gray-300 pb-5 lg:my-0">
-    <h2>Our way of Working</h2>
-    <span>\/</span>
-  </div>
-)
+export const Header = () => <HeaderSection>Our way of working</HeaderSection>
 
 export const Info = () => (
   <div className="grid gap-6 lg:flex lg:justify-between">

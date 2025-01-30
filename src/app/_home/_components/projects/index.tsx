@@ -7,8 +7,8 @@ import { useAtomValue } from 'jotai'
 import { Typography } from '@/app/_components'
 import { ProjectType } from '@/atom'
 import { useAtom } from 'jotai'
-import { Badge } from './component.badge'
-import * as Card from './component.card'
+import { Badge } from './Badge'
+import * as Card from './Card'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)

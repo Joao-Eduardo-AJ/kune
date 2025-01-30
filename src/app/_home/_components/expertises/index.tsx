@@ -1,12 +1,8 @@
 import { expertises } from '@/mock'
 import { Typography } from '@/app/_components'
+import { HeaderSection } from '../shared/HeaderSection'
 
-export const Header = () => (
-  <div className="my-[19px] flex items-center justify-between border-b border-gray-300 pb-5">
-    <Typography variant="h2">Our expertises</Typography>
-    <span>\/</span>
-  </div>
-)
+export const Header = () => <HeaderSection>Our Expertises</HeaderSection>
 
 export const List = () => (
   <ul>

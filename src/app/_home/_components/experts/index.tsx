@@ -1,12 +1,10 @@
 import { team } from '@/mock'
-import * as Card from './component.card'
+import * as Card from './Card'
 import { Typography } from '@/app/_components'
+import { HeaderSection } from '../shared/HeaderSection'
 
 export const Header = () => (
-  <div className="my-[19px] flex items-center justify-between border-b border-gray-600 pb-5 lg:my-0">
-    <h2 className="text-grayscale-100">Our team of experts</h2>
-    <span>\/</span>
-  </div>
+  <HeaderSection dark>Our team of experts</HeaderSection>
 )
 
 export const Info = () => (
