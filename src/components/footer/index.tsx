@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import kune from '@public/kune-white.svg'
-import { Topic } from '@/app/_components'
+import { Topic } from '@/components'
 import { List } from './component.list'
 
 export const Footer = () => (

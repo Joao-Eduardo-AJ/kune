@@ -1,5 +1,5 @@
 export * from './button'
 export * from './footer'
 export * from './header'
+export * from './paragraphy'
 export * from './topic'
-export * from './typography'

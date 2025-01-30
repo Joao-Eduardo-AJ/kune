@@ -1,8 +1,6 @@
-import { Typography } from '@/app/_components'
-
-import { expertises } from './expertises'
-
+import { Paragraphy } from '@/components'
 import { HeaderSection } from '../shared/HeaderSection'
+import { expertises } from './expertises'
 
 export const Header = () => <HeaderSection>Our Expertises</HeaderSection>
 
@@ -17,9 +15,9 @@ export const List = () => (
           <span className="w-10 lg:w-16" aria-hidden="true">
             iconicon
           </span>
-          <Typography variant="h4">{title}</Typography>
+          <h4>{title}</h4>
         </div>
-        <Typography variant="p1">{content}</Typography>
+        <Paragraphy>{content}</Paragraphy>
       </li>
     ))}
   </ul>

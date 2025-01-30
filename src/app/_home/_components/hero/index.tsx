@@ -1,18 +1,18 @@
-import { Topic, Typography } from '@/app/_components'
+import { Topic, Paragraphy } from '@/components'
 import { ButtonWave } from './Button'
 import { Customers } from './Customers'
 
 export const Content = () => (
   <div className="flex max-w-[912px] flex-col items-center gap-6">
     <Topic>Available for new projects</Topic>
-    <Typography variant="h1">
+    <h1>
       Building <br className="sm:hidden" /> human-centered systems
       <br className="hidden md:block" /> that create real impact
-    </Typography>
-    <Typography variant="p1" className="md:pb-4">
+    </h1>
+    <Paragraphy className="md:pb-4">
       Take the first step to turn your idea into reality. Chat with us for 10
       minutes and explore simple, impactful solutions made for you.
-    </Typography>
+    </Paragraphy>
     <ButtonWave />
   </div>
 )

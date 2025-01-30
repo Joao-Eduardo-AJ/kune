@@ -1,8 +1,6 @@
-import { Typography } from '@/app/_components'
-
-import { questions } from './questions'
-
+import { Paragraphy } from '@/components'
 import { HeaderSection } from '../shared/HeaderSection'
+import { questions } from './questions'
 
 export const Header = () => <HeaderSection>Questions Left</HeaderSection>
 
@@ -16,12 +14,12 @@ export const Content = () => (
         <span>{index + 1}</span>
         <div className="flex flex-col gap-0 transition-all duration-300 group-hover:gap-6">
           <h5>{title}</h5>
-          <Typography
-            variant="p2"
+          <Paragraphy
+            variant={{ type: 'p2' }}
             className="h-0 overflow-hidden transition-all duration-300 group-hover:h-52 md:group-hover:h-24"
           >
             {content}
-          </Typography>
+          </Paragraphy>
         </div>
         <span className="plus-button relative h-6 w-6 before:absolute after:absolute" />
       </li>

@@ -1,6 +1,6 @@
 import { team } from '@/data'
 import * as Card from './Card'
-import { Typography } from '@/app/_components'
+import { Paragraphy } from '@/components'
 import { HeaderSection } from '../shared/HeaderSection'
 
 export const Header = () => (
@@ -9,19 +9,17 @@ export const Header = () => (
 
 export const Info = () => (
   <div className="grid gap-6 lg:flex lg:justify-between">
-    <Typography variant="p1" className="text-white">
-      What you can expect
-    </Typography>
+    <Paragraphy className="text-white">What you can expect</Paragraphy>
     <div className="grid max-w-[488px] gap-6">
-      <Typography variant="p2" className="text-white">
+      <Paragraphy variant={{ type: 'p2' }} className="text-white">
         We create tailored presentations to help you persuade your colleagues,
         clients, or investors. Whether it’s live or digital, delivered for one
         or a hundred people.
-      </Typography>
-      <Typography variant="p2" className="text-white">
+      </Paragraphy>
+      <Paragraphy variant={{ type: 'p2' }} className="text-white">
         We believe the mix of strategy and design (with a bit of coffee) is what
         makes your message clear, convincing, and captivating.
-      </Typography>
+      </Paragraphy>
     </div>
   </div>
 )

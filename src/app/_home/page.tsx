@@ -10,7 +10,7 @@ import {
   SocialProof,
   WorkWay
 } from './_components'
-import { Button, Footer, Header, Typography } from '@/app/_components'
+import { Button, Footer, Header } from '@/components'
 
 export default function Home() {
   return (
@@ -31,9 +31,7 @@ export default function Home() {
         </section>
         <section className="divider before:divider-xs lg:before:divider-lg relative overflow-hidden bg-accent before:bg-accent-aux">
           <div className="container flex flex-col gap-6 text-center lg:flex-row lg:justify-between">
-            <Typography variant="h2" className="z-10">
-              Ready to bring your idea to life?
-            </Typography>
+            <h2 className="z-10">Ready to bring your idea to life?</h2>
             <Button variant={{ size: 'lg' }}>Schedule a 10-Minute Call</Button>
           </div>
         </section>

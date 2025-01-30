@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_components'
+import { Paragraphy } from '@/components'
 import * as Card from './Card'
 import { HeaderSection } from '../shared/HeaderSection'
 
@@ -6,12 +6,12 @@ export const Header = () => <HeaderSection>Our way of working</HeaderSection>
 
 export const Info = () => (
   <div className="grid gap-6 lg:flex lg:justify-between">
-    <Typography variant="p1">What you can expect</Typography>
-    <Typography variant="p2" className="max-w-[488px]">
+    <Paragraphy>What you can expect</Paragraphy>
+    <Paragraphy variant={{ type: 'p2' }} className="max-w-[488px]">
       At Kune, we believe that every project is unique and deserves a customized
       approach. That’s why our process is built on three key pillars:
       collaboration, innovation, and results.
-    </Typography>
+    </Paragraphy>
   </div>
 )
 
@@ -22,33 +22,33 @@ export const Content = () => (
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Typography variant="p2">
+          <Paragraphy variant={{ type: 'p2' }}>
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
-          </Typography>
+          </Paragraphy>
         </Card.Text>
       </Card.Wrapper>
       <Card.Wrapper>
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Typography variant="p2">
+          <Paragraphy variant={{ type: 'p2' }}>
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
-          </Typography>
+          </Paragraphy>
         </Card.Text>
       </Card.Wrapper>
       <Card.Wrapper>
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Typography variant="p2">
+          <Paragraphy variant={{ type: 'p2' }}>
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
-          </Typography>
+          </Paragraphy>
         </Card.Text>
       </Card.Wrapper>
     </div>

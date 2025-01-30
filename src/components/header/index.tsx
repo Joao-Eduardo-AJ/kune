@@ -1,4 +1,4 @@
-import { Button } from '@/app/_components'
+import { Button } from '@/components'
 import { Logo } from './component.logo'
 
 export const Header = () => (

@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_components'
+import { Paragraphy } from '@/components'
 
 export const SocialProof = () => (
   <div className="relative flex flex-col gap-10 bg-no-repeat before:top-1/3 before:hidden before:h-[781px] before:w-[781px] before:bg-[url(/section-bg.svg)] md:flex-row md:justify-between before:lg:block">
@@ -13,12 +13,10 @@ export const SocialProof = () => (
         project.”
       </h3>
       <div>
-        <Typography variant="p1" className="text-white">
-          Bernardo Campos
-        </Typography>
-        <Typography variant="p2" className="text-white">
+        <Paragraphy className="text-white">Bernardo Campos</Paragraphy>
+        <Paragraphy variant={{ type: 'p2' }} className="text-white">
           CEO / Founder at Doc.Door
-        </Typography>
+        </Paragraphy>
       </div>
     </div>
   </div>

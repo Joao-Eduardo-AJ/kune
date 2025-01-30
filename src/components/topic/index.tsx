@@ -1,4 +1,4 @@
-import { Typography } from '@/app/_components'
+import { Paragraphy } from '@/components'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const topic = tv({
@@ -23,7 +23,7 @@ export function Topic({ children, variant }: TopicProps) {
   return (
     <div className="flex items-center gap-2">
       <span className={topic(variant)} />
-      <Typography variant="p2">{children}</Typography>
+      <Paragraphy variant={{ type: 'p2' }}>{children}</Paragraphy>
     </div>
   )
 }

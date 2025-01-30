@@ -1,12 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
-import Image from 'next/image'
 
-import { Typography } from '@/app/_components/typography'
+import { Paragraphy } from '@/components'
+import { Member } from '@/data'
 
-import type { Member } from '@/data'
 
 type CardWrapperProps = {
   children: React.ReactNode
@@ -81,7 +81,7 @@ export function Info({ members, title }: CardInfoProps) {
       ref={ref}
       className={`transition-500 absolute flex w-full items-center justify-between ${inView ? 'top-6 opacity-100 xl:top-10' : 'top-[74px] opacity-0 xl:top-[90px]'}`}
     >
-      <Typography variant="h3">{title}</Typography>
+      <h3>{title}</h3>
       <div className="flex">
         {members.map((member, index) => (
           <Image
@@ -107,10 +107,10 @@ export function Description({
   })
 
   return (
-    <Typography
+    <Paragraphy
       {...props}
       ref={ref}
-      variant="p2"
+      variant={{ type: 'p2' }}
       className={`transition-500 absolute delay-200 ${inView ? 'top-[84px] opacity-100 xl:top-[124px]' : 'top-[134px] opacity-0 xl:top-[174px]'}`}
     />
   )

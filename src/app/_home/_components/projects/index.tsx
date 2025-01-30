@@ -1,11 +1,8 @@
 'use client'
 
-import { useAtom, useAtomValue } from 'jotai'
-
-import { Typography } from '@/app/_components'
-import { projectTypeAtom, ProjectType } from '@/atom'
+import { ProjectType, projectTypeAtom } from '@/atom'
 import { team } from '@/data'
-
+import { useAtom, useAtomValue } from 'jotai'
 import { Badge } from './Badge'
 import * as Card from './Card'
 
@@ -20,7 +17,7 @@ export function Header() {
 
   return (
     <div className="relative flex flex-col gap-6 border-b border-grayscale-300 pb-10 md:flex-row md:items-center md:justify-between">
-      <Typography variant="h2">Our Work</Typography>
+      <h2>Our Work</h2>
       <span className="fade-r absolute bottom-10 right-0 z-10 h-12 w-10 md:hidden" />
       <div className="hidden-scroll overflow-scroll">
         <div className="flex min-w-min gap-3">
