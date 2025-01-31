@@ -2,29 +2,29 @@ import { HtmlHTMLAttributes, RefAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const paragraphy = tv({
-  base: '',
+  base: 'text-grayscale-700',
   variants: {
     type: {
-      p1: 'font-semibold text-[16px] leading-[26px] md:text-[18px] md:leading-[24px] xl:text-[20px] xl:leading-[30px]',
-      p2: 'text-[14px] leading-[24px] xl:text-[16px] xl:leading-[26px]',
-      p3: ''
+      p1: 'text-[24px] md:text-[32px] xl:text-[40px] leading-[28px] md:leading-[42px] xl:leading-[56px] font-semibold',
+      p2: 'text-[16px] md:text-[18px] xl:text-[20px] leading-[24px] md:leading-[26px] xl:leading-[28px] font-semibold',
+      p3: 'text-[14px] xl:text-[16px] leading-[24px] xl:leading-[26px] font-semibold',
+      p4: 'text-[14px] xl:text-[16px] leading-[24px] xl:leading-[26px] font-normal',
+      p5: 'text-[14px] leading-[24px] font-normal',
+      p6: 'text-[12px] leading-[22px] font-normal'
     }
   },
-  defaultVariants: { type: 'p1' }
+  defaultVariants: {
+    type: 'p2'
+  }
 })
 
 type ParagraphyProps = HtmlHTMLAttributes<HTMLParagraphElement> &
   RefAttributes<HTMLParagraphElement> & {
-    variant?: VariantProps<typeof paragraphy>
+    variant?: VariantProps<typeof paragraphy>['type']
   }
 
-export function Paragraphy({ variant, ...props }: ParagraphyProps) {
-  const { className } = props
-
+export function Paragraphy({ variant, className, ...props }: ParagraphyProps) {
   return (
-    <p
-      {...props}
-      className={`${paragraphy(variant)} ${className ? className : ''}`}
-    />
+    <p {...props} className={`${paragraphy({ type: variant })} ${className}`} />
   )
 }

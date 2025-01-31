@@ -2,6 +2,7 @@
 
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
+import { Paragraphy } from '@/components'
 
 type ChildrenProp = {
   children: React.ReactNode
@@ -39,8 +40,10 @@ export function Caption({ name, role }: CaptionProps) {
       className={`transition-500 absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 ${inView ? 'bottom-4 opacity-100' : '-bottom-14 opacity-0'} `}
     >
       <div className="grid">
-        <p className="font-semibold text-grayscale-900">{role}</p>
-        <p className="text-[12px] text-grayscale-900">{name}</p>
+        <h5 className="font-semibold text-grayscale-900">{role}</h5>
+        <Paragraphy variant="p6" className="text-[12px] text-grayscale-900">
+          {name}
+        </Paragraphy>
       </div>
       <span className="h-[41px] w-[41px] rounded-xl bg-grayscale-900" />
     </figcaption>

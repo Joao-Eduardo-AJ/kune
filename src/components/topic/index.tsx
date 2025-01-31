@@ -15,15 +15,17 @@ const topic = tv({
 })
 
 type TopicProps = {
-  variant?: VariantProps<typeof topic>
+  variant?: VariantProps<typeof topic>['color']
   children: React.ReactNode
 }
 
 export function Topic({ children, variant }: TopicProps) {
   return (
     <div className="flex items-center gap-2">
-      <span className={topic(variant)} />
-      <Paragraphy variant={{ type: 'p2' }}>{children}</Paragraphy>
+      <span className={topic({ color: variant })} />
+      <Paragraphy variant={variant === 'gray' ? 'p5' : 'p3'}>
+        {children}
+      </Paragraphy>
     </div>
   )
 }

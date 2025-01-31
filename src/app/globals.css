@@ -34,41 +34,34 @@
     @apply cursor-default;
   }
 
-  section, footer {
-    @apply w-full px-7 py-10 xl:px-28 xl:py-20
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-semibold text-grayscale-900;
+  header,
+  footer,
+  section {
+    @apply w-full px-7 py-10 xl:py-20
   }
 
   h1 {
-    @apply text-h1-xs leading-h1-xs md:text-h1-md md:leading-h1-md xl:text-h1-xl xl:leading-h1-xl;
+    @apply text-[28px] md:text-[42px] xl:text-[56px] leading-[38px] md:leading-[46px] xl:leading-[54px] font-semibold
   }
 
   h2 {
-    @apply text-h2-xs leading-h2-xs md:text-h2-md md:leading-h2-md xl:text-h2-xl xl:leading-h2-xl;
+    @apply text-[26px] md:text-[36px] xl:text-[48px] leading-[38px] md:leading-[46px] xl:leading-[54px] font-semibold
   }
 
   h3 {
-    @apply text-h3-xs leading-h3-xs md:text-h3-md md:leading-h3-md xl:text-h3-xl xl:leading-h3-xl;
+    @apply text-[24px] md:text-[32px] xl:text-[40px] leading-[30px] md:leading-[38px] xl:leading-[46px] font-semibold
   }
 
   h4 {
-    @apply text-h4-xs leading-h4-xs md:text-h4-md md:leading-h4-md xl:text-h4-xl xl:leading-h4-xl;
+    @apply text-[22px] md:text-[30px] xl:text-[38px] leading-[30px] md:leading-[38px] xl:leading-[46px] font-semibold
   }
 
-  p {
-    @apply text-grayscale-700;
+  h5 {
+    @apply text-[16px] xl:text-[18px] leading-[24px] font-semibold
   }
 
   button {
-    @apply overflow-hidden font-semibold leading-[26px];
+    @apply overflow-hidden font-semibold;
   }
 
   ::before,
@@ -90,10 +83,6 @@
 }
 
 @layer utilities {
-  .container {
-    @apply mx-auto xl:max-w-7xl
-  }
-
   .divider-xs {
     width: 375px;
     height: 400px;
@@ -162,6 +151,10 @@ button.contained:hover::before,
 button.waves:hover::before {
   top: 0%;
   left: -60%;
+}
+
+div.shadow-waves::before {
+  background-image: linear-gradient(to right, var(--color-accent-shadow), var(--color-accent-aux-shadow));
 }
 
 section.divider::before {

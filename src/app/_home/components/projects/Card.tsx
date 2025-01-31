@@ -7,7 +7,6 @@ import { useInView } from 'react-intersection-observer'
 import { Paragraphy } from '@/components'
 import { Member } from '@/data'
 
-
 type CardWrapperProps = {
   children: React.ReactNode
   spacedTop?: boolean
@@ -110,7 +109,7 @@ export function Description({
     <Paragraphy
       {...props}
       ref={ref}
-      variant={{ type: 'p2' }}
+      variant="p4"
       className={`transition-500 absolute delay-200 ${inView ? 'top-[84px] opacity-100 xl:top-[124px]' : 'top-[134px] opacity-0 xl:top-[174px]'}`}
     />
   )

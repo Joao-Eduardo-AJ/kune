@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import kune from '@public/kune-white.svg'
-import { Topic } from '@/components'
+import { Container, Topic } from '@/components'
 import { List } from './component.list'
 
 export const Footer = () => (
   <footer className="bg-grayscale-900">
-    <div className="container relative grid gap-4 md:grid-cols-12">
+    <Container className="relative grid gap-4 md:grid-cols-12">
       <div className="md:col-span-5">
         <div className="grid gap-[10px]">
           <Image alt="logo" src={kune} height={60} width={60} />
@@ -21,7 +21,7 @@ export const Footer = () => (
             <List items={['Web Sites', 'Mobile App', 'Web App', 'Branding']} />
           </div>
           <div className="grid gap-6">
-            <Topic variant={{ color: 'gray' }}>ABOUT US</Topic>
+            <Topic variant="gray">ABOUT US</Topic>
             <List items={['Work', 'Clients', 'Services', 'Who we are?']} />
           </div>
         </div>
@@ -32,11 +32,11 @@ export const Footer = () => (
       <div className="md:col-span-7">
         <div className="grid gap-16">
           <div className="grid gap-6">
-            <Topic variant={{ color: 'gray' }}>CONTACT US</Topic>
+            <Topic variant="gray">CONTACT US</Topic>
             <List items={['+1 980 971-24-19', 'kunestudio@contato.com']} />
           </div>
           <div className="grid gap-6">
-            <Topic variant={{ color: 'gray' }}>LOCATION</Topic>
+            <Topic variant="gray">LOCATION</Topic>
             <List
               items={[
                 'Brasil / Santa Catarina / Florianópolis',
@@ -47,6 +47,6 @@ export const Footer = () => (
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   </footer>
 )

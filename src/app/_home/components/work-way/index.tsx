@@ -6,8 +6,8 @@ export const Header = () => <HeaderSection>Our way of working</HeaderSection>
 
 export const Info = () => (
   <div className="grid gap-6 lg:flex lg:justify-between">
-    <Paragraphy>What you can expect</Paragraphy>
-    <Paragraphy variant={{ type: 'p2' }} className="max-w-[488px]">
+    <h4>What you can expect</h4>
+    <Paragraphy variant="p4" className="max-w-[488px]">
       At Kune, we believe that every project is unique and deserves a customized
       approach. That’s why our process is built on three key pillars:
       collaboration, innovation, and results.
@@ -22,7 +22,7 @@ export const Content = () => (
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Paragraphy variant={{ type: 'p2' }}>
+          <Paragraphy variant="p4">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
@@ -33,7 +33,7 @@ export const Content = () => (
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Paragraphy variant={{ type: 'p2' }}>
+          <Paragraphy variant="p4">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.
@@ -44,7 +44,7 @@ export const Content = () => (
         <Card.Icon />
         <Card.Text>
           <h5>Collaboration</h5>
-          <Paragraphy variant={{ type: 'p2' }}>
+          <Paragraphy variant="p4">
             We work closely with our clients, understanding their goals,
             challenges, and vision. This partnership ensures that every decision
             we make aligns with their needs.

@@ -28,40 +28,6 @@ export default {
       fontFamily: {
         outfit: ['var(--font-outfit)']
       },
-      fontSize: {
-        'h1-xs': '32px',
-        'h1-md': '44px',
-        'h1-xl': '56px',
-
-        'h2-xs': '28px',
-        'h2-md': '38px',
-        'h2-xl': '48px',
-
-        'h3-xs': '24px',
-        'h3-md': '32px',
-        'h3-xl': '40px',
-
-        'h4-xs': '20px',
-        'h4-md': '28px',
-        'h4-xl': '38px'
-      },
-      lineHeight: {
-        'h1-xs': '42px',
-        'h1-md': '54px',
-        'h1-xl': '66px',
-
-        'h2-xs': '38px',
-        'h2-md': '48px',
-        'h2-xl': '58px',
-
-        'h3-xs': '34px',
-        'h3-md': '42px',
-        'h3-xl': '50px',
-
-        'h4-xs': '30px',
-        'h4-md': '38px',
-        'h4-xl': '48px'
-      },
       screens: {
         xs: '360px'
       },
@@ -69,7 +35,7 @@ export default {
         customers: 'customers linear infinite',
         project: 'project 1.5s ease-in-out forwards',
         topic: 'topic 2s linear infinite',
-        waves: 'waves 2s linear infinite'
+        waves: 'waves 2s ease-out infinite'
       },
       keyframes: {
         customers: {
