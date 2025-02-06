@@ -9,7 +9,9 @@ import { Member } from '@/data'
 
 type CardWrapperProps = {
   children: React.ReactNode
+  darkContrast?: boolean
   spacedTop?: boolean
+  year: string
 }
 
 export function Wrapper({ children, spacedTop }: CardWrapperProps) {
@@ -41,14 +43,23 @@ export function Figure({ alt, src }: CardFigureProps) {
 }
 
 type CardHeaderProps = {
-  url: string
+  darkContrast?: boolean
   year: string
 }
 
-export const Header = ({ url, year }: CardHeaderProps) => (
-  <div className="absolute left-10 top-10 flex items-center justify-between text-[22px] text-gray-100">
-    <span>{year}</span>
-    <span>{url}</span>
+export const Header = ({ darkContrast, year }: CardHeaderProps) => (
+  <div className="absolute z-10 flex w-full items-center justify-between p-6 lg:p-10">
+    <Paragraphy
+      variant="p1"
+      className={`${darkContrast ? 'text-white' : 'text-grayscale-900'}`}
+    >
+      {year}
+    </Paragraphy>
+    <span
+      className={`material-symbols-outlined text-[32px] ${darkContrast ? 'text-white' : 'text-grayscale-900'}`}
+    >
+      arrow_outward
+    </span>
   </div>
 )
 
@@ -89,7 +100,7 @@ export function Info({ members, title }: CardInfoProps) {
             width={64}
             height={64}
             alt={member.name}
-            className={`transition-500 h-auto w-12 cursor-pointer rounded-full bg-grayscale-100 hover:-translate-y-1 xl:w-16 -z-[${index - members.length}] ${index + 1 === members.length ? '-ml-2 hover:-ml-2' : '-mx-2 hover:-mx-2 lg:-mx-3'}`}
+            className={`transition-500 h-auto w-12 rounded-full bg-grayscale-100 xl:w-16 -z-[${index - members.length}]`}
           />
         ))}
       </div>

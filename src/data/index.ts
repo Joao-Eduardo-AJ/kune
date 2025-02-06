@@ -1,6 +1,6 @@
-import data from './team.json'
-import type { TeamData } from './types/team'
+import json from './data.json'
+import type { Data } from './types/data'
 
-export const team = data as unknown as TeamData
+export const data = json as unknown as Data
 
-export * from './types/team'
+export * from './types/data'

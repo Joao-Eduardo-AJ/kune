@@ -1,7 +1,7 @@
 'use client'
 
 import { ProjectType, projectTypeAtom } from '@/atom'
-import { team } from '@/data'
+import { data } from '@/data'
 import { useAtom, useAtomValue } from 'jotai'
 import { Badge } from './Badge'
 import * as Card from './Card'
@@ -54,7 +54,7 @@ export function Header() {
 export function Group() {
   const projectType = useAtomValue(projectTypeAtom)
 
-  const projectsByType = team.projects.filter(project => {
+  const projectsByType = data.projects.filter(project => {
     return project.type === projectType
   })
 
@@ -62,8 +62,12 @@ export function Group() {
     <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
       {projectsByType.map((project, index) => {
         return (
-          <Card.Wrapper key={project.id} spacedTop={index % 2 !== 0}>
-            <Card.Header url="teste" year={project.year} />
+          <Card.Wrapper
+            key={project.id}
+            spacedTop={index % 2 !== 0}
+            year="2024"
+          >
+            <Card.Header darkContrast year={project.year} />
             <Card.Figure
               alt="project"
               src={`projects/${project.id}/thumb.svg`}

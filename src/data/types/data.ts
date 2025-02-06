@@ -1,3 +1,10 @@
+export type DefaultData = {
+  icon: string
+  id: string
+  title: string
+  content: string
+}
+
 export type Member = {
   id: string
   linkedinUrl: string
@@ -15,7 +22,9 @@ export type Project = {
   year: string
 }
 
-export type TeamData = {
+export type Data = {
+  expertises: DefaultData[]
   members: Member[]
   projects: Project[]
+  working: DefaultData[]
 }

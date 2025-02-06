@@ -1,4 +1,4 @@
-import { team } from '@/data'
+import { data } from '@/data'
 import * as Card from './Card'
 import { Paragraphy } from '@/components'
 import { HeaderSection } from '../shared/HeaderSection'
@@ -28,9 +28,8 @@ export function Content() {
   return (
     <div className="hidden-scroll overflow-x-scroll">
       <div className="flex h-[413px] min-w-min gap-4 lg:grid lg:h-[1134px] lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
-        {team.members.map(({ id, name, role }) => (
+        {data.members.map(({ id, name, role }) => (
           <Card.Wrapper key={id}>
-            a
             <Card.Figure alt="teste" src={`/members/${id}/team-image.svg`} />
             <Card.Caption name={name} role={role} />
           </Card.Wrapper>

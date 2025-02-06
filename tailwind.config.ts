@@ -20,9 +20,9 @@ export default {
         'grayscale-300': '#C6C9C7',
         'grayscale-400': '#A1A7A3',
         'grayscale-500': '#7B867E',
-        'grayscale-600': '#5F6D63',
-        'grayscale-700': '#4B564E',
-        'grayscale-800': '#313E35',
+        'grayscale-600': '#626A64',
+        'grayscale-700': '#4C554E',
+        'grayscale-800': '#333C36',
         'grayscale-900': '#161D19'
       },
       fontFamily: {

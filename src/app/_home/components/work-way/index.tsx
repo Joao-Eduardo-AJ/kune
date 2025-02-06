@@ -1,6 +1,7 @@
 import { Paragraphy } from '@/components'
 import * as Card from './Card'
 import { HeaderSection } from '../shared/HeaderSection'
+import { data } from '@/data'
 
 export const Header = () => <HeaderSection>Our way of working</HeaderSection>
 
@@ -18,39 +19,15 @@ export const Info = () => (
 export const Content = () => (
   <div className="hidden-scroll overflow-x-scroll">
     <div className="grid justify-items-center gap-8 md:flex">
-      <Card.Wrapper>
-        <Card.Icon />
-        <Card.Text>
-          <h5>Collaboration</h5>
-          <Paragraphy variant="p4">
-            We work closely with our clients, understanding their goals,
-            challenges, and vision. This partnership ensures that every decision
-            we make aligns with their needs.
-          </Paragraphy>
-        </Card.Text>
-      </Card.Wrapper>
-      <Card.Wrapper>
-        <Card.Icon />
-        <Card.Text>
-          <h5>Collaboration</h5>
-          <Paragraphy variant="p4">
-            We work closely with our clients, understanding their goals,
-            challenges, and vision. This partnership ensures that every decision
-            we make aligns with their needs.
-          </Paragraphy>
-        </Card.Text>
-      </Card.Wrapper>
-      <Card.Wrapper>
-        <Card.Icon />
-        <Card.Text>
-          <h5>Collaboration</h5>
-          <Paragraphy variant="p4">
-            We work closely with our clients, understanding their goals,
-            challenges, and vision. This partnership ensures that every decision
-            we make aligns with their needs.
-          </Paragraphy>
-        </Card.Text>
-      </Card.Wrapper>
+      {data.working.map(({ icon, id, title, content }) => (
+        <Card.Wrapper key={id}>
+          <Card.Icon icon={icon} />
+          <Card.Text>
+            <h5>{title}</h5>
+            <Paragraphy variant="p4">{content}</Paragraphy>
+          </Card.Text>
+        </Card.Wrapper>
+      ))}
     </div>
   </div>
 )
