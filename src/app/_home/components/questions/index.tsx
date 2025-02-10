@@ -11,8 +11,8 @@ export const Content = () => (
         key={title}
         className="group flex gap-6 border-b px-4 py-10 last:border-b-0"
       >
-        <Paragraphy variant="p1">{index + 1}</Paragraphy>
-        <div className="flex flex-col gap-0 transition-all duration-300 group-hover:gap-6">
+        <Paragraphy variant="p1">{`0${index + 1}`}</Paragraphy>
+        <div className="flex flex-col justify-center gap-0 transition-all duration-300 group-hover:gap-6">
           <h5>{title}</h5>
           <Paragraphy
             variant="p3"

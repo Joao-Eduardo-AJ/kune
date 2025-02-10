@@ -1,12 +1,17 @@
 import { Paragraphy } from '@/components'
 
 export const SocialProof = () => (
-  <div className="relative flex flex-col gap-10 bg-no-repeat before:top-1/3 before:hidden before:h-[781px] before:w-[781px] before:bg-[url(/section-bg.svg)] md:flex-row md:justify-between before:lg:block">
-    <h2 className="text-white">
+  <div className="relative flex flex-col gap-10 md:flex-row md:justify-between">
+    <div
+      aria-hidden="true"
+      role="presentation"
+      className="absolute -left-8 -top-10 h-[545px] w-[545px] bg-[url(/section-bg.svg)] bg-cover lg:left-0 lg:top-[168px] xl:h-[781px] xl:w-[781px]"
+    />
+    <h2 className="z-10 text-white">
       Clients Who Trust, <br /> Results That Shine
     </h2>
-    <div className="grid max-w-[592px] gap-20">
-      <Paragraphy className="z-10 text-accent">
+    <div className="z-10 grid max-w-[592px] gap-20">
+      <Paragraphy className="text-accent" variant="p1">
         “At Kune, we bring together over 20 years of combined experience across
         our Designers, Developers, and Marketing Specialists. Our team excels in
         their fields, delivering innovative and tailored solutions for every

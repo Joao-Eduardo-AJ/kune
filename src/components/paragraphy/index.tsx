@@ -25,6 +25,6 @@ type ParagraphyProps = HtmlHTMLAttributes<HTMLParagraphElement> &
 
 export function Paragraphy({ variant, className, ...props }: ParagraphyProps) {
   return (
-    <p {...props} className={`${paragraphy({ type: variant })} ${className}`} />
+    <p {...props} className={`${className} ${paragraphy({ type: variant })}`} />
   )
 }
