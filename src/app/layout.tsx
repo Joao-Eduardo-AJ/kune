@@ -1,8 +1,12 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import ReactLenis from 'lenis/react'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
+
+import { Footer, Header } from '@/components'
+
 import 'material-symbols'
 import './globals.css'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const outfit = Outfit({
   display: 'swap',
@@ -24,7 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} font-outfit antialiased`}>
-        {children}
+        <ReactLenis root>
+          <Header />
+          {children}
+          <Footer />
+        </ReactLenis>
         <SpeedInsights />
       </body>
     </html>
