@@ -12,7 +12,7 @@ export const Wrapper = ({ children }: Children) => (
 
 export const Icon = ({ icon }: { icon: string }) => (
   <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-grayscale-100">
-    <Image alt="card icon" width={40} height={40} src={`/icons/${icon}.svg`} />
+    <Image alt="card icon" width={40} height={40} src={`/icons/${icon}`} />
   </div>
 )
 

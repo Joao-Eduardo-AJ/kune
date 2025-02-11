@@ -25,7 +25,7 @@ export const Wrapper = ({ children }: ChildrenProp) => (
 )
 
 export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="absolute bottom-0 left-0 rounded-xl group-hover:scale-105 transition-500">
+  <figure className="transition-500 absolute bottom-0 left-0 rounded-xl group-hover:scale-105">
     <Image width={384} height={547} src={src} alt={alt} />
   </figure>
 )
@@ -47,7 +47,7 @@ export function Caption({ name, role }: CaptionProps) {
           {name}
         </Paragraphy>
       </div>
-      <button className="leading-[44px] w-[46px] rounded-lg border bg-grayscale-900 text-[32px] font-bold text-white">
+      <button className="w-[46px] rounded-lg border bg-grayscale-900 text-[32px] font-bold leading-[44px] text-white">
         in
       </button>
     </figcaption>

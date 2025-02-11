@@ -1,25 +1,25 @@
 {
   "expertises": [
     {
-      "icon": "devices",
+      "icon": "devices.svg",
       "id": 1,
       "title": "UX Design & Strategy",
       "content": "We design user-focused experiences and strategies that drive growth, boost engagement, and deliver results."
     },
     {
-      "icon": "shapes",
+      "icon": "shapes.svg",
       "id": 2,
       "title": "UI Design & auditing",
       "content": "We create intuitive interfaces and audit designs to improve usability, performance, and visual impact."
     },
     {
-      "icon": "sdk",
+      "icon": "sdk.svg",
       "id": 3,
       "title": "Development & Technology",
       "content": "We build scalable, custom digital solutions using smart technology to ensure performance, reliability, and growth."
     },
     {
-      "icon": "family",
+      "icon": "family.svg",
       "id": 4,
       "title": "Branding & Positioning",
       "content": "We craft authentic brand identities and strategies that inspire, connect with audiences, and stand out."
@@ -323,22 +323,36 @@
   ],
   "working": [
     {
-      "icon": "collaboration",
+      "icon": "collaboration.svg",
       "id": 1,
       "title": "Collaboration",
       "content": "We work closely with our clients, understanding their goals, challenges, and vision. This partnership ensures that every decision we make aligns with their needs."
     },
     {
-      "icon": "innovation",
+      "icon": "innovation.svg",
       "id": 2,
       "title": "Innovation",
       "content": "With a team of experienced Designers, Developers, and Marketing Specialists, we push boundaries to create solutions that are both creative and effective."
     },
     {
-      "icon": "results",
+      "icon": "results.svg",
       "id": 3,
       "title": "Results",
       "content": "From strategy to execution, we focus on delivering real value through functional websites, engaging apps, and impactful brand identities."
+    }
+  ],
+  "socialIcons": [
+    {
+      "icon": "linkedin.svg",
+      "url": "https://www.linkedin.com/company/kune-studio/"
+    },
+    {
+      "icon": "whatsapp.svg",
+      "url": "https://wa.me/message/I64RKXAO23QOJ1"
+    },
+    {
+      "icon": "instagram.svg",
+      "url": "https://www.instagram.com/studiokune"
     }
   ]
 }

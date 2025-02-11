@@ -2,13 +2,15 @@ import { Container, Paragraphy, Topic } from '@/components'
 import { List } from './List'
 import Image from 'next/image'
 import kune from '@public/kune-white.svg'
+import { data } from '@/data'
+import Link from 'next/link'
 
 export const Footer = () => (
-  <footer className="relative bg-grayscale-900 overflow-hidden">
+  <footer className="relative overflow-hidden bg-grayscale-900">
     <div
       aria-hidden="true"
       role="presentation"
-      className="absolute -left-0 top-24 h-[443px] w-[443px] bg-[url(/footer-bg.svg)] bg-cover lg:h-[676px] lg:w-[676px] lg:-top-12 lg:left-1/3"
+      className="absolute -left-0 top-24 h-[443px] w-[443px] bg-[url(/footer-bg.svg)] bg-cover lg:-top-12 lg:left-1/3 lg:h-[676px] lg:w-[676px]"
     />
     <Container className="flex flex-col gap-10">
       <div className="z-10 flex flex-col gap-10 border-b border-grayscale-800 pb-10 md:flex-row md:justify-between">
@@ -41,9 +43,16 @@ export const Footer = () => (
             </span>
           </div>
           <div className="flex items-center gap-1">
-            <div className="h-10 w-10 rounded-full bg-grayscale-700"></div>
-            <div className="h-10 w-10 rounded-full bg-grayscale-700"></div>
-            <div className="h-10 w-10 rounded-full bg-grayscale-700"></div>
+            {data.socialIcons.map(({ icon, url }) => (
+              <Link
+                key={icon}
+                href={url}
+                target="_blank"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-grayscale-700 transition-all duration-300 hover:-translate-y-1"
+              >
+                <Image alt="" width={16} height={16} src={`/icons/${icon}`} />
+              </Link>
+            ))}
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:items-center md:gap-8">

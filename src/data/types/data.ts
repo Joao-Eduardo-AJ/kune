@@ -22,9 +22,15 @@ export type Project = {
   year: string
 }
 
+export type SocialIcon = {
+  icon: string
+  url: string
+}
+
 export type Data = {
   expertises: DefaultData[]
   members: Member[]
   projects: Project[]
   working: DefaultData[]
+  socialIcons: SocialIcon[]
 }

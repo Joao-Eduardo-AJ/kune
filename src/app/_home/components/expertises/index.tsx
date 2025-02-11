@@ -17,7 +17,7 @@ export const List = () => (
             alt="list item icon"
             width={64}
             height={64}
-            src={`/icons/${icon}.svg`}
+            src={`/icons/${icon}`}
             className="h-auto w-10 lg:w-auto"
           />
           <h4 className="md:w-[294px]">{title}</h4>
