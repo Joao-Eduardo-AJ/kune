@@ -70,7 +70,7 @@ export function Group() {
             <Card.Header darkContrast year={project.year} />
             <Card.Figure
               alt="project"
-              src={`projects/${project.id}/thumb.svg`}
+              src={`/projects/${project.id}/thumb.webp`}
             />
             <Card.Caption>
               <Card.Info members={project.members} title={project.name} />
