@@ -14,6 +14,7 @@ export type Member = {
 
 export type Project = {
   id: string
+  darkContrast: boolean
   description: string
   members: Member[]
   name: string

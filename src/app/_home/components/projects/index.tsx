@@ -60,25 +60,20 @@ export function Group() {
 
   return (
     <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
-      {projectsByType.map((project, index) => {
-        return (
-          <Card.Wrapper
-            key={project.id}
-            spacedTop={index % 2 !== 0}
-            year="2024"
-          >
-            <Card.Header darkContrast year={project.year} />
-            <Card.Figure
-              alt="project"
-              src={`/projects/${project.id}/thumb.webp`}
-            />
-            <Card.Caption>
-              <Card.Info members={project.members} title={project.name} />
-              <Card.Description>{project.description}</Card.Description>
-            </Card.Caption>
-          </Card.Wrapper>
-        )
-      })}
+      {projectsByType.map(
+        ({ darkContrast, description, id, members, name, year }, index) => {
+          return (
+            <Card.Wrapper key={id} spacedTop={index % 2 !== 0} year="2024">
+              <Card.Header darkContrast={darkContrast} year={year} />
+              <Card.Figure alt="project" src={`/projects/${id}/thumb.webp`} />
+              <Card.Caption>
+                <Card.Info members={members} title={name} />
+                <Card.Description>{description}</Card.Description>
+              </Card.Caption>
+            </Card.Wrapper>
+          )
+        }
+      )}
     </div>
   )
 }

@@ -43,7 +43,7 @@ export function Figure({ alt, src }: CardFigureProps) {
 }
 
 type CardHeaderProps = {
-  darkContrast?: boolean
+  darkContrast: boolean
   year: string
 }
 

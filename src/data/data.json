@@ -66,6 +66,7 @@
   "projects": [
     {
       "id": "01",
+      "darkContrast": false,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -82,6 +83,7 @@
     },
     {
       "id": "02",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -98,6 +100,7 @@
     },
     {
       "id": "03",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -114,6 +117,7 @@
     },
     {
       "id": "04",
+      "darkContrast": false,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -130,6 +134,7 @@
     },
     {
       "id": "05",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -146,6 +151,7 @@
     },
     {
       "id": "06",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -162,6 +168,7 @@
     },
     {
       "id": "07",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -178,6 +185,7 @@
     },
     {
       "id": "08",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -194,6 +202,7 @@
     },
     {
       "id": "09",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -210,6 +219,7 @@
     },
     {
       "id": "10",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -226,6 +236,7 @@
     },
     {
       "id": "11",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -242,6 +253,7 @@
     },
     {
       "id": "12",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -258,6 +270,7 @@
     },
     {
       "id": "13",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -274,6 +287,7 @@
     },
     {
       "id": "14",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -290,6 +304,7 @@
     },
     {
       "id": "15",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
@@ -306,6 +321,7 @@
     },
     {
       "id": "16",
+      "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [
         {
