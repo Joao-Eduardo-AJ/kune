@@ -15,7 +15,7 @@ export const Footer = () => (
     <Container className="flex flex-col gap-10">
       <div className="z-10 flex flex-col gap-10 border-b border-grayscale-800 pb-10 md:flex-row md:justify-between">
         <div className="grid gap-3">
-          <Topic variant="gray">We build. You grow</Topic>
+          <Topic color="gray">We build. You grow</Topic>
           <Paragraphy className="max-w-[400px] text-white">
             We create digital solutions that drive results, combining design,
             technology, and strategy to help your business grow and scale.
@@ -23,11 +23,11 @@ export const Footer = () => (
         </div>
         <div className="grid grid-cols-2">
           <div className="flex flex-col gap-3">
-            <Topic variant="gray">About us</Topic>
+            <Topic color="gray">About us</Topic>
             <List items={['Work', 'Clients', 'Services', 'Who we are?']} />
           </div>
           <div className="flex flex-col gap-3">
-            <Topic variant="gray">Contact us</Topic>
+            <Topic color="gray">Contact us</Topic>
             <List items={['+1 980 971-24-19', 'kunestudio@contato.com']} />
           </div>
         </div>

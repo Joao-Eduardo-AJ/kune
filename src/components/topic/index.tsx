@@ -23,19 +23,18 @@ const topic = tv({
   }
 })
 
-type TopicProps = {
-  variant?: VariantProps<typeof topic>['color']
+type TopicProps = VariantProps<typeof topic> & {
   children: React.ReactNode
 }
 
-export function Topic({ children, variant }: TopicProps) {
-  const { animation, base } = topic({ color: variant })
+export function Topic({ children, color }: TopicProps) {
+  const { animation, base } = topic({ color })
 
   return (
     <div className="flex items-center gap-2">
       <span className={animation()} />
       <span className={base()} />
-      <Paragraphy variant={variant === 'gray' ? 'p5' : 'p3'}>
+      <Paragraphy variant={color === 'gray' ? 'p5' : 'p3'}>
         {children}
       </Paragraphy>
     </div>
