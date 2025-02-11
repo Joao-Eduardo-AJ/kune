@@ -1,3 +1,4 @@
+export * as AnimatedCounter from './animated-counter'
 export * from './button'
 export * from './container'
 export * from './footer'

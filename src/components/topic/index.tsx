@@ -2,11 +2,20 @@ import { Paragraphy } from '@/components'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const topic = tv({
-  base: 'shadow-waves relative h-[11px] w-[11px] rounded-full before:animate-topic before:rounded-full',
+  slots: {
+    animation: 'h-[11px] w-[11px] rounded-full animate-ping-slow absolute',
+    base: 'h-[11px] w-[11px] rounded-full'
+  },
   variants: {
     color: {
-      green: 'bg-accent before:bg-accent-shadow',
-      gray: 'bg-grayscale-700 before:bg-grayscale-800'
+      green: {
+        animation: 'bg-accent/25',
+        base: 'bg-accent'
+      },
+      gray: {
+        animation: 'bg-grayscale-700/25',
+        base: 'bg-grayscale-700 '
+      }
     }
   },
   defaultVariants: {
@@ -20,9 +29,12 @@ type TopicProps = {
 }
 
 export function Topic({ children, variant }: TopicProps) {
+  const { animation, base } = topic({ color: variant })
+
   return (
     <div className="flex items-center gap-2">
-      <span className={topic({ color: variant })} />
+      <span className={animation()} />
+      <span className={base()} />
       <Paragraphy variant={variant === 'gray' ? 'p5' : 'p3'}>
         {children}
       </Paragraphy>

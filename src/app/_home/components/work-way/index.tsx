@@ -17,7 +17,7 @@ export const Info = () => (
 )
 
 export const Content = () => (
-  <div className="hidden-scroll overflow-x-scroll">
+  <div className="no-scrollbar overflow-x-scroll">
     <div className="grid justify-items-center gap-8 md:flex">
       {data.working.map(({ icon, id, title, content }) => (
         <Card.Wrapper key={id}>

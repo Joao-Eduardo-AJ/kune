@@ -5,7 +5,7 @@ import { HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import { Paragraphy } from '@/components'
-import { Member } from '@/data'
+import { MemberParams } from '@/data'
 
 type CardWrapperProps = {
   children: React.ReactNode
@@ -76,7 +76,7 @@ export function Caption({ children }: CardCaptionProps) {
 }
 
 type CardInfoProps = {
-  members: Member[]
+  members: MemberParams[]
   title: string
 }
 

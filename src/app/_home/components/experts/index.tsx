@@ -26,7 +26,7 @@ export const Info = () => (
 
 export function Content() {
   return (
-    <div className="hidden-scroll overflow-x-scroll">
+    <div className="no-scrollbar overflow-x-scroll">
       <div className="flex h-[413px] min-w-min gap-4 lg:grid lg:h-[1134px] lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
         {data.members.map(({ id, name, role }) => (
           <Card.Wrapper key={id}>

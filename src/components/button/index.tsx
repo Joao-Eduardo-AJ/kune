@@ -1,21 +1,24 @@
 import { ButtonHTMLAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
+import { twMerge } from 'tailwind-merge'
 
 const button = tv({
-  base: 'relative rounded-lg px-4',
+  base: 'rounded-lg h-14 px-4 py-2',
   variants: {
     type: {
-      contained:
-        'contained bg-grayscale-900 leading-[26px] text-white transition-shadow duration-[2s] hover:shadow-2xl xl:px-6 xl:py-[15px] before:bg-grayscale-300',
-      text: ''
+      primary: twMerge(
+        'bg-grayscale-900 text-white transition-colors',
+        'hover:bg-grayscale-800 disabled:bg-grayscale-400'
+      ),
+      secondary: ''
     },
     size: {
-      md: 'py-[7px]',
-      lg: 'py-[15px]'
+      md: 'text-base',
+      lg: 'text-xl leading-6.5'
     }
   },
   defaultVariants: {
-    type: 'contained',
+    type: 'primary',
     size: 'md'
   }
 })

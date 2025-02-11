@@ -3,7 +3,7 @@ import ReactLenis from 'lenis/react'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 
-import { Footer, Header } from '@/components'
+import { Footer } from '@/components'
 
 import 'material-symbols'
 import './globals.css'
@@ -29,7 +29,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.variable} font-outfit antialiased`}>
         <ReactLenis root>
-          <Header />
           {children}
           <Footer />
         </ReactLenis>

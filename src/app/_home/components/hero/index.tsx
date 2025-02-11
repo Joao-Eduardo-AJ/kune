@@ -1,5 +1,5 @@
 import { Topic, Paragraphy } from '@/components'
-import { ButtonWave } from './Button'
+import { ButtonPing } from './ButtonPing'
 import { Customers } from './Customers'
 
 export const Content = () => (
@@ -13,7 +13,7 @@ export const Content = () => (
       Take the first step to turn your idea into reality. Chat with us for 10
       minutes and explore simple, impactful solutions made for you.
     </Paragraphy>
-    <ButtonWave />
+    <ButtonPing />
   </div>
 )
 

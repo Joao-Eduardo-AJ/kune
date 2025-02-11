@@ -1,5 +1,6 @@
 import { HtmlHTMLAttributes, RefAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
+import { twMerge as merge } from 'tailwind-merge'
 
 const paragraphy = tv({
   base: 'text-grayscale-700',
@@ -25,6 +26,6 @@ type ParagraphyProps = HtmlHTMLAttributes<HTMLParagraphElement> &
 
 export function Paragraphy({ variant, className, ...props }: ParagraphyProps) {
   return (
-    <p {...props} className={`${className} ${paragraphy({ type: variant })}`} />
+    <p className={merge(paragraphy({ type: variant }), className)} {...props} />
   )
 }

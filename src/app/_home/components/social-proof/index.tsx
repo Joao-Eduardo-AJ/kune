@@ -11,7 +11,10 @@ export const SocialProof = () => (
       Clients Who Trust, <br /> Results That Shine
     </h2>
     <div className="z-10 grid max-w-[592px] gap-20">
-      <Paragraphy className="text-accent" variant="p1">
+      <Paragraphy
+        className="bg-gradient-to-tr from-accent to-accent-light bg-clip-text text-transparent"
+        variant="p1"
+      >
         “At Kune, we bring together over 20 years of combined experience across
         our Designers, Developers, and Marketing Specialists. Our team excels in
         their fields, delivering innovative and tailored solutions for every

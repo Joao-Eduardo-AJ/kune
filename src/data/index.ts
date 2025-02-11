@@ -1,6 +1,6 @@
 import json from './data.json'
-import type { Data } from './types/data'
+import type { DataParams } from './types/data'
 
-export const data = json as unknown as Data
+export const data = json as unknown as DataParams
 
 export * from './types/data'
