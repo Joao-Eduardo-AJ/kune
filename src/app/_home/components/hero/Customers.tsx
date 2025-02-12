@@ -1,15 +1,25 @@
-import { Paragraphy } from '@/components'
+import * as motion from 'motion/react-client'
 import Image from 'next/image'
+
+import { Paragraphy } from '@/components'
+
 import { customers } from './customers-data'
 
 export function Customers() {
+  const duplicatedCustomers = [...customers, ...customers]
+
   return (
-    <div className="grid gap-2 xl:gap-5">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.5, delay: 0.5 }}
+      className="space-y-2 xl:space-y-5"
+    >
       <Paragraphy variant="p5">Trusted by</Paragraphy>
-      <div className="relative max-w-[912px] overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <span className="fade-x absolute left-0 z-10 h-12 w-full" />
         <div className="flex animate-customers gap-6">
-          {[...customers, ...customers].map(({ slug, width }, index) => (
+          {duplicatedCustomers.map(({ slug, width }, index) => (
             <Image
               key={index}
               alt={slug}
@@ -20,6 +30,6 @@ export function Customers() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
