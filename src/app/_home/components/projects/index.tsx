@@ -30,12 +30,14 @@ export function Header() {
           </Badge>
           <Badge
             actived={projectType === 'mobile'}
+            className="hidden"
             onClick={() => handleProjectType('mobile')}
           >
             Mobile App
           </Badge>
           <Badge
             actived={projectType === 'web'}
+            className="hidden"
             onClick={() => handleProjectType('web')}
           >
             Web App

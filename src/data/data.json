@@ -67,7 +67,7 @@
     {
       "id": "01",
       "darkContrast": false,
-      "description": "Doc.Door mission is to support physicians in clinical decisions within hospitals and practices. Using advanced technology based on artificial intelligence, this innovative product offers a comprehensive library of medical information, covering possible clinical scenarios presented by patients.",
+      "description": "We built a brand that embodies innovation and trust, offering an interactive digital library of care protocols to enhance evidence-based medical practice.",
       "members": [],
       "name": "Doc.Door",
       "slug": "doc-door",
@@ -77,7 +77,7 @@
     {
       "id": "02",
       "darkContrast": true,
-      "description": "Our brand is a symbol of wisdom and history, conveying powerful messages through the phrases printed on our clothing. Each piece is a narrative that honors the voices of our ancestors and celebrates the richness of Black culture. We want to show that we are bearers of a deep and meaningful heritage, carrying the wisdom accumulated over generations.",
+      "description": "We craft compelling presentations that help persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message is impactful.",
       "members": [],
       "name": "John Martin Clothing",
       "slug": "john-martin-clothing",
@@ -87,7 +87,7 @@
     {
       "id": "03",
       "darkContrast": true,
-      "description": "Amorim Dev Studio bridges clients and developers with tailored digital solutions, combining technology, aesthetics, and functionality. Its visual identity reflects closeness, innovation, and modernity, highlighting the direct connection between clients and developers with a distinctive visual impact.",
+      "description": "We design powerful presentations to persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message resonates with clarity.",
       "members": [],
       "name": "Amorim Dev Studio",
       "slug": "amorim-dev-studio",
@@ -97,7 +97,7 @@
     {
       "id": "04",
       "darkContrast": false,
-      "description": "Modesta Moda provides Christian clothing that combines beauty, simplicity, and modesty, with tailor-made pieces that celebrate authenticity and purpose. The branding captures the brand's essence with a delicate identity aligned with Christian fashion principles, emphasizing quality and elegance.",
+      "description": "Driven by technology, Voltbras' founders in Florianópolis created a cutting-edge solution for EV charging stations and an exclusive app for seamless recharging.",
       "members": [],
       "name": "Modesta Moda",
       "slug": "modesta-moda",
@@ -187,40 +187,40 @@
     {
       "id": "13",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "description": "We created a website that captures K2L’s essence, blending its history and strategy into a digital experience. A powerful platform for artists and partners.",
       "members": [],
-      "name": "Project Website 01",
-      "slug": "project-website-01",
+      "name": "K2L",
+      "slug": "k2l",
       "type": "website",
       "year": "2024"
     },
     {
       "id": "14",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "description": "We modernized Clínica SiM’s website, making access to medical services faster and more intuitive. A digital platform that reflects its mission of accessibility.",
       "members": [],
-      "name": "Project Website 02",
-      "slug": "project-website-02",
+      "name": "Clinica SIM",
+      "slug": "clinica-sim",
       "type": "website",
       "year": "2024"
     },
     {
       "id": "15",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "description": "We built an innovative website for DOM, connecting investors to exclusive opportunities in Florida. A sophisticated design with immersive experience and smooth navigation.",
       "members": [],
-      "name": "Project Website 03",
-      "slug": "project-website-03",
+      "name": "DOM",
+      "slug": "dom",
       "type": "website",
       "year": "2024"
     },
     {
       "id": "16",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "description": "Regina Festas’ new website embraces its evolution, creating a seamless experience. Now, exploring products, collections, and trends is easier and more inspiring.",
       "members": [],
-      "name": "Project Website 04",
-      "slug": "project-website-04",
+      "name": "Regina Festas",
+      "slug": "regina-festas",
       "type": "website",
       "year": "2024"
     }

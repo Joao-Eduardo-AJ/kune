@@ -46,7 +46,7 @@ export default function Home() {
             <Expertises.List />
           </Container>
         </section>
-        <section className="bg-grayscale-900">
+        <section className="hidden bg-grayscale-900">
           <Container className="grid gap-10 lg:gap-20 lg:py-[120px]">
             <Experts.Header />
             <Experts.Info />
