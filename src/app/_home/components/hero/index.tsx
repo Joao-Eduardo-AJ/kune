@@ -4,6 +4,7 @@ import { Topic, Paragraphy } from '@/components'
 
 import { ButtonPing } from './ButtonPing'
 import { Customers } from './Customers'
+import { useTranslation } from 'react-i18next'
 
 export function Content() {
   return (
@@ -16,15 +17,13 @@ export function Content() {
       >
         <Topic>Available for new projects</Topic>
         <h1>
-          Building <br className="sm:hidden" /> human-centered systems
-          <br className="hidden md:block" /> that create real impact
+          Strategic UX/UI & Branding Agency for Tech Startups | Data-Driven Impact
         </h1>
         <Paragraphy>
           Take the first step to turn your idea into reality. Chat with us for
           10 minutes and explore simple, impactful solutions made for you.
         </Paragraphy>
       </motion.div>
-
       <ButtonPing />
     </div>
   )
