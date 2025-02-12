@@ -1,19 +1,18 @@
 'use client'
 
-import { ProjectType, projectTypeAtom } from '@/atom'
-import { data } from '@/data'
 import { useAtom, useAtomValue } from 'jotai'
 import Link from 'next/link'
 
-import { Badge } from './Badge'
+import { ProjectType, projectTypeAtom } from '@/atom'
+import { Badge } from '@/components'
+import { data } from '@/data'
+
 import * as Card from './Card'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
 
   function handleProjectType(newProjectType: ProjectType) {
-    console.log('test')
-
     setProjectType(newProjectType)
   }
 
@@ -24,25 +23,25 @@ export function Header() {
       <div className="no-scrollbar overflow-scroll">
         <div className="flex min-w-min gap-3">
           <Badge
-            selected={projectType === 'website'}
+            actived={projectType === 'website'}
             onClick={() => handleProjectType('website')}
           >
             Web Sites
           </Badge>
           <Badge
-            selected={projectType === 'mobile'}
+            actived={projectType === 'mobile'}
             onClick={() => handleProjectType('mobile')}
           >
             Mobile App
           </Badge>
           <Badge
-            selected={projectType === 'web'}
+            actived={projectType === 'web'}
             onClick={() => handleProjectType('web')}
           >
             Web App
           </Badge>
           <Badge
-            selected={projectType === 'branding'}
+            actived={projectType === 'branding'}
             onClick={() => handleProjectType('branding')}
           >
             Identidade Visual

@@ -92,7 +92,7 @@ export function Info({ members, title }: CardInfoProps) {
       className={`transition-500 absolute flex w-full items-center justify-between ${inView ? 'top-6 opacity-100 xl:top-10' : 'top-[74px] opacity-0 xl:top-[90px]'}`}
     >
       <h3>{title}</h3>
-      <div className="flex">
+      {/* <div className="flex">
         {members.map((member, index) => (
           <Image
             key={member.id}
@@ -103,7 +103,7 @@ export function Info({ members, title }: CardInfoProps) {
             className={`transition-500 h-auto w-12 rounded-full bg-grayscale-100 xl:w-16 -z-[${index - members.length}]`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
