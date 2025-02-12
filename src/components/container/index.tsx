@@ -1,8 +1,9 @@
-import { HTMLAttributes } from 'react'
+import { twMerge as merge } from 'tailwind-merge'
 
-export const Container = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <div {...props} className={`mx-auto max-w-[1216px] ${className}`} />
-)
+type ContainerProps = React.ComponentProps<'div'>
+
+export function Container({ className, ...props }: ContainerProps) {
+  return (
+    <div className={merge('mx-auto max-w-[1216px]', className)} {...props} />
+  )
+}
