@@ -67,68 +67,40 @@
     {
       "id": "01",
       "darkContrast": false,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
-      "name": "Project Branding 01",
-      "slug": "project-branding-01",
+      "description": "Doc.Door mission is to support physicians in clinical decisions within hospitals and practices. Using advanced technology based on artificial intelligence, this innovative product offers a comprehensive library of medical information, covering possible clinical scenarios presented by patients.",
+      "members": [],
+      "name": "Doc.Door",
+      "slug": "doc-door",
       "type": "branding",
       "year": "2024"
     },
     {
       "id": "02",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
-      "name": "Project Branding 02",
-      "slug": "project-branding-02",
+      "description": "Our brand is a symbol of wisdom and history, conveying powerful messages through the phrases printed on our clothing. Each piece is a narrative that honors the voices of our ancestors and celebrates the richness of Black culture. We want to show that we are bearers of a deep and meaningful heritage, carrying the wisdom accumulated over generations.",
+      "members": [],
+      "name": "John Martin Clothing",
+      "slug": "john-martin-clothing",
       "type": "branding",
       "year": "2024"
     },
     {
       "id": "03",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
-      "name": "Project Branding 03",
-      "slug": "project-branding-03",
+      "description": "Amorim Dev Studio bridges clients and developers with tailored digital solutions, combining technology, aesthetics, and functionality. Its visual identity reflects closeness, innovation, and modernity, highlighting the direct connection between clients and developers with a distinctive visual impact.",
+      "members": [],
+      "name": "Amorim Dev Studio",
+      "slug": "amorim-dev-studio",
       "type": "branding",
       "year": "2024"
     },
     {
       "id": "04",
       "darkContrast": false,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
-      "name": "Project Branding 04",
-      "slug": "project-branding-04",
+      "description": "Modesta Moda provides Christian clothing that combines beauty, simplicity, and modesty, with tailor-made pieces that celebrate authenticity and purpose. The branding captures the brand's essence with a delicate identity aligned with Christian fashion principles, emphasizing quality and elegance.",
+      "members": [],
+      "name": "Modesta Moda",
+      "slug": "modesta-moda",
       "type": "branding",
       "year": "2024"
     },
@@ -136,14 +108,7 @@
       "id": "05",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Mobile 01",
       "slug": "project-mobile-01",
       "type": "mobile",
@@ -153,14 +118,7 @@
       "id": "06",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Mobile 02",
       "slug": "project-mobile-02",
       "type": "mobile",
@@ -170,14 +128,7 @@
       "id": "07",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Mobile 03",
       "slug": "project-mobile-03",
       "type": "mobile",
@@ -187,14 +138,7 @@
       "id": "08",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Mobile 04",
       "slug": "project-mobile-04",
       "type": "mobile",
@@ -204,14 +148,7 @@
       "id": "09",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Web 01",
       "slug": "project-web-01",
       "type": "web",
@@ -221,14 +158,7 @@
       "id": "10",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Web 02",
       "slug": "project-web-02",
       "type": "web",
@@ -238,14 +168,7 @@
       "id": "11",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Web 03",
       "slug": "project-web-03",
       "type": "web",
@@ -255,14 +178,7 @@
       "id": "12",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Web 04",
       "slug": "project-web-04",
       "type": "web",
@@ -272,14 +188,7 @@
       "id": "13",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Website 01",
       "slug": "project-website-01",
       "type": "website",
@@ -289,14 +198,7 @@
       "id": "14",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Website 02",
       "slug": "project-website-02",
       "type": "website",
@@ -306,14 +208,7 @@
       "id": "15",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Website 03",
       "slug": "project-website-03",
       "type": "website",
@@ -323,14 +218,7 @@
       "id": "16",
       "darkContrast": true,
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "members": [
-        {
-          "id": "01",
-          "linkedinUrl": "https://www.linkedin.com/in/danieldecastroliveira/",
-          "name": "Daniel Oliveira",
-          "role": "Marketing"
-        }
-      ],
+      "members": [],
       "name": "Project Website 04",
       "slug": "project-website-04",
       "type": "website",
