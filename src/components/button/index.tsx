@@ -3,7 +3,7 @@ import { tv, VariantProps } from 'tailwind-variants'
 import { twMerge as merge } from 'tailwind-merge'
 
 const button = tv({
-  base: 'rounded-lg h-14 px-4 py-2 disabled:cursor-not-allowed',
+  base: 'rounded-lg h-12 px-4 py-2 disabled:cursor-not-allowed',
   variants: {
     variant: {
       primary: merge(
@@ -30,5 +30,5 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof button>
 
 export function Button({ size, variant, ...props }: ButtonProps) {
-  return <button {...props} className={button({ size, variant })} />
+  return <button className={button({ size, variant })} {...props} />
 }

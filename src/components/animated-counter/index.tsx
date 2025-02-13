@@ -1,72 +1,45 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+import { animate } from 'motion'
+import { useInView, useIsomorphicLayoutEffect } from 'motion/react'
+import { useRef } from 'react'
 
-type CounterContext = {
-  count: number
-}
-
-const CounterContext = createContext<CounterContext | null>(null)
-
-type AnimatedCounterRootProps = {
-  children: React.ReactNode
+type AnimatedCounterProps = React.ComponentProps<'span'> & {
+  asChild?: boolean
   from: number
-  time: number
   to: number
 }
 
-function easeOut(time: number) {
-  return 1 - Math.pow(1 - time, 3)
-}
+export function AnimatedCounter({
+  from,
+  to,
+  asChild,
+  ...props
+}: AnimatedCounterProps) {
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref, { once: true })
+  const Component = asChild ? Slot : 'span'
 
-export function Root({ children, from, time, to }: AnimatedCounterRootProps) {
-  const [count, setCount] = useState(from)
+  useIsomorphicLayoutEffect(() => {
+    const element = ref.current
 
-  useEffect(() => {
-    let startTimestamp: number | null = null
-    let frameId: number
+    if (!element || !isInView) return
 
-    function onStep(timestamp: number) {
-      if (startTimestamp === null) startTimestamp = timestamp
+    element.textContent = from.toString()
 
-      const elapsedTime = timestamp - startTimestamp
-      const normalizedTime = Math.min(elapsedTime / time, 1)
-      const easedTime = easeOut(normalizedTime)
-
-      const currentValue = from + (to - from) * easedTime
-      setCount(currentValue)
-
-      if (elapsedTime < time) {
-        frameId = window.requestAnimationFrame(onStep)
+    const controls = animate(from, to, {
+      duration: 2,
+      ease: [0.17, 0.67, 0.16, 0.95], //cubic-bezier(.17,.67,.16,.95)
+      onUpdate(value) {
+        element.textContent = value.toFixed(0)
       }
-    }
-
-    frameId = window.requestAnimationFrame(onStep)
+    })
 
     return () => {
-      window.cancelAnimationFrame(frameId)
+      controls.stop()
     }
-  }, [from, time, to])
+  }, [ref, from, to, isInView])
 
-  return (
-    <CounterContext.Provider value={{ count }}>
-      {children}
-    </CounterContext.Provider>
-  )
-}
-
-function useCounter() {
-  const context = useContext(CounterContext)
-
-  if (!context) {
-    throw new Error('useCounter must be inside CounterContextProvider')
-  }
-
-  return context
-}
-
-export function Value() {
-  const { count } = useCounter()
-
-  return Math.floor(count)
+  return <Component ref={ref} {...props} />
 }

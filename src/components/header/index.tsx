@@ -17,10 +17,8 @@ export type HeaderProps = React.ComponentProps<'header'> &
   VariantProps<typeof header>
 
 export function Header(props: HeaderProps) {
-  const headerStyle = header(props)
-
   return (
-    <header className={headerStyle}>
+    <header className={header(props)}>
       <Container className="flex justify-between">
         <Logo />
         <Button>Book a Call</Button>
