@@ -25,7 +25,7 @@ export const Wrapper = ({ children }: ChildrenProp) => (
 )
 
 export const Figure = ({ alt, src }: FigureProps) => (
-  <figure className="transition-500 absolute bottom-0 left-0 rounded-xl group-hover:scale-105">
+  <figure className="absolute bottom-0 left-0 rounded-xl duration-500 group-hover:scale-105">
     <Image width={384} height={547} src={src} alt={alt} />
   </figure>
 )
@@ -39,7 +39,7 @@ export function Caption({ name, role }: CaptionProps) {
   return (
     <figcaption
       ref={ref}
-      className={`transition-500 absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 ${inView ? 'bottom-4 opacity-100' : '-bottom-14 opacity-0'} `}
+      className={`absolute flex w-[calc(100%-32px)] items-center justify-between rounded-xl bg-white px-4 py-3 duration-500 ${inView ? 'bottom-4 opacity-100' : '-bottom-14 opacity-0'} `}
     >
       <div className="grid">
         <h5 className="font-semibold text-grayscale-900">{role}</h5>

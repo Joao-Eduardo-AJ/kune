@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   header,
   footer,
   section {
@@ -86,18 +85,11 @@
 
 @layer utilities {
   .no-scrollbar {
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
 
   .no-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari and Opera */
-  }
-
-  .transition-500 {
-    transition: all 500ms ease-in-out;
+    display: none; /* Chrome, Safari and Opera */
   }
 }
