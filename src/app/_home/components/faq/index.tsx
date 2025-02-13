@@ -38,7 +38,7 @@ export function FAQ() {
                 variant="p3"
                 className={twJoin(
                   'max-h-0 overflow-hidden transition-all duration-300',
-                  'group-hover:max-h-[500px]'
+                  'group-hover:max-h-56 sm:group-hover:max-h-28'
                 )}
               >
                 {content}
