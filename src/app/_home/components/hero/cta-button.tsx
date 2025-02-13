@@ -1,10 +1,10 @@
 import * as motion from 'motion/react-client'
 
-import { twMerge as merge } from 'tailwind-merge'
+import { twJoin, twMerge } from 'tailwind-merge'
 
 type ButtonPingProps = React.ComponentProps<'button'>
 
-export function ButtonPing({ className, ...props }: ButtonPingProps) {
+export function CTAButton({ className, ...props }: ButtonPingProps) {
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
@@ -13,13 +13,13 @@ export function ButtonPing({ className, ...props }: ButtonPingProps) {
       className="relative mx-auto w-[232px]"
     >
       <span
-        className={merge(
+        className={twJoin(
           'cta absolute left-0 h-full w-full rounded-xl',
           'animate-bloom opacity-50'
         )}
       />
       <button
-        className={merge(
+        className={twMerge(
           'cta relative w-full rounded-xl bg-left p-2 pl-6 transition-all duration-500',
           'flex items-center justify-between text-xl leading-6.5',
           'hover:bg-right',
@@ -29,7 +29,7 @@ export function ButtonPing({ className, ...props }: ButtonPingProps) {
       >
         Book a call
         <span
-          className={merge(
+          className={twJoin(
             'material-symbols-outlined block cursor-pointer rounded-md p-2',
             'bg-grayscale-900 text-grayscale-100'
           )}

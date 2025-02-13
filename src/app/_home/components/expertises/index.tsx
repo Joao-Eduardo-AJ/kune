@@ -1,29 +1,31 @@
 import { Paragraphy } from '@/components'
-import { HeaderSection } from '../shared/HeaderSection'
 import { data } from '@/data'
-import Image from 'next/image'
 
-export const Header = () => <HeaderSection>Our Expertises</HeaderSection>
+import { ItemWrapper } from './item-wrapper'
 
-export const List = () => (
-  <ul>
-    {data.expertises.map(({ icon, title, content }) => (
-      <li
-        key={title}
-        className="flex flex-col gap-12 border-b border-grayscale-300 py-6 last:border-b-0 last:pb-0 md:flex-row lg:gap-[160px] lg:py-20"
-      >
-        <div className="flex items-center gap-12 lg:gap-[160px]">
-          <Image
-            alt="list item icon"
-            width={64}
-            height={64}
-            src={`/icons/${icon}`}
-            className="h-auto w-10 lg:w-auto"
-          />
-          <h4 className="md:w-[294px]">{title}</h4>
-        </div>
-        <Paragraphy>{content}</Paragraphy>
-      </li>
-    ))}
-  </ul>
-)
+export function Expertises() {
+  return (
+    <>
+      <div className="flex items-center justify-between border-b border-gray-300 pb-5">
+        <h2>Our Expertises</h2>
+        <span className="material-symbols-outlined text-[32px] text-grayscale-900">
+          arrow_downward
+        </span>
+      </div>
+
+      <ul className="space-y-4">
+        {data.expertises.map(({ content, id, symbolsIcon, title }, index) => (
+          <ItemWrapper key={id} index={index}>
+            <span className="material-symbols-outlined text-[40px] font-semibold lg:text-[64px]">
+              {symbolsIcon}
+            </span>
+            <h4 className="col-span-2 lg:col-span-1">{title}</h4>
+            <Paragraphy className="col-span-3 lg:col-span-1">
+              {content}
+            </Paragraphy>
+          </ItemWrapper>
+        ))}
+      </ul>
+    </>
+  )
+}

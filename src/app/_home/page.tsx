@@ -1,15 +1,15 @@
+import { Button, Container, Header } from '@/components'
+
 import {
   Expertises,
   Experts,
+  FAQ,
   Hero,
   Numbers,
   Projects,
-  Questions,
   SocialProof,
-  WorkWay
+  WorkStyle
 } from './components'
-import { Button, Container, Header } from '@/components'
-import { twJoin } from 'tailwind-merge'
 
 export default function Home() {
   return (
@@ -18,34 +18,30 @@ export default function Home() {
       <main className="flex flex-col items-center overflow-hidden">
         <section className="bg-grayscale-100 text-center">
           <Container className="max-w-[912px] space-y-10 xl:space-y-20">
-            <Hero.Content />
-            <Hero.Carousel />
-            <span
-              className={twJoin(
-                'relative mx-auto block h-[52px] w-8 rounded-full border border-grayscale-400',
-                'before:left-[13px] before:top-3 before:h-2 before:w-1 before:animate-bounce before:rounded-full before:bg-grayscale-700'
-              )}
-            />
+            <Hero />
           </Container>
         </section>
+
         <section className="xl:py-[200px]">
-          <Container>
+          <Container className="space-y-10 xl:space-y-20">
             <Projects.Header />
             <Projects.Group />
           </Container>
         </section>
+
         <section className="cta relative overflow-hidden">
           <Container className="flex flex-col gap-6 text-center lg:flex-row lg:justify-between">
             <h2 className="z-10">Ready to bring your idea to life?</h2>
             <Button>Schedule a 10-Minute Call</Button>
           </Container>
         </section>
-        <section aria-labelledby="our-expertise" className="bg-grayscale-100">
-          <Container className="grid gap-10 lg:gap-20">
-            <Expertises.Header />
-            <Expertises.List />
+
+        <section aria-labelledby="our-expertise">
+          <Container className="space-y-10 xl:space-y-20">
+            <Expertises />
           </Container>
         </section>
+
         <section className="hidden bg-grayscale-900">
           <Container className="grid gap-10 lg:gap-20 lg:py-[120px]">
             <Experts.Header />
@@ -53,28 +49,28 @@ export default function Home() {
             <Experts.Content />
           </Container>
         </section>
+
         <section className="bg-grayscale-100">
-          <Container className="grid gap-10 lg:gap-20">
-            <WorkWay.Header />
-            <WorkWay.Info />
-            <WorkWay.Content />
+          <Container className="space-y-10 xl:space-y-20">
+            <WorkStyle />
           </Container>
         </section>
+
         <section>
-          <Container className="grid gap-10 lg:gap-20">
-            <Numbers.Header />
-            <Numbers.Content />
+          <Container className="space-y-10 xl:space-y-20">
+            <Numbers />
           </Container>
         </section>
+
         <section className="overflow-hidden bg-grayscale-900">
           <Container>
             <SocialProof />
           </Container>
         </section>
+
         <section>
-          <Container className="grid gap-10 lg:gap-20">
-            <Questions.Header />
-            <Questions.Content />
+          <Container className="xl:space-y-5">
+            <FAQ />
           </Container>
         </section>
       </main>

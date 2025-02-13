@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Button, Container, Header, Paragraphy } from '@/components'
+import { Button, Container, Header, IconButton, Paragraphy } from '@/components'
 import { data } from '@/data'
 
 import { GalleryGrid } from './components/galery-grid'
@@ -27,7 +27,9 @@ export default async function Project({ params }: ProjectProps) {
       <main>
         <Container className="w-full space-y-20 pb-20 pt-40">
           <Link href="/">
-            <span className="material-symbols-outlined">chevron_left</span>
+            <IconButton variant="secondary">
+              <span className="material-symbols-outlined">chevron_left</span>
+            </IconButton>
           </Link>
 
           <div className="space-y-4 border-b border-grayscale-300 pb-5">

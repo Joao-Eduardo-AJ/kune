@@ -1,6 +1,6 @@
-import Image from 'next/image'
-
 import { Container } from '@/components'
+
+import { ImageGrid } from './image-grid'
 
 type GalleryGridProps = {
   projectId: string
@@ -64,9 +64,12 @@ export function GalleryGrid({ projectId, projectName }: GalleryGridProps) {
   return (
     <Container className="flex flex-wrap gap-x-8 gap-y-10 py-32">
       {images.map(({ alt, semi, src }, index) => (
-        <div key={`${alt}-${index}`} className="rounded-xl">
-          <Image alt={alt} src={src} height={695} width={semi ? 592 : 1216} />
-        </div>
+        <ImageGrid
+          key={`${alt}-${index}`}
+          alt={alt}
+          src={src}
+          width={semi ? 592 : 1216}
+        />
       ))}
     </Container>
   )

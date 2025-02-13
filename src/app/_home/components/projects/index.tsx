@@ -2,12 +2,13 @@
 
 import { useAtom, useAtomValue } from 'jotai'
 import Link from 'next/link'
+import { twJoin } from 'tailwind-merge'
 
 import { ProjectType, projectTypeAtom } from '@/atom'
 import { Badge } from '@/components'
 import { data } from '@/data'
 
-import * as Card from './Card'
+import * as ProjectCard from './project-card'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
@@ -17,9 +18,13 @@ export function Header() {
   }
 
   return (
-    <div className="relative flex flex-col gap-6 border-b border-grayscale-300 pb-10 md:flex-row md:items-center md:justify-between">
+    <div
+      className={twJoin(
+        'relative flex flex-col gap-6 border-b border-grayscale-300 pb-10',
+        'xl:flex-row xl:justify-between'
+      )}
+    >
       <h2>Our Work</h2>
-      <span className="absolute bottom-10 right-0 z-10 h-12 w-10" />
       <div className="no-scrollbar overflow-scroll">
         <div className="flex min-w-min gap-3">
           <Badge
@@ -46,7 +51,7 @@ export function Header() {
             actived={projectType === 'branding'}
             onClick={() => handleProjectType('branding')}
           >
-            Identidade Visual
+            Branding
           </Badge>
         </div>
       </div>
@@ -62,30 +67,23 @@ export function Group() {
   })
 
   return (
-    <div className="grid gap-x-8 gap-y-6 pt-10 sm:grid-cols-2 md:gap-y-20 md:pt-20">
-      {projectsByType.map((project, index) => {
+    <div className={twJoin('grid gap-6 sm:grid-cols-2 xl:gap-x-8 xl:gap-y-20')}>
+      {projectsByType.map(project => {
         return (
-          <Card.Wrapper
-            key={project.id}
-            spacedTop={index % 2 !== 0}
-            year="2024"
-          >
+          <ProjectCard.Wrapper key={project.id}>
             <Link href={`/projects/${project.slug}`}>
-              <Card.Header
-                darkContrast={project.darkContrast}
-                year={project.year}
-              />
-              <Card.Figure
+              <ProjectCard.Figure
                 alt="project"
                 src={`/projects/${project.id}/thumb.webp`}
               />
             </Link>
 
-            <Card.Caption>
-              <Card.Info members={project.members} title={project.name} />
-              <Card.Description>{project.description}</Card.Description>
-            </Card.Caption>
-          </Card.Wrapper>
+            <ProjectCard.Caption
+              description={project.description}
+              title={project.name}
+              shortly={projectType === 'website'}
+            />
+          </ProjectCard.Wrapper>
         )
       })}
     </div>
