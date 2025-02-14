@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 
 import '../globals.css'
+import '../../../public/icons/symbols.css'
 
 const outfit = Outfit({
   display: 'swap',

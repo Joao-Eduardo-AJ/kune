@@ -2,6 +2,7 @@
 
 import { useAtom, useAtomValue } from 'jotai'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { twJoin } from 'tailwind-merge'
 
 import { ProjectType, projectTypeAtom } from '@/atom'
@@ -61,6 +62,7 @@ export function Header() {
 
 export function Group() {
   const projectType = useAtomValue(projectTypeAtom)
+  const lang = usePathname().split('/')[1]
 
   const projectsByType = data.projects.filter(project => {
     return project.type === projectType
@@ -71,7 +73,7 @@ export function Group() {
       {projectsByType.map(project => {
         return (
           <ProjectCard.Wrapper key={project.id}>
-            <Link href={`/projects/${project.slug}`}>
+            <Link href={`${lang}/projects/${project.slug}`}>
               <ProjectCard.Figure
                 alt="project"
                 src={`/projects/${project.id}/thumb.webp`}
