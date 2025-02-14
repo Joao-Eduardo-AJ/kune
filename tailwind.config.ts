@@ -18,6 +18,9 @@ export default {
         'pos-0': '0%',
         'pos-100': '100%'
       },
+      boxShadow: {
+        dropdown: ' 4px 4px 16px 0px rgba(51, 60, 54, 0.24);'
+      },
       colors: {
         grayscale: {
           50: '#FFFFFF',

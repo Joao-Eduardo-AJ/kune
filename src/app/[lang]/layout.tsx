@@ -3,9 +3,10 @@ import ReactLenis from 'lenis/react'
 /* import type { Metadata } from 'next' */
 import { Outfit } from 'next/font/google'
 import { Footer } from '@/components'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
-import './globals.css'
-import '../../public/icons/symbols.css'
+import '../globals.css'
 
 const outfit = Outfit({
   display: 'swap',
@@ -63,18 +64,23 @@ export async function generateMetadata() {
   }
 } */
 
-export default function RootLayout({
-  children
+export default async function RootLayout({
+  children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode
+  params: { locale: string }
 }>) {
+  const messages = await getMessages()
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${outfit.variable} font-outfit antialiased`}>
-        <ReactLenis root>
-          {children}
-          <Footer />
-        </ReactLenis>
+        <NextIntlClientProvider messages={messages}>
+          <ReactLenis root>
+            {children}
+            <Footer />
+          </ReactLenis>
+        </NextIntlClientProvider>
         <SpeedInsights />
       </body>
     </html>

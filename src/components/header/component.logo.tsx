@@ -5,7 +5,7 @@ import { HtmlHTMLAttributes } from 'react'
 const Span = ({ ...props }: HtmlHTMLAttributes<HTMLParagraphElement>) => (
   <span
     {...props}
-    className={`${props.className} absolute left-0 -z-10 text-xl font-semibold text-grayscale-900 opacity-0 transition-all duration-300 ease-out group-hover:left-12 group-hover:opacity-100 xl:text-2xl`}
+    className={`${props.className} absolute left-0 -z-10 cursor-default pl-1 text-xl font-semibold text-grayscale-900 opacity-0 transition-all duration-300 ease-out group-hover:left-10 group-hover:opacity-100 xl:text-2xl`}
   />
 )
 export const Logo = () => (
@@ -17,7 +17,7 @@ export const Logo = () => (
       alt="logo"
       className="h-8 w-8 xl:h-10 xl:w-10"
     />
-    <Span className="-top-[2px]">Kune</Span>
-    <Span className="-bottom-[2px] delay-100">Studio</Span>
+    <Span className="-top-2">Kune</Span>
+    <Span className="-bottom-2 delay-100">Studio</Span>
   </div>
 )
