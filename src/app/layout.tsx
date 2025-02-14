@@ -4,8 +4,8 @@ import ReactLenis from 'lenis/react'
 import { Outfit } from 'next/font/google'
 import { Footer } from '@/components'
 
-import 'material-symbols'
 import './globals.css'
+import '../../public/icons/symbols.css'
 
 const outfit = Outfit({
   display: 'swap',
