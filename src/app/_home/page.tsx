@@ -16,20 +16,20 @@ export default function Home() {
     <>
       <Header filled />
       <main className="flex flex-col items-center overflow-hidden">
-        <section className="bg-grayscale-100 text-center">
+        <section className="bg-grayscale-100 py-10 text-center xl:py-20">
           <Container className="max-w-[912px] space-y-10 xl:space-y-20">
             <Hero />
           </Container>
         </section>
 
-        <section className="xl:py-[200px]">
+        <section>
           <Container className="space-y-10 xl:space-y-20">
             <Projects.Header />
             <Projects.Group />
           </Container>
         </section>
 
-        <section className="cta relative overflow-hidden">
+        <section className="cta relative overflow-hidden py-10 xl:py-20">
           <Container className="flex flex-col gap-6 text-center lg:flex-row lg:justify-between">
             <h2 className="z-10">Ready to bring your idea to life?</h2>
             <Button>Schedule a 10-Minute Call</Button>

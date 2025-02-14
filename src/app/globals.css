@@ -6,7 +6,7 @@
   header,
   footer,
   section {
-    @apply w-full px-7 py-10 xl:py-20
+    @apply w-full px-7 py-[100px] xl:py-[200px]
   }
 
   h1 {
