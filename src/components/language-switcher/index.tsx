@@ -13,6 +13,7 @@ import {
 } from '@radix-ui/react-select'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 type LanguageSwitcherProps = {
   footer?: boolean
@@ -61,7 +62,10 @@ export const LanguageSwitcher = ({ footer }: LanguageSwitcherProps) => {
       </SelectTrigger>
       <SelectPortal>
         <SelectContent
-          className="shadow-dropdown z-10 rounded-xl bg-grayscale-50 px-3 py-2 text-grayscale-700"
+          className={twMerge(
+            'z-10 rounded-xl bg-grayscale-50 px-3 py-2 text-grayscale-700',
+            'shadow-dropdown'
+          )}
           position="popper"
           sideOffset={4}
         >
