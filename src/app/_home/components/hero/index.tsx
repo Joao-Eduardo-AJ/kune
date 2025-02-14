@@ -14,9 +14,9 @@ export function Hero() {
     <>
       <div className="w-full space-y-10">
         <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ ease: 'easeOut', duration: 0.5 }}
+          initial={{ y: 25, opacity: 0, scale: 0.95 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ type: 'spring', duration: 0.5 }}
           className="flex flex-col items-center gap-6"
         >
           <Topic>Available for new projects</Topic>
@@ -34,9 +34,9 @@ export function Hero() {
       </div>
 
       <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 0.5, delay: 0.5 }}
+        initial={{ y: 25, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', delay: 0.2, duration: 0.5 }}
         className="space-y-2 xl:space-y-5"
       >
         <Paragraphy variant="p5">Trusted by</Paragraphy>

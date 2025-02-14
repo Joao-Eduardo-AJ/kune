@@ -7,9 +7,9 @@ type ButtonPingProps = React.ComponentProps<'button'>
 export function CTAButton({ className, ...props }: ButtonPingProps) {
   return (
     <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: 'easeOut', duration: 0.5, delay: 0.25 }}
+      initial={{ y: 25, opacity: 0, scale: 0.95 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{ type: 'spring', delay: 0.1, duration: 0.5 }}
       className="relative mx-auto w-[232px]"
     >
       <span
