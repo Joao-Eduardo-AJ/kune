@@ -25,49 +25,73 @@ export default async function Project({ params }: ProjectProps) {
     <>
       <Header />
       <main>
-        <Container className="w-full space-y-20 pb-20 pt-40">
-          <Link href="/">
-            <IconButton variant="secondary">
-              <span className="material-symbols-outlined">chevron_left</span>
-            </IconButton>
-          </Link>
+        <section className="pb-20 pt-[128px]">
+          <Container className="w-full space-y-12 lg:space-y-20">
+            <Link className="inline-flex" href="/">
+              <IconButton variant="secondary">
+                <span className="material-symbols-outlined">chevron_left</span>
+              </IconButton>
+            </Link>
 
-          <div className="space-y-4 border-b border-grayscale-300 pb-5">
-            <h2>{project.name}</h2>
-          </div>
+            <div className="space-y-10 lg:space-y-0">
+              <div className="space-y-4">
+                <h2>{project.name}</h2>
+                <Paragraphy className="text-grayscale-500" variant="p5">
+                  Visual identity for developer | Programming and development
+                </Paragraphy>
+              </div>
 
-          <div className="flex w-full justify-between">
-            <div className="space-y-1">
-              <Paragraphy variant="p4">Service</Paragraphy>
-              <Paragraphy variant="p2" className="text-gray-900">
-                Visual Identity
+              <span className="block h-px w-full bg-grayscale-300 lg:!mt-5" />
+
+              <div className="space-y-10 lg:!mt-20 lg:flex lg:justify-between lg:space-y-0">
+                <div className="space-y-1">
+                  <Paragraphy variant="p4">Service</Paragraphy>
+                  <Paragraphy variant="p2" className="text-gray-900">
+                    Visual Identity
+                  </Paragraphy>
+                </div>
+
+                <Paragraphy
+                  className="max-w-[488px] text-grayscale-500"
+                  variant="p4"
+                >
+                  {project.description}
+                </Paragraphy>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        <section className="py-0 pb-20 lg:py-[128px]">
+          <GalleryGrid projectId={project.id} projectName={project.name} />
+        </section>
+
+        <section className="py-20 lg:py-[128px]">
+          <Container className="space-y-10 lg:space-y-20">
+            <div className="space-y-10 lg:flex lg:flex-row-reverse lg:items-start lg:justify-between lg:space-y-0">
+              <div className="max-w-fit rounded-lg bg-grayscale-900 p-4">
+                <Image
+                  height={40}
+                  width={40}
+                  src="/kune-white.svg"
+                  alt="kune"
+                />
+              </div>
+
+              <span className="block text-[56px]/[56px] font-semibold text-grayscale-900 lg:max-w-[613px] lg:text-[64px]/[62px]">
+                Let{`'`}s create something together?
+              </span>
+            </div>
+
+            <div className="space-y-10 lg:flex lg:items-center lg:justify-between lg:space-y-0">
+              <Paragraphy className="lg:max-w-60" variant="p4">
+                Tell us your idea and get in touch to make your dream come true
               </Paragraphy>
+
+              <Button variant="secondary">Schedule a 10-Minute Call</Button>
             </div>
-            <p className="max-w-[488px]">{project.description}</p>
-          </div>
-        </Container>
-
-        <GalleryGrid projectId={project.id} projectName={project.name} />
-
-        <Container className="space-y-20 py-32">
-          <div className="flex items-start justify-between">
-            <strong className="leading-[62px] text-grayscale-900 lg:max-w-[613px] lg:text-[64px]">
-              Let{`'`}s create something together?
-            </strong>
-
-            <div className="inline-flex rounded-lg bg-grayscale-900 p-4">
-              <Image height={40} width={40} src="/kune-white.svg" alt="kune" />
-            </div>
-          </div>
-
-          <div className="flex w-full justify-between">
-            <Paragraphy className="max-w-[240px]" variant="p4">
-              Tell us your idea and get in touch to make your dream come true
-            </Paragraphy>
-
-            <Button variant="secondary">Schedule a 10-Minute Call</Button>
-          </div>
-        </Container>
+          </Container>
+        </section>
       </main>
     </>
   )

@@ -62,14 +62,9 @@ export function GalleryGrid({ projectId, projectName }: GalleryGridProps) {
   ]
 
   return (
-    <Container className="flex flex-wrap gap-x-8 gap-y-10 py-32">
+    <Container className="grid auto-cols-fr gap-y-4 sm:gap-x-8 sm:gap-y-10">
       {images.map(({ alt, semi, src }, index) => (
-        <ImageGrid
-          key={`${alt}-${index}`}
-          alt={alt}
-          src={src}
-          width={semi ? 592 : 1216}
-        />
+        <ImageGrid key={`${alt}-${index}`} alt={alt} src={src} semi={semi} />
       ))}
     </Container>
   )
