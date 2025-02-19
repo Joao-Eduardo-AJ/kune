@@ -1,1 +1,116 @@
-{ "h1": "en" }
+{
+  "home": {
+    "scheduleButton": "Book a call",
+    "sectionDivider": "Ready to bring your idea to life?",
+    "hero": {
+      "status": "Available for new projects",
+      "title": "Strategic UX/UI & Branding Agency for Tech Startups | Data-Driven Impact",
+      "subtitle": "Take the first step to turn your idea into reality. Chat with us for 10 minutes and explore simple, impactful solutions made for you.",
+      "cta": "Book a call",
+      "trusted": "Trusted by"
+    },
+    "projects": {
+      "title": "Our Work",
+      "brandingDesign": "Branding Design",
+      "mobileApps": "Mobile Apps",
+      "webSites": "Web Sites",
+      "webApp": "Web Apps",
+      "01": "We built a brand that embodies innovation and trust, offering an interactive digital library of care protocols to enhance evidence-based medical practice.",
+      "02": "We craft compelling presentations that help persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message is impactful.",
+      "03": "We design powerful presentations to persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message resonates with clarity.",
+      "04": "Driven by technology, Voltbras' founders in Florianópolis created a cutting-edge solution for EV charging stations and an exclusive app for seamless recharging.",
+      "13": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
+      "14": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
+      "15": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
+      "16": "Regina Festas’ new website embraces its evolution, creating a seamless experience. Now, exploring products, collections, and trends is easier and more inspiring."
+    },
+    "expertises": {
+      "title": "Our Expertise",
+      "01": {
+        "title": "UX Design & Strategy",
+        "subtitle": "We design user-focused experiences and strategies that drive growth, boost engagement, and deliver results."
+      },
+      "02": {
+        "title": "UI Design & auditing",
+        "subtitle": "We create intuitive interfaces and audit designs to improve usability, performance, and visual impact."
+      },
+      "03": {
+        "title": "Development & Technology",
+        "subtitle": "We build scalable, custom digital solutions using smart technology to ensure performance, reliability, and growth."
+      },
+      "04": {
+        "title": "Branding & Positioning",
+        "subtitle": "We craft authentic brand identities and strategies that inspire, connect with audiences, and stand out."
+      }
+    },
+    "experts": {},
+    "workStyle": {
+      "title": "Experience That Delivers Results",
+      "subtitle": "At Kune, we believe that every project is unique and deserves a customized approach. That’s why our process is built on three key pillars: collaboration, innovation, and results.",
+      "01": {
+        "title": "Collaboration",
+        "subtitle": "We work closely with our clients, understanding their goals, challenges, and vision. This partnership ensures that every decision we make aligns with their needs."
+      },
+      "02": {
+        "title": "Innovation",
+        "subtitle": "With a team of experienced Designers, Developers, and Marketing Specialists, we push boundaries to create solutions that are both creative and effective."
+      },
+      "03": {
+        "title": "Results",
+        "subtitle": "From strategy to execution, we focus on delivering real value through functional websites, engaging apps, and impactful brand identities."
+      }
+    },
+    "numbers": {
+      "title": "Interesting Numbers",
+      "subtitle": "Experience That Delivers Results",
+      "paragraph": "At Kune, we bring together over 20 years of combined experience across our Designers, Developers, and Marketing Specialists. Our team excels in their fields, delivering innovative and tailored solutions for every project.",
+      "years": "Years of experience",
+      "done": "Projects completed"
+    },
+    "socialProof": {
+      "title": "Clients Who Trust, Results That Shine",
+      "subtitle": "“At Kune, we bring together over 20 years of combined experience across our Designers, Developers, and Marketing Specialists. Our team excels in their fields, delivering innovative and tailored solutions for every project.”",
+      "role": "CEO / Founder at Doc.Door"
+    },
+    "faq": {
+      "title": "Are there any questions left?",
+      "01": {
+        "title": "What sets Kune Studio apart from other design and technology studios?",
+        "subtitle": "At Kune Studio, we believe that every project has a unique story to tell. We don’t provide one-size-fits-all solutions. Our team blends technical expertise with empathy to create websites, mobile apps, web apps, and brands that truly connect with people and drive business forward."
+      },
+      "02": {
+        "title": "Why should I invest in branding and design for my brand?",
+        "subtitle": "Branding goes beyond just creating a logo; it’s about building an emotional connection with your audience. Strategic design elevates your brand, boosts customer trust, and sets your business apart in a competitive market. At Kune Studio, we translate your essence into a visual identity that inspires and communicates."
+      },
+      "03": {
+        "title": "How can Kune Studio help my business grow?",
+        "subtitle": "Whether it’s a visually striking website, a functional app, or a memorable brand, we help your company stand out and achieve tangible results. Our products are developed with a focus on performance, usability, and impact, always aligned with your business goals."
+      },
+      "04": {
+        "title": "Do you really understand the needs of different businesses?",
+        "subtitle": "Absolutely! Our process begins with active listening. Each client has unique challenges and dreams, and it’s our mission to understand them deeply. We create tailored solutions, from an intuitive digital experience to a brand that reflects authenticity. Nothing at Kune Studio is done without purpose."
+      },
+      "05": {
+        "title": "Why is it important to have a professional team like Kune Studio?",
+        "subtitle": "Because creating something that works and resonates is not a matter of chance. Our multidisciplinary team brings not only technical skills but also a passion for what they do. Working with top professionals means you can be confident that your project will be delivered with excellence, exceeding your expectations at every stage."
+      }
+    },
+    "footer": {
+      "about": {
+        "title": "About us",
+        "work": "Work",
+        "clients": "Clients",
+        "services": "Services",
+        "who": "Who are we?"
+      },
+      "contact": "Contact us",
+      "grow": {
+        "title": "We build. You grow.",
+        "paragraph": "We create digital solutions that drive results, combining design, technology, and strategy to help your business grow and scale."
+      },
+      "rights": "2024 Kune Studio | All rights reserved",
+      "policy": "Privacy policy"
+    }
+  },
+  "Project": {}
+}

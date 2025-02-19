@@ -1,4 +1,4 @@
-import { Button, Container, Header } from '@/components'
+import { Container, Header } from '@/components'
 
 import {
   Expertises,
@@ -10,6 +10,7 @@ import {
   SocialProof,
   WorkStyle
 } from './components'
+import { SectionDivider } from './components/section-divider'
 
 export default async function Home() {
   return (
@@ -31,8 +32,7 @@ export default async function Home() {
 
         <section className="cta relative overflow-hidden py-10 xl:py-20">
           <Container className="flex flex-col gap-6 text-center lg:flex-row lg:justify-between">
-            <h2 className="z-10">Ready to bring your idea to life?</h2>
-            <Button>Schedule a 10-Minute Call</Button>
+            <SectionDivider />
           </Container>
         </section>
 

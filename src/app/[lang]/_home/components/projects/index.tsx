@@ -10,9 +10,11 @@ import { Badge } from '@/components'
 import { data } from '@/data'
 
 import * as ProjectCard from './project-card'
+import { useTranslations } from 'next-intl'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
+  const t = useTranslations('home.projects')
 
   function handleProjectType(newProjectType: ProjectType) {
     setProjectType(newProjectType)
@@ -25,34 +27,34 @@ export function Header() {
         'xl:flex-row xl:justify-between'
       )}
     >
-      <h2>Our Work</h2>
+      <h2>{t('title')}</h2>
       <div className="no-scrollbar overflow-scroll">
         <div className="flex min-w-min gap-3">
           <Badge
             actived={projectType === 'website'}
             onClick={() => handleProjectType('website')}
           >
-            Web Sites
+            {t('webSites')}
           </Badge>
           <Badge
             actived={projectType === 'mobile'}
             className="hidden"
             onClick={() => handleProjectType('mobile')}
           >
-            Mobile App
+            {t('mobileApps')}
           </Badge>
           <Badge
             actived={projectType === 'web'}
             className="hidden"
             onClick={() => handleProjectType('web')}
           >
-            Web App
+            {t('webApp')}
           </Badge>
           <Badge
             actived={projectType === 'branding'}
             onClick={() => handleProjectType('branding')}
           >
-            Branding
+            {t('brandingDesign')}
           </Badge>
         </div>
       </div>
@@ -63,6 +65,7 @@ export function Header() {
 export function Group() {
   const projectType = useAtomValue(projectTypeAtom)
   const lang = usePathname().split('/')[1]
+  const t = useTranslations('home.projects')
 
   const projectsByType = data.projects.filter(project => {
     return project.type === projectType
@@ -70,19 +73,19 @@ export function Group() {
 
   return (
     <div className={twJoin('grid gap-6 sm:grid-cols-2 xl:gap-x-8 xl:gap-y-20')}>
-      {projectsByType.map(project => {
+      {projectsByType.map(({ id, name, slug }) => {
         return (
-          <ProjectCard.Wrapper key={project.id}>
-            <Link href={`${lang}/projects/${project.slug}`}>
+          <ProjectCard.Wrapper key={id}>
+            <Link href={`${lang}/projects/${slug}`}>
               <ProjectCard.Figure
                 alt="project"
-                src={`/projects/${project.id}/thumb.webp`}
+                src={`/projects/${id}/thumb.webp`}
               />
             </Link>
 
             <ProjectCard.Caption
-              description={project.description}
-              title={project.name}
+              title={name}
+              description={t(id)}
               shortly={projectType === 'website'}
             />
           </ProjectCard.Wrapper>

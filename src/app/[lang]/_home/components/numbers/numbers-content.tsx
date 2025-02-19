@@ -6,8 +6,10 @@ import * as motion from 'motion/react-client'
 import { twJoin } from 'tailwind-merge'
 
 import { AnimatedCounter, Paragraphy } from '@/components'
+import { useTranslations } from 'next-intl'
 
 export function NumbersContent() {
+  const t = useTranslations('home.numbers')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -26,12 +28,9 @@ export function NumbersContent() {
       className={twJoin('space-y-6 lg:space-y-20')}
     >
       <div className="space-y-6 lg:flex lg:justify-between lg:space-y-0">
-        <h4 className="text-grayscale-700">Experience That Deliver Results</h4>
+        <h4 className="text-grayscale-700"> {t('title')}</h4>
         <Paragraphy className="lg:max-w-[488px]" variant="p4">
-          At Kune, we bring together over 20 years of combined experience across
-          our Designers, Developers, and Marketing Specialists. Our team excels
-          in their fields, delivering innovative and tailored solutions for
-          every project.
+          {t('subtitle')}
         </Paragraphy>
       </div>
 
@@ -42,7 +41,7 @@ export function NumbersContent() {
             <AnimatedCounter from={0} to={12} />
           </span>
           <Paragraphy className="text-grayscale-500" variant="p2">
-            Years of experience
+            {t('years')}
           </Paragraphy>
         </div>
 
@@ -52,7 +51,7 @@ export function NumbersContent() {
             <AnimatedCounter from={0} to={50} />
           </span>
           <Paragraphy className="text-grayscale-500" variant="p2">
-            Projects completed
+            {t('done')}
           </Paragraphy>
         </div>
       </div>

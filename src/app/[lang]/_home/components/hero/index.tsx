@@ -6,9 +6,11 @@ import { Topic, Paragraphy } from '@/components'
 
 import { CTAButton } from './cta-button'
 import { customers } from './customers-data'
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
   const duplicatedCustomers = [...customers, ...customers]
+  const t = useTranslations('home.hero')
 
   return (
     <>
@@ -19,18 +21,12 @@ export function Hero() {
           transition={{ type: 'spring', duration: 0.5 }}
           className="flex flex-col items-center gap-6"
         >
-          <Topic>Available for new projects</Topic>
-          <h1>
-            Strategic UX/UI & Branding Agency for Tech Startups | Data-Driven
-            Impact
-          </h1>
-          <Paragraphy>
-            Take the first step to turn your idea into reality. Chat with us for
-            10 minutes and explore simple, impactful solutions made for you.
-          </Paragraphy>
+          <Topic>{t('status')}</Topic>
+          <h1>{t('title')}</h1>
+          <Paragraphy>{t('subtitle')}</Paragraphy>
         </motion.div>
 
-        <CTAButton />
+        <CTAButton>{t('cta')}</CTAButton>
       </div>
 
       <motion.div
@@ -39,7 +35,7 @@ export function Hero() {
         transition={{ type: 'spring', delay: 0.2, duration: 0.5 }}
         className="space-y-2 xl:space-y-5"
       >
-        <Paragraphy variant="p5">Trusted by</Paragraphy>
+        <Paragraphy variant="p5">{t('trusted')}</Paragraphy>
         <div className="relative w-full overflow-hidden">
           <span className="fade-x absolute left-0 z-10 h-12 w-full" />
           <div className="flex animate-customers gap-6">

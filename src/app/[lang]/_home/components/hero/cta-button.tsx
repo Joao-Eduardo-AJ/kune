@@ -27,7 +27,7 @@ export function CTAButton({ className, ...props }: ButtonPingProps) {
         )}
         {...props}
       >
-        Book a call
+        {props.children}
         <span
           className={twJoin(
             'material-symbols-outlined block cursor-pointer rounded-md p-2',

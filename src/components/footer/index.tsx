@@ -1,12 +1,13 @@
 import { Container, Paragraphy, Topic } from '@/components'
-import { List } from './List'
-import Image from 'next/image'
 import kune from '@public/kune-white.svg'
-import { data } from '@/data'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { LanguageSwitcher } from '../language-switcher'
+import { List } from './List'
+import { SocialIcons } from './social-icons'
 
 export function Footer() {
+  const t = useTranslations('home.footer')
   return (
     <footer className="relative overflow-hidden bg-grayscale-900">
       <div
@@ -17,24 +18,30 @@ export function Footer() {
       <Container className="flex flex-col gap-10">
         <div className="z-10 flex flex-col gap-10 border-b border-grayscale-800 pb-10 md:flex-row md:justify-between">
           <div className="grid gap-3">
-            <Topic color="gray">We build. You grow</Topic>
+            <Topic color="gray">{t('grow.title')}</Topic>
             <Paragraphy className="max-w-[400px] text-white">
-              We create digital solutions that drive results, combining design,
-              technology, and strategy to help your business grow and scale.
+              {t('grow.paragraph')}
             </Paragraphy>
           </div>
           <div className="grid grid-cols-2">
             <div className="flex flex-col gap-3">
-              <Topic color="gray">About us</Topic>
-              <List items={['Work', 'Clients', 'Services', 'Who we are?']} />
+              <Topic color="gray">{t('about.title')}</Topic>
+              <List
+                items={[
+                  t('about.work'),
+                  t('about.clients'),
+                  t('about.services'),
+                  t('about.who')
+                ]}
+              />
             </div>
             <div className="flex flex-col gap-3">
-              <Topic color="gray">Contact us</Topic>
+              <Topic color="gray">{t('contact')}</Topic>
               <List items={['+1 980 971-24-19', 'kunestudio@contato.com']} />
             </div>
           </div>
         </div>
-        <div className="z-10 flex flex-col justify-between gap-6 md:flex-row">
+        <div className="z-10 flex flex-col justify-between gap-4 md:flex-row">
           <div className="flex flex-col gap-6 md:flex-row">
             <div className="flex gap-1">
               <Image alt="logo" src={kune} height={40} width={40} />
@@ -44,27 +51,17 @@ export function Footer() {
                 Studio
               </span>
             </div>
-            <div className="flex items-center gap-1">
-              {data.socialIcons.map(({ icon, url }) => (
-                <Link
-                  key={icon}
-                  href={url}
-                  target="_blank"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-grayscale-700 transition-all duration-300 hover:-translate-y-1"
-                >
-                  <Image alt="" width={16} height={16} src={`/icons/${icon}`} />
-                </Link>
-              ))}
+            <SocialIcons className="hidden md:flex" />
+          </div>
+          <div className="flex flex-col gap-6 md:flex-row md:items-center">
+            <span className="text-grayscale-700">&copy; {t('rights')}</span>
+            <SocialIcons className="flex md:hidden" />
+            <div className="flex items-center justify-between md:gap-48">
+              <Paragraphy variant="p5">{t('policy')}</Paragraphy>
+              <LanguageSwitcher footer />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row md:items-center md:gap-8">
-            <span className="text-grayscale-700">
-              &copy; 2024 Kune Studio | All rights reserved
-            </span>
-            <Paragraphy variant="p5">Privacy policy</Paragraphy>
-          </div>
         </div>
-        <LanguageSwitcher footer />
       </Container>
     </footer>
   )

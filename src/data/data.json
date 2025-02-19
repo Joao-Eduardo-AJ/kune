@@ -2,27 +2,19 @@
   "expertises": [
     {
       "symbolsIcon": "devices_other",
-      "id": 1,
-      "title": "UX Design & Strategy",
-      "content": "We design user-focused experiences and strategies that drive growth, boost engagement, and deliver results."
+      "id": "01"
     },
     {
       "symbolsIcon": "format_shapes",
-      "id": 2,
-      "title": "UI Design & auditing",
-      "content": "We create intuitive interfaces and audit designs to improve usability, performance, and visual impact."
+      "id": "02"
     },
     {
       "symbolsIcon": "sdk",
-      "id": 3,
-      "title": "Development & Technology",
-      "content": "We build scalable, custom digital solutions using smart technology to ensure performance, reliability, and growth."
+      "id": "03"
     },
     {
       "symbolsIcon": "brand_family",
-      "id": 4,
-      "title": "Branding & Positioning",
-      "content": "We craft authentic brand identities and strategies that inspire, connect with audiences, and stand out."
+      "id": "04"
     }
   ],
   "members": [
@@ -228,19 +220,19 @@
   "working": [
     {
       "symbolsIcon": "collaboration.svg",
-      "id": 1,
+      "id": "01",
       "title": "Collaboration",
       "content": "We work closely with our clients, understanding their goals, challenges, and vision. This partnership ensures that every decision we make aligns with their needs."
     },
     {
       "symbolsIcon": "innovation.svg",
-      "id": 2,
+      "id": "02",
       "title": "Innovation",
       "content": "With a team of experienced Designers, Developers, and Marketing Specialists, we push boundaries to create solutions that are both creative and effective."
     },
     {
       "symbolsIcon": "results.svg",
-      "id": 3,
+      "id": "03",
       "title": "Results",
       "content": "From strategy to execution, we focus on delivering real value through functional websites, engaging apps, and impactful brand identities."
     }

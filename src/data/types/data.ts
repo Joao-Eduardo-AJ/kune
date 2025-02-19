@@ -1,10 +1,8 @@
 import { ProjectType } from '@/atom'
 
 export type GenericDataParams = {
-  content: string
   id: string
   symbolsIcon: string
-  title: string
 }
 
 export type MemberParams = {
