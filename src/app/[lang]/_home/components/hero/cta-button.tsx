@@ -1,4 +1,5 @@
 import * as motion from 'motion/react-client'
+import Link from 'next/link'
 
 import { twJoin, twMerge } from 'tailwind-merge'
 
@@ -18,25 +19,27 @@ export function CTAButton({ className, ...props }: ButtonPingProps) {
           'animate-bloom opacity-50'
         )}
       />
-      <button
-        className={twMerge(
-          'cta relative w-full rounded-xl bg-left p-2 pl-6 transition-all duration-500',
-          'flex items-center justify-between text-xl leading-6.5',
-          'hover:bg-right',
-          className
-        )}
-        {...props}
-      >
-        {props.children}
-        <span
-          className={twJoin(
-            'material-symbols-outlined block cursor-pointer rounded-md p-2',
-            'bg-grayscale-900 text-grayscale-100'
+      <Link href="https://calendly.com/daniel-oliveira-kunestudio/30min">
+        <button
+          className={twMerge(
+            'cta relative w-full rounded-xl bg-left p-2 pl-6 transition-all duration-500',
+            'flex items-center justify-between text-xl leading-6.5',
+            'hover:bg-right',
+            className
           )}
+          {...props}
         >
-          arrow_right_alt
-        </span>
-      </button>
+          {props.children}
+          <span
+            className={twJoin(
+              'material-symbols-outlined block cursor-pointer rounded-md p-2',
+              'bg-grayscale-900 text-grayscale-100'
+            )}
+          >
+            arrow_right_alt
+          </span>
+        </button>
+      </Link>
     </motion.div>
   )
 }

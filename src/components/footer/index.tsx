@@ -37,7 +37,7 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <Topic color="gray">{t('contact')}</Topic>
-              <List items={['+1 980 971-24-19', 'kunestudio@contato.com']} />
+              <List items={['+55 48 9182-2250', 'contato@kunestudio.com']} />
             </div>
           </div>
         </div>
