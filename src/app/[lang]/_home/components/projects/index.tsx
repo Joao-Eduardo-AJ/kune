@@ -31,6 +31,12 @@ export function Header() {
       <div className="no-scrollbar overflow-scroll">
         <div className="flex min-w-min gap-3">
           <Badge
+            actived={projectType === 'branding'}
+            onClick={() => handleProjectType('branding')}
+          >
+            {t('brandingDesign')}
+          </Badge>
+          <Badge
             actived={projectType === 'website'}
             onClick={() => handleProjectType('website')}
           >
@@ -49,12 +55,6 @@ export function Header() {
             onClick={() => handleProjectType('web')}
           >
             {t('webApp')}
-          </Badge>
-          <Badge
-            actived={projectType === 'branding'}
-            onClick={() => handleProjectType('branding')}
-          >
-            {t('brandingDesign')}
           </Badge>
         </div>
       </div>
@@ -76,7 +76,10 @@ export function Group() {
       {projectsByType.map(({ id, name, slug }) => {
         return (
           <ProjectCard.Wrapper key={id}>
-            <Link href={`${lang}/projects/${slug}`}>
+            <Link
+              href={`${lang}/projects/${slug}`}
+              onClick={e => projectType === 'website' && e.preventDefault()}
+            >
               <ProjectCard.Figure
                 alt="project"
                 src={`/projects/${id}/thumb.webp`}
