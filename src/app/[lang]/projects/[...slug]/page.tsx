@@ -1,3 +1,5 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import { ArrowLeft01Icon } from '@hugeicons/core-free-icons'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -29,7 +31,13 @@ export default async function Project({ params }: ProjectProps) {
           <Container className="w-full space-y-12 lg:space-y-20">
             <Link className="inline-flex" href="/">
               <IconButton variant="secondary">
-                <span className="material-symbols-outlined">chevron_left</span>
+                <span className="text-grayscale-900">
+                  <HugeiconsIcon
+                    icon={ArrowLeft01Icon}
+                    size={24}
+                    strokeWidth={1.5}
+                  />
+                </span>
               </IconButton>
             </Link>
 

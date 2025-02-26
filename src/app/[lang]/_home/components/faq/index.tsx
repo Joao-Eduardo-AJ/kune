@@ -1,17 +1,19 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import { ArrowDown02Icon } from '@hugeicons/core-free-icons'
+import { useTranslations } from 'next-intl'
 import { twJoin } from 'tailwind-merge'
 
 import { Paragraphy } from '@/components'
 
-import { useTranslations } from 'next-intl'
-
 export function FAQ() {
   const t = useTranslations('home.faq')
+
   return (
     <>
       <div className="flex items-center justify-between border-b border-gray-300 pb-5">
         <h2>{t('title')}</h2>
-        <span className="material-symbols-outlined text-[32px] text-grayscale-900">
-          arrow_downward
+        <span className="text-grayscale-900">
+          <HugeiconsIcon icon={ArrowDown02Icon} size={32} strokeWidth={1.5} />
         </span>
       </div>
 

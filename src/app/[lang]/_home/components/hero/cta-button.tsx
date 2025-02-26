@@ -1,7 +1,11 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import { ArrowRight02Icon } from '@hugeicons/core-free-icons'
 import * as motion from 'motion/react-client'
 import Link from 'next/link'
 
 import { twJoin, twMerge } from 'tailwind-merge'
+
+import { iconButton } from '@/components'
 
 type ButtonPingProps = React.ComponentProps<'button'>
 
@@ -30,13 +34,13 @@ export function CTAButton({ className, ...props }: ButtonPingProps) {
           {...props}
         >
           {props.children}
-          <span
-            className={twJoin(
-              'material-symbols-outlined block cursor-pointer rounded-md p-2',
-              'bg-grayscale-900 text-grayscale-100'
-            )}
-          >
-            arrow_right_alt
+          <span className={twJoin(iconButton(), 'pointer-events-none')}>
+            <HugeiconsIcon
+              icon={ArrowRight02Icon}
+              size={24}
+              color="currentColor"
+              strokeWidth={1.5}
+            />
           </span>
         </button>
       </Link>

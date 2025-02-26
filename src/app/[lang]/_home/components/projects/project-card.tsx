@@ -1,3 +1,5 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import { ArrowUpRight01Icon } from '@hugeicons/core-free-icons'
 import { useRef } from 'react'
 import { useInView, Variants } from 'motion/react'
 import * as motion from 'motion/react-client'
@@ -40,7 +42,12 @@ export function Wrapper({ children, className, ...props }: CardWrapperProps) {
           iconButton()
         )}
       >
-        arrow_outward
+        <HugeiconsIcon
+          icon={ArrowUpRight01Icon}
+          size={24}
+          color="currentColor"
+          strokeWidth={1.5}
+        />
       </span>
     </motion.div>
   )
