@@ -1,10 +1,12 @@
+import { GoogleTagManager } from '@next/third-parties/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ReactLenis from 'lenis/react'
 /* import type { Metadata } from 'next' */
-import { Outfit } from 'next/font/google'
-import { Footer } from '@/components'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { Outfit } from 'next/font/google'
+
+import { Footer } from '@/components'
 
 import '../globals.css'
 import '../../../public/icons/symbols.css'
@@ -75,6 +77,7 @@ export default async function RootLayout({
   const messages = await getMessages()
   return (
     <html lang={locale}>
+      <GoogleTagManager gtmId="GTM-TNNHL9Q5" />
       <body className={`${outfit.variable} font-outfit antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <ReactLenis root>

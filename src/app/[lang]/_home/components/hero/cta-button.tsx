@@ -7,7 +7,7 @@ import { twJoin, twMerge } from 'tailwind-merge'
 
 import { iconButton } from '@/components'
 
-type ButtonPingProps = React.ComponentProps<'button'>
+type ButtonPingProps = Omit<React.ComponentProps<typeof Link>, 'href'>
 
 export function CTAButton({ className, ...props }: ButtonPingProps) {
   return (
@@ -15,7 +15,7 @@ export function CTAButton({ className, ...props }: ButtonPingProps) {
       initial={{ y: 25, opacity: 0, scale: 0.95 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
       transition={{ type: 'spring', delay: 0.1, duration: 0.5 }}
-      className="relative mx-auto w-[232px]"
+      className="relative mx-auto inline-flex min-w-[232px]"
     >
       <span
         className={twJoin(
@@ -23,26 +23,25 @@ export function CTAButton({ className, ...props }: ButtonPingProps) {
           'animate-bloom opacity-50'
         )}
       />
-      <Link href="https://calendly.com/daniel-oliveira-kunestudio/30min">
-        <button
-          className={twMerge(
-            'cta relative w-full rounded-xl bg-left p-2 pl-6 transition-all duration-500',
-            'flex items-center justify-between text-xl leading-6.5',
-            'hover:bg-right',
-            className
-          )}
-          {...props}
-        >
-          {props.children}
-          <span className={twJoin(iconButton(), 'pointer-events-none')}>
-            <HugeiconsIcon
-              icon={ArrowRight02Icon}
-              size={24}
-              color="currentColor"
-              strokeWidth={1.5}
-            />
-          </span>
-        </button>
+      <Link
+        href="https://calendly.com/daniel-oliveira-kunestudio/30min"
+        className={twMerge(
+          'cta relative w-full rounded-xl bg-left p-2 pl-6 transition-all duration-500',
+          'flex items-center justify-between gap-2 text-xl font-semibold leading-6.5',
+          'hover:bg-right',
+          className
+        )}
+        {...props}
+      >
+        {props.children}
+        <span className={twJoin(iconButton(), 'pointer-events-none')}>
+          <HugeiconsIcon
+            icon={ArrowRight02Icon}
+            size={24}
+            color="currentColor"
+            strokeWidth={1.5}
+          />
+        </span>
       </Link>
     </motion.div>
   )
