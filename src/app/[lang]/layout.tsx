@@ -77,7 +77,7 @@ export default async function RootLayout({
   const messages = await getMessages()
   return (
     <html lang={locale}>
-      <GoogleTagManager gtmId="GTM-TNNHL9Q5" />
+      <GoogleTagManager gtmId="GT-MBGCK87P" />
       <body className={`${outfit.variable} font-outfit antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <ReactLenis root>
