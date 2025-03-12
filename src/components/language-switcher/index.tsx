@@ -37,8 +37,9 @@ export const LanguageSwitcher = ({ footer }: LanguageSwitcherProps) => {
 
   function onValueChange(newLocale: string) {
     if (locale === newLocale) return
-    const path = pathName.split('/').slice(2).join('/')
-    router.push(`${newLocale}/${path}`)
+    const segments = pathName.split('/').filter(Boolean)
+    segments[0] = newLocale
+    router.push(`/${segments.join('/')}`)
   }
 
   return (
