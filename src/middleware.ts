@@ -1,19 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
 
-const locales = ['en', 'es', 'pt']
-
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl
-  const segments = pathname.split('/').filter(Boolean)
-
-  if (!locales.includes(segments[0])) {
-    const locale = 'en'
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url))
-  }
-
-  return NextResponse.next()
-}
+export default createMiddleware({
+  locales: ['en', 'es', 'pt'],
+  defaultLocale: 'en'
+})
 
 export const config = {
-  matcher: '/((?!api|_next|.*\\..*).*)'
+  matcher: ['/', '/(en|es|pt)/:path*']
 }

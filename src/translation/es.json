@@ -9,21 +9,6 @@
       "cta": "Agendar una llamada",
       "trusted": "Confiado por"
     },
-    "projects": {
-      "title": "Nuestro trabajo",
-      "brandingDesign": "Diseño de marca",
-      "mobileApps": "Aplicaciones móviles",
-      "webSites": "Sitios web",
-      "webApp": "Aplicaciones web",
-      "01": "Creamos una marca que encarna la innovación y la confianza, ofreciendo una biblioteca digital interactiva de protocolos de atención para mejorar la práctica médica basada en evidencia.",
-      "02": "Creamos presentaciones impactantes que ayudan a persuadir a colegas, clientes o inversores. Ya sea en vivo o digital, para uno o cien, tu mensaje será impactante.",
-      "03": "Diseñamos presentaciones poderosas para persuadir a colegas, clientes o inversores. Ya sea en vivo o digital, para uno o cien, tu mensaje resonará con claridad.",
-      "04": "Impulsados por la tecnología, los fundadores de Voltbras en Florianópolis crearon una solución de vanguardia para estaciones de carga de vehículos eléctricos y una aplicación exclusiva para una recarga sin problemas.",
-      "13": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversores. Ya sea en vivo o digital, para uno o cien.",
-      "14": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversores. Ya sea en vivo o digital, para uno o cien.",
-      "15": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversores. Ya sea en vivo o digital, para uno o cien.",
-      "16": "El nuevo sitio web de Regina Festas abraza su evolución, creando una experiencia fluida. Ahora, explorar productos, colecciones y tendencias es más fácil e inspirador."
-    },
     "expertises": {
       "title": "Nuestra experiencia",
       "01": {
@@ -112,5 +97,71 @@
       "policy": "Política de privacidad"
     }
   },
-  "Project": {}
+  "projects": {
+    "title": "Nuestro Trabajo",
+    "brandingDesign": "Diseño de Marca",
+    "mobileApps": "Aplicaciones Móviles",
+    "webSites": "Sitios Web",
+    "webApp": "Aplicaciones Web",
+    "service": "Servicio",
+    "doc-door": {
+      "name": "Doc.Door",
+      "caption": "Construimos una marca que encarna la innovación y la confianza, ofreciendo una biblioteca digital interactiva de protocolos de atención para mejorar la práctica médica basada en evidencia.",
+      "subtitle": "Identidad visual para tecnología AI | Diseño de Marca",
+      "service": "Identidad Visual",
+      "about": "La misión de Doc.Door es apoyar a los médicos en decisiones clínicas dentro de hospitales y consultorios. Utilizando tecnología avanzada basada en inteligencia artificial, este innovador producto ofrece una biblioteca integral de información médica, cubriendo posibles escenarios clínicos presentados por los pacientes."
+    },
+    "modesta-moda": {
+      "name": "Modesta Moda",
+      "caption": "Creamos presentaciones impactantes que ayudan a persuadir a colegas, clientes o inversionistas. Ya sea en vivo o digital, para uno o cien, tu mensaje es poderoso.",
+      "subtitle": "Identidad visual para marca de vestidos | Diseño de Marca",
+      "service": "Identidad Visual",
+      "about": "Modesta Moda ofrece ropa cristiana que combina belleza, sencillez y modestia, con piezas a medida que celebran la autenticidad y el propósito. La identidad visual captura la esencia de la marca con un diseño delicado alineado con los principios de la moda cristiana, enfatizando calidad y elegancia."
+    },
+    "amorim-dev-studio": {
+      "name": "Amorim Dev Studio",
+      "caption": "Diseñamos presentaciones poderosas para persuadir a colegas, clientes o inversionistas. Ya sea en vivo o digital, para uno o cien, tu mensaje resuena con claridad.",
+      "subtitle": "Identidad visual para desarrollador | Programación y desarrollo",
+      "service": "Identidad Visual",
+      "about": "Amorim Dev Studio conecta clientes y desarrolladores con soluciones digitales personalizadas, combinando tecnología, estética y funcionalidad. Su identidad visual refleja cercanía, innovación y modernidad, destacando la conexión directa entre clientes y desarrolladores con un impacto visual distintivo."
+    },
+    "john-martin-clothing": {
+      "name": "John Martin Clothing",
+      "caption": "Impulsados por la tecnología, los fundadores de Voltbras en Florianópolis crearon una solución innovadora para estaciones de carga de vehículos eléctricos y una aplicación exclusiva para una recarga sin interrupciones.",
+      "subtitle": "Identidad visual para marca de ropa | Diseño de Marca",
+      "service": "Identidad Visual",
+      "about": "Nuestra marca es un símbolo de sabiduría e historia, transmitiendo mensajes poderosos a través de las frases impresas en nuestra ropa. Cada pieza es una narrativa que honra las voces de nuestros ancestros y celebra la riqueza de la cultura negra. Queremos mostrar que somos portadores de un legado profundo y significativo, llevando la sabiduría acumulada a lo largo de generaciones."
+    },
+    "k2l": {
+      "name": "K2L",
+      "caption": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversionistas. Ya sea en vivo o digital, entregadas para uno o cien.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "clinica-sim": {
+      "name": "Clínica Sim",
+      "caption": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversionistas. Ya sea en vivo o digital, entregadas para uno o cien.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "dom": {
+      "name": "DOM",
+      "caption": "Creamos presentaciones personalizadas para ayudarte a persuadir a tus colegas, clientes o inversionistas. Ya sea en vivo o digital, entregadas para uno o cien.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "regina-festas": {
+      "name": "Regina Festas",
+      "caption": "El nuevo sitio web de Regina Festas abraza su evolución, creando una experiencia fluida. Ahora, explorar productos, colecciones y tendencias es más fácil e inspirador.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "invite": "¿Creamos algo juntos?",
+    "inviteAux": "Cuéntanos tu idea y contáctanos para hacer tu sueño realidad",
+    "button": "Agenda una llamada de 10 minutos"
+  }
 }

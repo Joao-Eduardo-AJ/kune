@@ -59,7 +59,6 @@
     {
       "id": "01",
       "darkContrast": false,
-      "description": "We built a brand that embodies innovation and trust, offering an interactive digital library of care protocols to enhance evidence-based medical practice.",
       "members": [],
       "name": "Doc.Door",
       "slug": "doc-door",
@@ -69,7 +68,6 @@
     {
       "id": "02",
       "darkContrast": true,
-      "description": "We craft compelling presentations that help persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message is impactful.",
       "members": [],
       "name": "Modesta Moda",
       "slug": "modesta-moda",
@@ -79,7 +77,6 @@
     {
       "id": "03",
       "darkContrast": true,
-      "description": "We design powerful presentations to persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message resonates with clarity.",
       "members": [],
       "name": "Amorim Dev Studio",
       "slug": "amorim-dev-studio",
@@ -89,7 +86,6 @@
     {
       "id": "04",
       "darkContrast": false,
-      "description": "Driven by technology, Voltbras' founders in Florianópolis created a cutting-edge solution for EV charging stations and an exclusive app for seamless recharging.",
       "members": [],
       "name": "John Martin Clothing",
       "slug": "john-martin-clothing",
@@ -99,7 +95,6 @@
     {
       "id": "05",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Mobile 01",
       "slug": "project-mobile-01",
@@ -109,7 +104,6 @@
     {
       "id": "06",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Mobile 02",
       "slug": "project-mobile-02",
@@ -119,7 +113,6 @@
     {
       "id": "07",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Mobile 03",
       "slug": "project-mobile-03",
@@ -129,7 +122,6 @@
     {
       "id": "08",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Mobile 04",
       "slug": "project-mobile-04",
@@ -139,7 +131,6 @@
     {
       "id": "09",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Web 01",
       "slug": "project-web-01",
@@ -149,7 +140,6 @@
     {
       "id": "10",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Web 02",
       "slug": "project-web-02",
@@ -159,7 +149,6 @@
     {
       "id": "11",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Web 03",
       "slug": "project-web-03",
@@ -169,7 +158,6 @@
     {
       "id": "12",
       "darkContrast": true,
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "members": [],
       "name": "Project Web 04",
       "slug": "project-web-04",
@@ -179,7 +167,6 @@
     {
       "id": "13",
       "darkContrast": true,
-      "description": "We created a website that captures K2L’s essence, blending its history and strategy into a digital experience. A powerful platform for artists and partners.",
       "members": [],
       "name": "K2L",
       "slug": "k2l",
@@ -189,7 +176,6 @@
     {
       "id": "14",
       "darkContrast": true,
-      "description": "We modernized Clínica SiM’s website, making access to medical services faster and more intuitive. A digital platform that reflects its mission of accessibility.",
       "members": [],
       "name": "Clinica SIM",
       "slug": "clinica-sim",
@@ -199,7 +185,6 @@
     {
       "id": "15",
       "darkContrast": true,
-      "description": "We built an innovative website for DOM, connecting investors to exclusive opportunities in Florida. A sophisticated design with immersive experience and smooth navigation.",
       "members": [],
       "name": "DOM",
       "slug": "dom",
@@ -209,7 +194,6 @@
     {
       "id": "16",
       "darkContrast": true,
-      "description": "Regina Festas’ new website embraces its evolution, creating a seamless experience. Now, exploring products, collections, and trends is easier and more inspiring.",
       "members": [],
       "name": "Regina Festas",
       "slug": "regina-festas",

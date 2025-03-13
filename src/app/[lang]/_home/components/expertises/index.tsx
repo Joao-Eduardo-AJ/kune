@@ -25,8 +25,10 @@ export function Expertises() {
             <span className="material-symbols-outlined text-[40px] font-semibold lg:text-[64px]">
               {symbolsIcon}
             </span>
-            <h4 className="col-span-2 lg:col-span-1">{t(`${id}.title`)}</h4>
-            <Paragraphy className="col-span-3 lg:col-span-1">
+            <h4 className="col-span-2 sm:col-span-5 lg:col-span-1 lg:w-[294px]">
+              {t(`${id}.title`)}
+            </h4>
+            <Paragraphy className="col-span-full lg:col-span-1 lg:w-[378px]">
               {t(`${id}.subtitle`)}
             </Paragraphy>
           </ItemWrapper>

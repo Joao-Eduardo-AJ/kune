@@ -14,7 +14,7 @@ import { useTranslations } from 'next-intl'
 
 export function Header() {
   const [projectType, setProjectType] = useAtom(projectTypeAtom)
-  const t = useTranslations('home.projects')
+  const t = useTranslations('projects')
 
   function handleProjectType(newProjectType: ProjectType) {
     setProjectType(newProjectType)
@@ -65,7 +65,7 @@ export function Header() {
 export function Group() {
   const projectType = useAtomValue(projectTypeAtom)
   const lang = usePathname().split('/')[1]
-  const t = useTranslations('home.projects')
+  const t = useTranslations('projects')
 
   const projectsByType = data.projects.filter(project => {
     return project.type === projectType
@@ -73,7 +73,7 @@ export function Group() {
 
   return (
     <div className={twJoin('grid gap-6 sm:grid-cols-2 xl:gap-x-8 xl:gap-y-20')}>
-      {projectsByType.map(({ id, name, slug }) => {
+      {projectsByType.map(({ id, slug }) => {
         return (
           <ProjectCard.Wrapper key={id}>
             <Link
@@ -87,8 +87,8 @@ export function Group() {
             </Link>
 
             <ProjectCard.Caption
-              title={name}
-              description={t(id)}
+              title={t(`${slug}.name`)}
+              description={t(`${slug}.caption`)}
               shortly={projectType === 'website'}
             />
           </ProjectCard.Wrapper>

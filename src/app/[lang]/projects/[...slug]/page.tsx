@@ -1,11 +1,12 @@
-import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowLeft01Icon } from '@hugeicons/core-free-icons'
-import Link from 'next/link'
+import { HugeiconsIcon } from '@hugeicons/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Button, Container, Header, IconButton, Paragraphy } from '@/components'
 import { data } from '@/data'
 
+import { getTranslations } from 'next-intl/server'
 import { GalleryGrid } from './components/galery-grid'
 
 type ProjectProps = {
@@ -15,6 +16,7 @@ type ProjectProps = {
 }
 
 export default async function Project({ params }: ProjectProps) {
+  const t = await getTranslations('projects')
   const [slug] = (await params).slug
 
   const project = data.projects.find(item => {
@@ -43,9 +45,9 @@ export default async function Project({ params }: ProjectProps) {
 
             <div className="space-y-10 lg:space-y-0">
               <div className="space-y-4">
-                <h2>{project.name}</h2>
+                <h2>{t(`${slug}.name`)}</h2>
                 <Paragraphy className="text-grayscale-500" variant="p5">
-                  Visual identity for developer | Programming and development
+                  {t(`${slug}.subtitle`)}
                 </Paragraphy>
               </div>
 
@@ -53,9 +55,9 @@ export default async function Project({ params }: ProjectProps) {
 
               <div className="space-y-10 lg:!mt-20 lg:flex lg:justify-between lg:space-y-0">
                 <div className="space-y-1">
-                  <Paragraphy variant="p4">Service</Paragraphy>
+                  <Paragraphy variant="p4">{t('service')}</Paragraphy>
                   <Paragraphy variant="p2" className="text-gray-900">
-                    Visual Identity
+                    {t(`${slug}.service`)}
                   </Paragraphy>
                 </div>
 
@@ -63,7 +65,7 @@ export default async function Project({ params }: ProjectProps) {
                   className="max-w-[488px] text-grayscale-500"
                   variant="p4"
                 >
-                  {project.description}
+                  {t(`${slug}.about`)}
                 </Paragraphy>
               </div>
             </div>
@@ -71,7 +73,7 @@ export default async function Project({ params }: ProjectProps) {
         </section>
 
         <section className="py-0 pb-20 lg:py-[128px]">
-          <GalleryGrid projectId={project.id} projectName={project.name} />
+          <GalleryGrid projectId={project.id} projectName={t(`${slug}.name`)} />
         </section>
 
         <section className="py-20 lg:py-[128px]">
@@ -87,16 +89,16 @@ export default async function Project({ params }: ProjectProps) {
               </div>
 
               <span className="block text-[56px]/[56px] font-semibold text-grayscale-900 lg:max-w-[613px] lg:text-[64px]/[62px]">
-                Let{`'`}s create something together?
+                {t('invite')}
               </span>
             </div>
 
             <div className="space-y-10 lg:flex lg:items-center lg:justify-between lg:space-y-0">
               <Paragraphy className="lg:max-w-60" variant="p4">
-                Tell us your idea and get in touch to make your dream come true
+                {t('inviteAux')}
               </Paragraphy>
 
-              <Button variant="secondary">Schedule a 10-Minute Call</Button>
+              <Button variant="secondary"> {t('button')}</Button>
             </div>
           </Container>
         </section>

@@ -22,8 +22,8 @@ export function ItemWrapper({ children, index, ...props }: ItemWrapperProps) {
     <motion.li
       ref={ref}
       className={twJoin(
-        'grid grid-cols-3 gap-y-12 rounded-2xl bg-grayscale-100 p-6',
-        'lg:flex lg:items-center lg:gap-x-40 lg:rounded-3xl lg:px-20 lg:py-16'
+        'grid grid-cols-3 gap-y-12 rounded-2xl bg-grayscale-100 p-6 sm:grid-cols-6',
+        'lg:flex lg:items-center lg:justify-between lg:rounded-3xl lg:px-20 lg:py-16'
       )}
       variants={variants}
       initial="hidden"

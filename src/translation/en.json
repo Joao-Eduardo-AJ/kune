@@ -9,21 +9,6 @@
       "cta": "Book a call",
       "trusted": "Trusted by"
     },
-    "projects": {
-      "title": "Our Work",
-      "brandingDesign": "Branding Design",
-      "mobileApps": "Mobile Apps",
-      "webSites": "Web Sites",
-      "webApp": "Web Apps",
-      "01": "We built a brand that embodies innovation and trust, offering an interactive digital library of care protocols to enhance evidence-based medical practice.",
-      "02": "We craft compelling presentations that help persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message is impactful.",
-      "03": "We design powerful presentations to persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message resonates with clarity.",
-      "04": "Driven by technology, Voltbras' founders in Florianópolis created a cutting-edge solution for EV charging stations and an exclusive app for seamless recharging.",
-      "13": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
-      "14": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
-      "15": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred ",
-      "16": "Regina Festas’ new website embraces its evolution, creating a seamless experience. Now, exploring products, collections, and trends is easier and more inspiring."
-    },
     "expertises": {
       "title": "Our Expertise",
       "01": {
@@ -112,5 +97,71 @@
       "policy": "Privacy policy"
     }
   },
-  "Project": {}
+  "projects": {
+    "title": "Our Work",
+    "brandingDesign": "Branding Design",
+    "mobileApps": "Mobile Apps",
+    "webSites": "Web Sites",
+    "webApp": "Web Apps",
+    "service": "Service",
+    "doc-door": {
+      "name": "Doc.Door",
+      "caption": "We built a brand that embodies innovation and trust, offering an interactive digital library of care protocols to enhance evidence-based medical practice.",
+      "subtitle": "Visual identity for Ai Technology | Brand Design",
+      "service": "Visual Identity",
+      "about": "Doc.Door mission is to support physicians in clinical decisions within hospitals and practices. Using advanced technology based on artificial intelligence, this innovative product offers a comprehensive library of medical information, covering possible clinical scenarios presented by patients."
+    },
+    "modesta-moda": {
+      "name": "Modesta Moda",
+      "caption": "We craft compelling presentations that help persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message is impactful.",
+      "subtitle": "Visual identity for dress brand | Brand Design",
+      "service": "Visual Identity",
+      "about": "Modesta Moda provides Christian clothing that combines beauty, simplicity, and modesty, with tailor-made pieces that celebrate authenticity and purpose. The branding captures the brand's essence with a delicate identity aligned with Christian fashion principles, emphasizing quality and elegance."
+    },
+    "amorim-dev-studio": {
+      "name": "Amorim Dev Studio",
+      "caption": "We design powerful presentations to persuade colleagues, clients, or investors. Whether live or digital, for one or a hundred, your message resonates with clarity.",
+      "subtitle": "Visual identity for developer | Programming and development",
+      "service": "Visual Identity",
+      "about": "Amorim Dev Studio bridges clients and developers with tailored digital solutions, combining technology, aesthetics, and functionality. Its visual identity reflects closeness, innovation, and modernity, highlighting the direct connection between clients and developers with a distinctive visual impact."
+    },
+    "john-martin-clothing": {
+      "name": "John Martin Clothing",
+      "caption": "Driven by technology, Voltbras' founders in Florianópolis created a cutting-edge solution for EV charging stations and an exclusive app for seamless recharging.",
+      "subtitle": "Visual identity for clothes brand | Brand Design",
+      "service": "Visual Identity",
+      "about": "Our brand is a symbol of wisdom and history, conveying powerful messages through the phrases printed on our clothing. Each piece is a narrative that honors the voices of our ancestors and celebrates the richness of Black culture. We want to show that we are bearers of a deep and meaningful heritage, carrying the wisdom accumulated over generations."
+    },
+    "k2l": {
+      "name": "K2L",
+      "caption": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "clinica-sim": {
+      "name": "Clínica Sim",
+      "caption": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "dom": {
+      "name": "DOM",
+      "caption": "We create tailored presentations to help you persuade your colleagues, clients, or investors. Whether it’s live or digital, delivered for one or a hundred.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "regina-festas": {
+      "name": "Regina Festas",
+      "caption": "Regina Festas’ new website embraces its evolution, creating a seamless experience. Now, exploring products, collections, and trends is easier and more inspiring.",
+      "subtitle": "",
+      "service": "",
+      "about": ""
+    },
+    "invite": "Let's create something together?",
+    "inviteAux": "Tell us your idea and get in touch to make your dream come true",
+    "button": "Schedule a 10-Minute Call"
+  }
 }

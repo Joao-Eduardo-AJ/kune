@@ -15,9 +15,7 @@ export type MemberParams = {
 export type ProjectParams = {
   id: string
   darkContrast: boolean
-  description: string
   members: MemberParams[]
-  name: string
   slug: string
   type: ProjectType
   year: string
